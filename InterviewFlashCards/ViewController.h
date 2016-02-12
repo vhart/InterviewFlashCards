@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum SectionQuestionType {
+    iOSTechnical = 0,
+    DataStructures,
+    Algorithms
+} SectionType;
+
 @interface ViewController : UIViewController
 
+@property (nonatomic) NSString *sectionName;
+@property (nonatomic) SectionType section;
 
 @end
 

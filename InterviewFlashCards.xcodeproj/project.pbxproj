@@ -17,6 +17,8 @@
 		C7DD0A961C6CDF5500361D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */; };
 		C7DD0AA11C6CDF5700361D17 /* InterviewFlashCardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AA01C6CDF5700361D17 /* InterviewFlashCardsTests.m */; };
 		C7DD0AAC1C6CDF5700361D17 /* InterviewFlashCardsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */; };
+		C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */; };
+		C7DD0AC41C6E6AEB00361D17 /* IFCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		C7DD0AA71C6CDF5700361D17 /* InterviewFlashCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewFlashCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterviewFlashCardsUITests.m; sourceTree = "<group>"; };
 		C7DD0AAD1C6CDF5700361D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCAnswerViewController.h; sourceTree = "<group>"; };
+		C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCAnswerViewController.m; sourceTree = "<group>"; };
+		C7DD0AC21C6E6AEB00361D17 /* IFCMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCMenuViewController.h; sourceTree = "<group>"; };
+		C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCMenuViewController.m; sourceTree = "<group>"; };
 		D1957339B0A4DD72AD5E9E5B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF79B47F8006EEAABD8DBBAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +137,10 @@
 				C7DD0A871C6CDF5400361D17 /* AppDelegate.m */,
 				C7DD0A891C6CDF5400361D17 /* ViewController.h */,
 				C7DD0A8A1C6CDF5400361D17 /* ViewController.m */,
+				C7DD0AC21C6E6AEB00361D17 /* IFCMenuViewController.h */,
+				C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */,
+				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
+				C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */,
 				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
 				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
 				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
@@ -348,7 +358,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */,
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
+				C7DD0AC41C6E6AEB00361D17 /* IFCMenuViewController.m in Sources */,
 				C7DD0A8B1C6CDF5400361D17 /* ViewController.m in Sources */,
 				C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */,
 				C7DD0A851C6CDF5400361D17 /* main.m in Sources */,
