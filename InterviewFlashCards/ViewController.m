@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self setupNavBar];
+
     Firebase *ref = [[Firebase alloc]initWithUrl:@"https://fiery-torch-4131.firebaseio.com/"];
 
     [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
@@ -28,9 +30,15 @@
 
 }
 
-- (IBAction)backButtonTapped:(id)sender {
+- (void)setupNavBar {
 
-    [self dismissViewControllerAnimated:YES completion:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
+    
+    self.navigationItem.title = self.sectionName;
+
 }
 
+- (void)dismiss{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

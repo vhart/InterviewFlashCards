@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Interview Flash Cards-->
+        <!--Menu View Controller-->
         <scene sceneID="8dc-Xm-qjE">
             <objects>
                 <viewController id="ww0-J5-cxg" customClass="IFCMenuViewController" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                             <constraint firstItem="98H-FR-uaa" firstAttribute="centerX" secondItem="2Tz-xY-hYz" secondAttribute="centerX" id="wbY-hJ-2OE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Interview Flash Cards" id="Quc-cX-4uQ"/>
+                    <navigationItem key="navigationItem" id="Quc-cX-4uQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1P-UJ-mD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
