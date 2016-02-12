@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "Firebase.h"
 
+
 @interface ViewController ()
+
 
 @end
 
@@ -23,7 +25,12 @@
     [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         NSLog(@"%@ with value %@", snapshot.key, snapshot.value);
     }];
+
 }
 
+- (IBAction)backButtonTapped:(id)sender {
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
