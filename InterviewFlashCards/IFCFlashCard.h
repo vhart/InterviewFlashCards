@@ -12,6 +12,7 @@
 
 @property (nonatomic) NSString *question;
 @property (nonatomic) NSString *answer;
-@property (nonatomic) NSURL *imageURL;
+@property (nonatomic) NSURL *questionImageURL;
+@property (nonatomic) NSURL *answerImageURL;
 
 @end
