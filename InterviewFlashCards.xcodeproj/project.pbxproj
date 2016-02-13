@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */; };
 		2C347CCE51EF518A9F10D711 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1957339B0A4DD72AD5E9E5B /* libPods.a */; };
 		C7DD0A851C6CDF5400361D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A841C6CDF5400361D17 /* main.m */; };
 		C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A871C6CDF5400361D17 /* AppDelegate.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCFlashCard.h; sourceTree = "<group>"; };
+		182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCFlashCard.m; sourceTree = "<group>"; };
 		8AF92758EEAF76C98257BF28 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C7DD0A801C6CDF5400361D17 /* InterviewFlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewFlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0A841C6CDF5400361D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				C7DD0A871C6CDF5400361D17 /* AppDelegate.m */,
 				C7DD0A891C6CDF5400361D17 /* ViewController.h */,
 				C7DD0A8A1C6CDF5400361D17 /* ViewController.m */,
+				182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */,
+				182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */,
 				C7DD0AC21C6E6AEB00361D17 /* IFCMenuViewController.h */,
 				C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */,
 				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
@@ -358,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */,
 				C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */,
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
 				C7DD0AC41C6E6AEB00361D17 /* IFCMenuViewController.m in Sources */,
