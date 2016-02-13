@@ -10,15 +10,5 @@
 
 @implementation IFCFlashCard
 
--(instancetype)init {
-    
-    if (self = [super init]) {
-        self.questions = [NSMutableArray new];
-        self.answers = [NSMutableArray new];
-        
-        return  self;
-    }
-    return nil;
-}
 
 @end

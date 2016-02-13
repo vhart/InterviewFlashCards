@@ -10,8 +10,8 @@
 
 @interface IFCFlashCard : NSObject
 
-@property (nonatomic) NSMutableArray<NSString *> *questions;
-@property (nonatomic) NSMutableArray<NSString *> *answers;
-
+@property (nonatomic) NSString *question;
+@property (nonatomic) NSString *answer;
+@property (nonatomic) NSURL *imageURL;
 
 @end
