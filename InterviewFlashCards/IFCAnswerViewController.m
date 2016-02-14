@@ -7,6 +7,7 @@
 //
 
 #import "IFCAnswerViewController.h"
+#import "UIImage+AsyncFetch.h"
 
 @interface IFCAnswerViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
@@ -19,7 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    [UIImage asyncFetchForUrl:@"https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/integerPalindrome.png" withCompletion:^(UIImage *img, BOOL success) {
+        self.answerImageView.image = img;
+    }];
 }
 - (IBAction)backButtonTapped:(UIButton *)sender {
 

@@ -12,7 +12,8 @@
 
 @property (nonatomic) NSString *question;
 @property (nonatomic) NSString *answer;
-@property (nonatomic) NSURL *questionImageURL;
-@property (nonatomic) NSURL *answerImageURL;
+@property (nonatomic) NSString *questionImageURL;
+@property (nonatomic) NSArray <NSString *> *answerImageURLs;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
 @end
