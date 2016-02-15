@@ -8,10 +8,19 @@
 
 #import "ViewController.h"
 #import "Firebase.h"
-
+#import "IFCQueryManager.h"
+#import "IFCFlashCard.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *prevButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *answerButton;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *questionImageView;
 
+@property (nonatomic) IFCQueryManager *queryManager;
+@property (nonatomic) NSMutableArray <IFCFlashCard *> *flashCards;
+@property (nonatomic) NSInteger currentIndex;
 
 @end
 
@@ -22,12 +31,15 @@
 
     [self setupNavBar];
 
-    Firebase *ref = [[Firebase alloc]initWithUrl:@"https://fiery-torch-4131.firebaseio.com/"];
+    self.flashCards = [NSMutableArray new];
 
-    [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-        NSLog(@"%@ with value %@", snapshot.key, snapshot.value);
-    }];
+    self.queryManager = [IFCQueryManager new];
 
+    [self fetchData];
+
+    self.currentIndex = 0;
+
+    [self prepareFlashCard:0];
 }
 
 - (void)setupNavBar {
@@ -38,7 +50,49 @@
 
 }
 
+- (void)fetchData{
+    Request type = [self requestType];
+
+    [self.queryManager getDataForRequest:type completion:^(NSArray<NSDictionary *> *json) {
+
+        self.flashCards = [NSMutableArray arrayWithArray:[IFCFlashCard flashCardsFromDictionaries:json]];
+
+    }];
+
+}
+
+- (Request)requestType{
+
+    switch (self.section) {
+        case iOSTechnical:
+            return RequestTypeiOS;
+            break;
+        case DataStructures:
+            return RequestTypeDataStructures;
+            break;
+        case Algorithms:
+            return RequestTypeAlgorithms;
+            break;
+        default:
+            break;
+    }
+
+
+}
+
+- (void)prepareFlashCard:(NSInteger)index {
+
+}
+
 - (void)dismiss{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)prevButtonTapped:(UIButton *)sender {
+}
+
+- (IBAction)nextButtonTapped:(UIButton *)sender {
+}
+
+
 @end

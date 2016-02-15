@@ -7,8 +7,12 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <Foundation/Foundation.h>
+#import "IFCQueryManager.h"
 
 @interface InterviewFlashCardsTests : XCTestCase
+
+@property (nonatomic) IFCQueryManager *qman;
 
 @end
 
@@ -16,6 +20,7 @@
 
 - (void)setUp {
     [super setUp];
+    self.qman = [IFCQueryManager new];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -33,6 +38,24 @@
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
+    }];
+}
+
+- (void)testQueryManagerGetData {
+
+    XCTestExpectation *expectation = [self expectationWithDescription:@"AsyncFetch"];
+
+    __block NSArray *testArray;
+
+    [self.qman getDataForRequest:RequestTypeiOS completion:^(NSArray *json) {
+        XCTAssert(json.count > 0);
+        testArray = [NSArray arrayWithArray: json];
+        [expectation fulfill];
+    }];
+
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError * _Nullable error) {
+        NSLog(@"Successful getData - QUERY MANAGER");
+        NSLog(@"%@",testArray);
     }];
 }
 

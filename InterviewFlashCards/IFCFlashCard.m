@@ -8,6 +8,7 @@
 
 #import "IFCFlashCard.h"
 #import "NSMutableArray+Sizing.h"
+#import "UIImage+AsyncFetch.h"
 
 @implementation IFCFlashCard
 
@@ -41,4 +42,56 @@
 
     return nil;
 }
+
+- (void)prepareFlashCardWithCompletion:(void (^)())completion{
+
+    if (self.questionImageURL && self.questionImages.count == 0) {
+        [UIImage asyncFetchForUrl:self.questionImageURL withCompletion:^(UIImage *img, BOOL success) {
+            [self.questionImages addObject:img];
+            self.questionImagesLoaded = YES;
+            if (self.answerImagesLoaded) {
+                completion();
+            }
+        }];
+    } else{
+        self.questionImagesLoaded = YES;
+    }
+
+    if (self.answerImageURLs && self.answerImages.count == 0){
+        dispatch_queue_t serial = dispatch_queue_create("com.answers.IFC", DISPATCH_QUEUE_SERIAL);
+        for (NSString *url in self.answerImageURLs) {
+            dispatch_async(serial, ^{
+
+                NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+                UIImage *ansImage = [UIImage imageWithData:data];
+                [self.answerImages addObject:ansImage];
+
+                if (self.answerImages.count == self.answerImageURLs.count) {
+                    self.answerImagesLoaded = YES;
+                    completion();
+                }
+            });
+        }
+    } else {
+        self.answerImagesLoaded = YES;
+        if (self.questionImagesLoaded) {
+            completion();
+        }
+    }
+}
+
++ (NSArray<IFCFlashCard *> *)flashCardsFromDictionaries:(NSArray<NSDictionary *> *)dictionaries{
+    NSMutableArray <IFCFlashCard *> *flashCards = [NSMutableArray new];
+
+    for (NSDictionary *dict in dictionaries) {
+        IFCFlashCard *next = [[IFCFlashCard alloc] initWithDictionary:dict];
+        [flashCards addObject:next];
+    }
+
+    return flashCards;
+}
+
+
+
+
 @end

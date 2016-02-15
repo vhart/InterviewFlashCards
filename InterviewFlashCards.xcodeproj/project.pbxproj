@@ -22,6 +22,7 @@
 		C7DD0AC41C6E6AEB00361D17 /* IFCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */; };
 		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
 		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
+		C7DD0ACD1C71A9C500361D17 /* IFCQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0ACC1C71A9C500361D17 /* IFCQueryManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AsyncFetch.m"; path = "../UIImage+AsyncFetch.m"; sourceTree = "<group>"; };
 		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
 		C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sizing.m"; sourceTree = "<group>"; };
+		C7DD0ACB1C71A9C500361D17 /* IFCQueryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCQueryManager.h; sourceTree = "<group>"; };
+		C7DD0ACC1C71A9C500361D17 /* IFCQueryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCQueryManager.m; sourceTree = "<group>"; };
 		D1957339B0A4DD72AD5E9E5B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF79B47F8006EEAABD8DBBAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +155,8 @@
 				C7DD0A8A1C6CDF5400361D17 /* ViewController.m */,
 				182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */,
 				182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */,
+				C7DD0ACB1C71A9C500361D17 /* IFCQueryManager.h */,
+				C7DD0ACC1C71A9C500361D17 /* IFCQueryManager.m */,
 				C7DD0AC21C6E6AEB00361D17 /* IFCMenuViewController.h */,
 				C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */,
 				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
@@ -378,6 +383,7 @@
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
 				C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */,
 				C7DD0AC41C6E6AEB00361D17 /* IFCMenuViewController.m in Sources */,
+				C7DD0ACD1C71A9C500361D17 /* IFCQueryManager.m in Sources */,
 				C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */,
 				C7DD0A8B1C6CDF5400361D17 /* ViewController.m in Sources */,
 				C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */,
