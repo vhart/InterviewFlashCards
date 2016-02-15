@@ -84,13 +84,6 @@
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-lM-av9">
-                                <rect key="frame" x="200" y="198" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="PoA-Yp-Q5b"/>
-                                    <constraint firstAttribute="height" constant="200" id="vdm-P0-zWH"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlu-Me-e58">
                                 <rect key="frame" x="20" y="84" width="60" height="30"/>
                                 <constraints>
@@ -98,6 +91,9 @@
                                     <constraint firstAttribute="width" constant="60" id="AgB-wH-1jg"/>
                                 </constraints>
                                 <state key="normal" title="&lt;&lt; Prev"/>
+                                <connections>
+                                    <action selector="prevButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OlU-XZ-oYu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-ft-aJP">
                                 <rect key="frame" x="520" y="84" width="60" height="30"/>
@@ -106,6 +102,9 @@
                                     <constraint firstAttribute="width" constant="60" id="uEM-YE-3Ih"/>
                                 </constraints>
                                 <state key="normal" title="Next &gt;&gt;"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djt-YW-FhG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-cj-99o">
                                 <rect key="frame" x="275" y="525" width="51" height="30"/>
@@ -114,6 +113,13 @@
                                     <segue destination="Jig-1g-Wod" kind="presentation" modalTransitionStyle="flipHorizontal" id="Nj3-SZ-DnO"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-lM-av9">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="PoA-Yp-Q5b"/>
+                                    <constraint firstAttribute="height" constant="200" id="vdm-P0-zWH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -136,6 +142,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="answerButton" destination="LVA-cj-99o" id="zfG-0r-1kt"/>
+                        <outlet property="nextButton" destination="Zbq-ft-aJP" id="pND-qj-wz7"/>
+                        <outlet property="prevButton" destination="Qlu-Me-e58" id="wK1-Su-NfR"/>
+                        <outlet property="questionImageView" destination="Sie-lM-av9" id="e3A-Gi-cty"/>
+                        <outlet property="questionLabel" destination="tmj-YQ-QJu" id="oMD-3x-kbe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
