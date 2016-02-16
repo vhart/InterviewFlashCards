@@ -23,6 +23,12 @@
         NSDictionary *urls    = dict[@"answer_urls"];
         self.answerImageURLs = [self arrayOfUrlsFromDictionary:urls];
 
+        if (self.questionImageURL) {
+            self.questionImages = [NSMutableArray new];
+        }
+        if (self.answerImageURLs) {
+            self.answerImages = [NSMutableArray new];
+        }
     }
 
     return self;
@@ -50,7 +56,9 @@
             [self.questionImages addObject:img];
             self.questionImagesLoaded = YES;
             if (self.answerImagesLoaded) {
-                completion();
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion();
+                });
             }
         }];
     } else{
@@ -68,14 +76,18 @@
 
                 if (self.answerImages.count == self.answerImageURLs.count) {
                     self.answerImagesLoaded = YES;
-                    completion();
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        completion();
+                    });
                 }
             });
         }
     } else {
         self.answerImagesLoaded = YES;
         if (self.questionImagesLoaded) {
-            completion();
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion();
+            });
         }
     }
 }
