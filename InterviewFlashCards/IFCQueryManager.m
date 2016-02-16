@@ -16,32 +16,42 @@ NSString *BASE_URL = @"https://fiery-torch-4131.firebaseio.com/";
 
 - (void)getDataForRequest:(Request)type completion:(void (^)(NSArray<NSDictionary *> *))completion{
 
-    NSMutableArray <NSDictionary *> *fireBaseDataArray = [NSMutableArray new];
+    Firebase *ref = [[Firebase alloc] initWithUrl:BASE_URL];
 
-    __block NSInteger childrenCount;
+    NSString *keyForSection = [self destinationPathForSection:type];
 
-    dispatch_queue_t serial = dispatch_queue_create("fetching", DISPATCH_QUEUE_SERIAL);
+    [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
 
-    dispatch_async(serial, ^{
-        [self childrenCountForSection:type withCompletion:^(NSInteger count) {
+        if ([snapshot.key isEqualToString: keyForSection]) {
+            NSMutableArray <NSDictionary *> *fireBaseDataArray = [self populateArrayWithSnapshot:snapshot];
+            completion(fireBaseDataArray);
+        }
+    }];
 
-            childrenCount = count;
-
-            Firebase *ref = [[Firebase alloc]initWithUrl:[self firebaseRequestStringForType:type]];
-
-            dispatch_async(serial, ^{
-                [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-
-                    [fireBaseDataArray addObject:(NSDictionary *)[snapshot valueInExportFormat]];
-
-                    if (fireBaseDataArray.count == childrenCount) {
-                        completion(fireBaseDataArray);
-                    }
-                }];
-            });
-
-        }];
-    });
+//    __block NSInteger childrenCount;
+//
+//    dispatch_queue_t serial = dispatch_queue_create("fetching", DISPATCH_QUEUE_SERIAL);
+//
+//    dispatch_async(serial, ^{
+//        [self childrenCountForSection:type withCompletion:^(NSInteger count) {
+//
+//            childrenCount = count;
+//
+//            Firebase *ref = [[Firebase alloc]initWithUrl:[self firebaseRequestStringForType:type]];
+//
+//            dispatch_async(serial, ^{
+//                [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+//
+//                    [fireBaseDataArray addObject:(NSDictionary *)[snapshot valueInExportFormat]];
+//
+//                    if (fireBaseDataArray.count == childrenCount) {
+//                        completion(fireBaseDataArray);
+//                    }
+//                }];
+//            });
+//
+//        }];
+//    });
 
 
 }
@@ -80,5 +90,15 @@ NSString *BASE_URL = @"https://fiery-torch-4131.firebaseio.com/";
             break;
     }
 
+}
+
+- (NSMutableArray <NSDictionary *> *)populateArrayWithSnapshot:(FDataSnapshot *)snapshot{
+    NSMutableArray <NSDictionary *> *firebaseArray = [NSMutableArray new];
+
+    for (NSDictionary *dict in [(NSDictionary *)snapshot.valueInExportFormat allValues]) {
+        [firebaseArray addObject:dict];
+    }
+
+    return firebaseArray;
 }
 @end

@@ -57,7 +57,9 @@
             [self.questionImages addObject:img];
             self.questionImagesLoaded = YES;
             if (self.answerImagesLoaded) {
-                completion();
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion();
+                });
             }
         }];
     } else{
@@ -84,7 +86,9 @@
     } else {
         self.answerImagesLoaded = YES;
         if (self.questionImagesLoaded) {
-            completion();
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion();
+            });
         }
     }
 }
