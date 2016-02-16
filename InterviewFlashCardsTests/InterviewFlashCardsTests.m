@@ -9,10 +9,13 @@
 #import <XCTest/XCTest.h>
 #import <Foundation/Foundation.h>
 #import "IFCQueryManager.h"
+#import "IFCFlashCard.h"
+#import "UIImage+AsyncFetch.h"
 
 @interface InterviewFlashCardsTests : XCTestCase
 
 @property (nonatomic) IFCQueryManager *qman;
+@property (nonatomic) IFCFlashCard *flashCard;
 
 @end
 
@@ -56,6 +59,26 @@
     [self waitForExpectationsWithTimeout:5.0 handler:^(NSError * _Nullable error) {
         NSLog(@"Successful getData - QUERY MANAGER");
         NSLog(@"%@",testArray);
+    }];
+}
+
+- (void)testFlashCardPreparation {
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Image Fetching"];
+
+    
+    self.flashCard.answerImageURLs = @[@"https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/changeMaker.png"];
+    
+    [self.flashCard prepareFlashCardWithCompletion:^{
+        
+        XCTAssert(self.flashCard.answerImages.count == self.flashCard.answerImageURLs.count && self.flashCard.answerImages != nil);
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error in preparing flash card: %@",error.localizedDescription);
+        }
     }];
 }
 
