@@ -14,19 +14,17 @@
 NSString *BASE_URL = @"https://fiery-torch-4131.firebaseio.com/";
 
 
-- (void)getDataForRequest:(Request)type completion:(void (^)(NSArray *))completion{
+- (void)getDataForRequest:(Request)type completion:(void (^)(NSArray<NSDictionary *> *))completion{
 
-    NSMutableArray <NSDictionary *> *fireBaseDataArray = [NSMutableArray new];
-
-    Firebase *ref = [[Firebase alloc]initWithUrl:[self firebaseRequestStringForType:type]];
+    Firebase *ref = [[Firebase alloc]initWithUrl:BASE_URL];
     
     [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
 
-        [fireBaseDataArray addObject:(NSDictionary *)[snapshot valueInExportFormat]];
-
-        if (fireBaseDataArray.count == 25) {
+        if ([snapshot.key isEqualToString:[self firebaseRequestStringForType:type]]) {
+            NSMutableArray <NSDictionary *> *fireBaseDataArray = [self populateArrayWithSnapshot:snapshot];
             completion(fireBaseDataArray);
         }
+
     }];
 }
 
@@ -35,18 +33,29 @@ NSString *BASE_URL = @"https://fiery-torch-4131.firebaseio.com/";
 
     switch (type) {
         case RequestTypeiOS:
-            return [BASE_URL stringByAppendingString:@"iOS technical questions"];
+            return @"iOS technical questions";
             break;
         case RequestTypeDataStructures:
-            return [BASE_URL stringByAppendingString:@"data structure questions"];
+            return @"data structure questions";
             break;
         case RequestTypeAlgorithms:
-            return [BASE_URL stringByAppendingString:@"algorithm questions"];
+            return @"algorithm questions";
             break;
         default:
-            return BASE_URL;
+            return @"";
             break;
     }
 
 }
+
+- (NSMutableArray <NSDictionary *> *)populateArrayWithSnapshot:(FDataSnapshot *)snapshot{
+    NSMutableArray <NSDictionary *> *firebaseArray = [NSMutableArray new];
+
+    for (NSDictionary *dict in [(NSDictionary *)snapshot.valueInExportFormat allValues]) {
+        [firebaseArray addObject:dict];
+    }
+
+    return firebaseArray;
+}
+
 @end
