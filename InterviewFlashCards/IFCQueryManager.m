@@ -14,37 +14,69 @@
 NSString *BASE_URL = @"https://fiery-torch-4131.firebaseio.com/";
 
 
-- (void)getDataForRequest:(Request)type completion:(void (^)(NSArray *))completion{
+- (void)getDataForRequest:(Request)type completion:(void (^)(NSArray<NSDictionary *> *))completion{
 
     NSMutableArray <NSDictionary *> *fireBaseDataArray = [NSMutableArray new];
 
-    Firebase *ref = [[Firebase alloc]initWithUrl:[self firebaseRequestStringForType:type]];
-    
-    [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+    __block NSInteger childrenCount;
 
-        [fireBaseDataArray addObject:(NSDictionary *)[snapshot valueInExportFormat]];
+    dispatch_queue_t serial = dispatch_queue_create("fetching", DISPATCH_QUEUE_SERIAL);
 
-        if (fireBaseDataArray.count == 25) {
-            completion(fireBaseDataArray);
-        }
-    }];
+    dispatch_async(serial, ^{
+        [self childrenCountForSection:type withCompletion:^(NSInteger count) {
+
+            childrenCount = count;
+
+            Firebase *ref = [[Firebase alloc]initWithUrl:[self firebaseRequestStringForType:type]];
+
+            dispatch_async(serial, ^{
+                [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+
+                    [fireBaseDataArray addObject:(NSDictionary *)[snapshot valueInExportFormat]];
+
+                    if (fireBaseDataArray.count == childrenCount) {
+                        completion(fireBaseDataArray);
+                    }
+                }];
+            });
+
+        }];
+    });
+
+
 }
 
+- (void)childrenCountForSection:(Request)type withCompletion:(void(^)(NSInteger count))completion{
+    Firebase *ref = [[Firebase alloc]initWithUrl:BASE_URL];
+    [[[ref queryOrderedByChild:
+           [self destinationPathForSection:type]]
+                 queryLimitedToFirst:1]
+                     observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
 
+        NSInteger children = snapshot.childrenCount ;
+        completion(children);
+    }];
+
+}
 - (NSString *)firebaseRequestStringForType:(Request)type {
+
+    return [BASE_URL stringByAppendingString:[self destinationPathForSection:type]];
+}
+
+- (NSString *)destinationPathForSection:(Request)type {
 
     switch (type) {
         case RequestTypeiOS:
-            return [BASE_URL stringByAppendingString:@"iOS technical questions"];
+            return @"iOS technical questions";
             break;
         case RequestTypeDataStructures:
-            return [BASE_URL stringByAppendingString:@"data structure questions"];
+            return @"data structure questions";
             break;
         case RequestTypeAlgorithms:
-            return [BASE_URL stringByAppendingString:@"algorithm questions"];
+            return @"algorithm questions";
             break;
         default:
-            return BASE_URL;
+            return @"";
             break;
     }
 

@@ -38,8 +38,6 @@
     [self fetchData];
 
     self.currentIndex = 0;
-
-    [self prepareFlashCard:0];
 }
 
 - (void)setupNavBar {
@@ -56,7 +54,7 @@
     [self.queryManager getDataForRequest:type completion:^(NSArray<NSDictionary *> *json) {
 
         self.flashCards = [NSMutableArray arrayWithArray:[IFCFlashCard flashCardsFromDictionaries:json]];
-
+        [self prepareFlashCard:0];
     }];
 
 }
@@ -82,6 +80,28 @@
 
 - (void)prepareFlashCard:(NSInteger)index {
 
+    self.nextButton.hidden = YES;
+
+    IFCFlashCard *nextCard = self.flashCards[index];
+
+    [nextCard prepareFlashCardWithCompletion:^{
+        [self prepareUIwithCard:nextCard];
+    }];
+}
+
+- (void)prepareUIwithCard:(IFCFlashCard *)flashCard {
+
+    self.questionLabel.text = flashCard.question;
+
+    self.questionImageView.image = nil;
+
+    if(flashCard.questionImages && flashCard.questionImages.count > 0){
+        UIImage *questionImage = (UIImage *)flashCard.questionImages[0];
+        self.questionImageView.image = questionImage;
+    }
+
+    self.nextButton.hidden = NO;
+
 }
 
 - (void)dismiss{
@@ -92,6 +112,8 @@
 }
 
 - (IBAction)nextButtonTapped:(UIButton *)sender {
+    self.currentIndex = (self.currentIndex + 1)%(self.flashCards.count);
+    [self prepareFlashCard:self.currentIndex];
 }
 
 

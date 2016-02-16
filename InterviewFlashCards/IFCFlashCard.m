@@ -23,6 +23,13 @@
         NSDictionary *urls    = dict[@"answer_urls"];
         self.answerImageURLs = [self arrayOfUrlsFromDictionary:urls];
 
+        if (self.questionImageURL) {
+            self.questionImages = [NSMutableArray new];
+        }
+        if (self.answerImageURLs) {
+            self.answerImages = [NSMutableArray new];
+        }
+
     }
 
     return self;
@@ -68,7 +75,9 @@
 
                 if (self.answerImages.count == self.answerImageURLs.count) {
                     self.answerImagesLoaded = YES;
-                    completion();
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        completion();
+                    });
                 }
             });
         }
