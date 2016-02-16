@@ -64,7 +64,10 @@
 - (void)testFlashCardPreparation {
     
     XCTestExpectation *expectation = [self expectationWithDescription:@"Image Fetching"];
-
+    
+    self.flashCard = [[IFCFlashCard alloc] init];
+    self.flashCard.answerImages = [NSMutableArray new];
+    self.flashCard.questionImages = [NSMutableArray new];
     
     self.flashCard.answerImageURLs = @[@"https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/changeMaker.png"];
     

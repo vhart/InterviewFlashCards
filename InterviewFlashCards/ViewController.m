@@ -21,6 +21,9 @@
 @property (nonatomic) IFCQueryManager *queryManager;
 @property (nonatomic) NSMutableArray <IFCFlashCard *> *flashCards;
 @property (nonatomic) NSInteger currentIndex;
+@property (nonatomic) NSInteger previousIndex;
+@property (nonatomic) NSInteger nextIndex;
+@property (nonatomic) IFCFlashCard *currentFlushCard;
 
 @end
 
@@ -38,8 +41,8 @@
     [self fetchData];
 
     self.currentIndex = 0;
-
-    [self prepareFlashCard:0];
+    self.previousIndex = 0;
+    self.nextIndex = 0;
 }
 
 - (void)setupNavBar {
@@ -50,15 +53,31 @@
 
 }
 
-- (void)fetchData{
+- (void)fetchData {
     Request type = [self requestType];
 
     [self.queryManager getDataForRequest:type completion:^(NSArray<NSDictionary *> *json) {
 
         self.flashCards = [NSMutableArray arrayWithArray:[IFCFlashCard flashCardsFromDictionaries:json]];
-
+        [self prepareFlashCard:0];
+        [self setupIndex];
+        [self setupLabel:self.currentIndex];
     }];
 
+}
+
+-(void) setupIndex {
+    
+    if (self.previousIndex <=24 && self.currentIndex <= 24 && self.nextIndex <= 23) {
+        self.previousIndex = self.currentIndex;
+        self.nextIndex = self.currentIndex + 1;
+        self.currentIndex = self.nextIndex;
+    }
+}
+
+-(void)setupLabel:(NSInteger)index {
+    self.questionLabel.text = self.flashCards[index].question;
+    [self prepareFlashCard:self.nextIndex];
 }
 
 - (Request)requestType{
@@ -81,12 +100,12 @@
 }
 
 - (void)prepareFlashCard:(NSInteger)index {
-    if (self.flashCards.count != 0) {
-        [self.flashCards[0] prepareFlashCardWithCompletion:^{
-            
-        }];
-    }
-   
+    
+    IFCFlashCard *flashCardToPrepare = self.flashCards[index];
+    
+    [flashCardToPrepare prepareFlashCardWithCompletion:^{
+        self.currentFlushCard = flashCardToPrepare;
+    }];
 }
 
 - (void)dismiss{
@@ -95,14 +114,13 @@
 
 - (IBAction)prevButtonTapped:(UIButton *)sender {
     
+    self.questionLabel.text = self.flashCards[self.previousIndex].question;
+    [self setupIndex];
 }
 
 - (IBAction)nextButtonTapped:(UIButton *)sender {
-    
-    if (self.flashCards.count != 0 && self.flashCards[0].question != nil) {
-        self.questionLabel.text = self.flashCards[0].question;
-        NSLog(@"This is it: %@",self.flashCards[0].questionImages[0]);
-    }
+    self.questionLabel.text = self.flashCards[self.nextIndex].question;
+     [self setupIndex];
 }
 
 
