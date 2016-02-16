@@ -39,7 +39,6 @@
 
     self.currentIndex = 0;
 
-    [self prepareFlashCard:0];
 }
 
 - (void)setupNavBar {
@@ -56,7 +55,7 @@
     [self.queryManager getDataForRequest:type completion:^(NSArray<NSDictionary *> *json) {
 
         self.flashCards = [NSMutableArray arrayWithArray:[IFCFlashCard flashCardsFromDictionaries:json]];
-
+        [self prepareFlashCard:0];
     }];
 
 }
