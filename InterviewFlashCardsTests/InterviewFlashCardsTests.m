@@ -10,7 +10,6 @@
 #import <Foundation/Foundation.h>
 #import "IFCQueryManager.h"
 #import "IFCFlashCard.h"
-#import "UIImage+AsyncFetch.h"
 
 @interface InterviewFlashCardsTests : XCTestCase
 
@@ -69,7 +68,12 @@
     
     self.flashCard.answerImageURLs = @[@"https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/changeMaker.png"];
     
+    self.flashCard.questionImageURL = @"http://www.cs.wcupa.edu/rkline/assets/img/DS/bst2.png?1264796754";
+    
     [self.flashCard prepareFlashCardWithCompletion:^{
+        
+        
+        XCTAssert(self.flashCard.questionImages != nil);
         
         XCTAssert(self.flashCard.answerImages.count == self.flashCard.answerImageURLs.count && self.flashCard.answerImages != nil);
         [expectation fulfill];

@@ -1,4 +1,4 @@
-//
+    //
 //  ViewController.m
 //  InterviewFlashCards
 //
@@ -81,7 +81,12 @@
 }
 
 - (void)prepareFlashCard:(NSInteger)index {
-
+    if (self.flashCards.count != 0) {
+        [self.flashCards[0] prepareFlashCardWithCompletion:^{
+            
+        }];
+    }
+   
 }
 
 - (void)dismiss{
@@ -89,9 +94,15 @@
 }
 
 - (IBAction)prevButtonTapped:(UIButton *)sender {
+    
 }
 
 - (IBAction)nextButtonTapped:(UIButton *)sender {
+    
+    if (self.flashCards.count != 0 && self.flashCards[0].question != nil) {
+        self.questionLabel.text = self.flashCards[0].question;
+        NSLog(@"This is it: %@",self.flashCards[0].questionImages[0]);
+    }
 }
 
 
