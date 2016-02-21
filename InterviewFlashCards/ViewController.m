@@ -51,10 +51,11 @@
 - (void)fetchData{
     Request type = [self requestType];
 
+    __weak typeof(self) weakSelf = self;
     [self.queryManager getDataForRequest:type completion:^(NSArray<NSDictionary *> *json) {
 
-        self.flashCards = [NSMutableArray arrayWithArray:[IFCFlashCard flashCardsFromDictionaries:json]];
-        [self prepareFlashCard:0];
+        weakSelf.flashCards = [NSMutableArray arrayWithArray:[IFCFlashCard flashCardsFromDictionaries:json]];
+        [weakSelf prepareFlashCard:0];
     }];
 
 }
@@ -81,11 +82,13 @@
 - (void)prepareFlashCard:(NSInteger)index {
 
     self.nextButton.hidden = YES;
+    self.answerButton.hidden = YES;
 
     IFCFlashCard *nextCard = self.flashCards[index];
 
+    __weak typeof(self) weakSelf = self;
     [nextCard prepareFlashCardWithCompletion:^{
-        [self prepareUIwithCard:nextCard];
+        [weakSelf prepareUIwithCard:nextCard];
     }];
 }
 
@@ -101,7 +104,7 @@
     }
 
     self.nextButton.hidden = NO;
-
+    self.answerButton.hidden = NO;
 }
 
 - (void)dismiss{
@@ -109,6 +112,8 @@
 }
 
 - (IBAction)prevButtonTapped:(UIButton *)sender {
+    self.currentIndex = self.currentIndex - 1 < 0 ? (self.currentIndex - 1 + self.flashCards.count) : 0;
+    [self prepareFlashCard:self.currentIndex];
 }
 
 - (IBAction)nextButtonTapped:(UIButton *)sender {
