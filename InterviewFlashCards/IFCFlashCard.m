@@ -29,6 +29,7 @@
         if (self.answerImageURLs) {
             self.answerImages = [NSMutableArray new];
         }
+
     }
 
     return self;

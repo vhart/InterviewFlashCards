@@ -103,6 +103,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18D4D6AC1C7B8896004E8555 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */,
+				C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */,
+				C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */,
+				C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		18D4D6AD1C7B88A4004E8555 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD0A891C6CDF5400361D17 /* ViewController.h */,
+				C7DD0A8A1C6CDF5400361D17 /* ViewController.m */,
+				C7DD0AC21C6E6AEB00361D17 /* IFCMenuViewController.h */,
+				C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */,
+				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
+				C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		18D4D6AE1C7B88B0004E8555 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */,
+				182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		18D4D6AF1C7B88C2004E8555 /* QueryManager */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD0ACB1C71A9C500361D17 /* IFCQueryManager.h */,
+				C7DD0ACC1C71A9C500361D17 /* IFCQueryManager.m */,
+			);
+			name = QueryManager;
+			sourceTree = "<group>";
+		};
 		6B6EB147D873A1963716B639 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,22 +187,12 @@
 		C7DD0A821C6CDF5400361D17 /* InterviewFlashCards */ = {
 			isa = PBXGroup;
 			children = (
-				C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */,
-				C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */,
-				C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */,
-				C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */,
+				18D4D6AC1C7B8896004E8555 /* Categories */,
 				C7DD0A861C6CDF5400361D17 /* AppDelegate.h */,
 				C7DD0A871C6CDF5400361D17 /* AppDelegate.m */,
-				C7DD0A891C6CDF5400361D17 /* ViewController.h */,
-				C7DD0A8A1C6CDF5400361D17 /* ViewController.m */,
-				182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */,
-				182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */,
-				C7DD0ACB1C71A9C500361D17 /* IFCQueryManager.h */,
-				C7DD0ACC1C71A9C500361D17 /* IFCQueryManager.m */,
-				C7DD0AC21C6E6AEB00361D17 /* IFCMenuViewController.h */,
-				C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */,
-				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
-				C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */,
+				18D4D6AD1C7B88A4004E8555 /* ViewControllers */,
+				18D4D6AE1C7B88B0004E8555 /* Model */,
+				18D4D6AF1C7B88C2004E8555 /* QueryManager */,
 				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
 				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
 				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
@@ -267,6 +299,7 @@
 				TargetAttributes = {
 					C7DD0A7F1C6CDF5300361D17 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = BULEKXRKSR;
 					};
 					C7DD0A9B1C6CDF5600361D17 = {
 						CreatedOnToolsVersion = 7.1;
@@ -529,9 +562,10 @@
 			baseConfigurationReference = EF79B47F8006EEAABD8DBBAB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = InterviewFlashCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.vhart.InterviewFlashCards;
+				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.mesfin.InterviewFlashCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -541,9 +575,10 @@
 			baseConfigurationReference = 8AF92758EEAF76C98257BF28 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = InterviewFlashCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.vhart.InterviewFlashCards;
+				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.mesfin.InterviewFlashCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
