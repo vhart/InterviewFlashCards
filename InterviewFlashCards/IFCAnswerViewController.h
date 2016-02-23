@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IFCFlashCard.h"
+
 
 @interface IFCAnswerViewController : UITableViewController
 
-@property (nonatomic) BOOL hasImage;
-@property (nonatomic) UIImage *answerImage;
-@property (nonatomic) NSString *answerString;
+@property (nonatomic) IFCFlashCard *flashCard;
 
 @end
