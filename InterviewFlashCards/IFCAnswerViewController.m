@@ -201,8 +201,7 @@
 
 #pragma mark - Navigation
 - (IBAction)backButtonTapped:(UIButton *)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self displayScoreTrackerAlert];
 }
 
 - (IBAction)nextButtonTapped:(UIButton *)sender {
