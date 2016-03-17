@@ -9,7 +9,7 @@
 #import "IFCAnswerViewController.h"
 #import "UIImage+AsyncFetch.h"
 
-@interface IFCAnswerViewController ()<UIScrollViewDelegate>
+@interface IFCAnswerViewController ()   
 
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *answerImageView;
@@ -99,7 +99,7 @@
 }
 
 - (void)showPaginationLabel {
-    self.paginationLabel.text = [NSString stringWithFormat:@"%d/%d",self.index+1,self.flashCard.answerImages.count];
+    self.paginationLabel.text = [NSString stringWithFormat:@"%ld/%ld",self.index+1,self.flashCard.answerImages.count];
 }
 
 #pragma mark - Swipe Handlers
