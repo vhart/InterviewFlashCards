@@ -9,7 +9,7 @@
 #import "IFCAnswerViewController.h"
 #import "UIImage+AsyncFetch.h"
 
-@interface IFCAnswerViewController ()<UIScrollViewDelegate>
+@interface IFCAnswerViewController ()   
 
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *answerImageView;
@@ -99,7 +99,7 @@
 }
 
 - (void)showPaginationLabel {
-    self.paginationLabel.text = [NSString stringWithFormat:@"%d/%d",self.index+1,self.flashCard.answerImages.count];
+    self.paginationLabel.text = [NSString stringWithFormat:@"%ld/%ld",self.index+1,self.flashCard.answerImages.count];
 }
 
 #pragma mark - Swipe Handlers
@@ -162,6 +162,7 @@
             self.answer.hidden = NO;
             self.answerImageView.bounds = self.tempAnswerImageView.bounds;
         }
+        
         else if(!self.flashCard.answerImages) {
             
             self.answerImageView.hidden = NO;
@@ -169,6 +170,27 @@
             self.answerLabel.frame = CGRectMake(10, 60, self.view.bounds.size.width-20, self.view.bounds.size.height-20);
         }
     }
+}
+
+#pragma mark - Score Tracker Alert
+
+- (void)displayScoreTrackerAlert {
+    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Score Check Time" message:@"Did you get it?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+
+    }];
+    
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+    }];
+    
+    [controller addAction:yesAction];
+    [controller addAction:noAction];
+    
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark - Frame Maker
@@ -179,13 +201,11 @@
 
 #pragma mark - Navigation
 - (IBAction)backButtonTapped:(UIButton *)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self displayScoreTrackerAlert];
 }
 
 - (IBAction)nextButtonTapped:(UIButton *)sender {
-    
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self displayScoreTrackerAlert];
 }
 
 @end
