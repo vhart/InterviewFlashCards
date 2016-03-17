@@ -162,6 +162,7 @@
             self.answer.hidden = NO;
             self.answerImageView.bounds = self.tempAnswerImageView.bounds;
         }
+        
         else if(!self.flashCard.answerImages) {
             
             self.answerImageView.hidden = NO;
@@ -169,6 +170,27 @@
             self.answerLabel.frame = CGRectMake(10, 60, self.view.bounds.size.width-20, self.view.bounds.size.height-20);
         }
     }
+}
+
+#pragma mark - Score Tracker Alert
+
+- (void)displayScoreTrackerAlert {
+    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Score Check Time" message:@"Did you get it?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+
+    }];
+    
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+    }];
+    
+    [controller addAction:yesAction];
+    [controller addAction:noAction];
+    
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark - Frame Maker
@@ -184,8 +206,7 @@
 }
 
 - (IBAction)nextButtonTapped:(UIButton *)sender {
-    
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self displayScoreTrackerAlert];
 }
 
 @end
