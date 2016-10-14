@@ -2,7 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:InterviewFlashCards-Bridging-Header.h">
+   </FileRef>
+   <FileRef
       location = "group:InterviewFlashCards.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:InterviewFlashCards-Bridging-Header.h">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
