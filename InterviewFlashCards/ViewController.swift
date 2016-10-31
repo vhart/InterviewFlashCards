@@ -1,4 +1,4 @@
-//
+
 //  ViewController.swift
 //  InterviewFlashCards
 //
@@ -19,7 +19,25 @@ class ViewController: UIViewController {
     
     let queryManager = IFCQueryManager()
     let flashCards = [IFCFlashCard]()
+    var sectionName = ""
     let currentIndex = 0
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavBar()
+        fetchData()
+        
+        let blue = UIColor.blue
+    }
+    
+    func setupNavBar {
+//        navigationItem.leftBarButtonItem.
+        navigationItem.title = sectionName
+    }
+    
+    func fetchData {
+        Request.type = requestType
     
 }
 
