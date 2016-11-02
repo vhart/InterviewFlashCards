@@ -11,7 +11,8 @@
 typedef enum RequestType{
     RequestTypeiOS = 1,
     RequestTypeDataStructures,
-    RequestTypeAlgorithms
+    RequestTypeAlgorithms,
+    RequestTypeError
 }Request;
 
 @interface IFCQueryManager : NSObject

@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */; };
 		50C514133FEC5C5C99518168 /* Pods_InterviewFlashCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */; };
-		53E19B411DB176050087E231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E19B401DB176050087E231 /* ViewController.swift */; };
+		5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312953D1DCA947F00CD3B07 /* MenuViewController.swift */; };
+		53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E19B401DB176050087E231 /* QuestionsViewController.swift */; };
 		C7DD0A851C6CDF5400361D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A841C6CDF5400361D17 /* main.m */; };
 		C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A871C6CDF5400361D17 /* AppDelegate.m */; };
-		C7DD0A8B1C6CDF5400361D17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A8A1C6CDF5400361D17 /* ViewController.m */; };
 		C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */; };
 		C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */; };
 		C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A921C6CDF5500361D17 /* Assets.xcassets */; };
@@ -20,7 +20,6 @@
 		C7DD0AA11C6CDF5700361D17 /* InterviewFlashCardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AA01C6CDF5700361D17 /* InterviewFlashCardsTests.m */; };
 		C7DD0AAC1C6CDF5700361D17 /* InterviewFlashCardsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */; };
 		C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */; };
-		C7DD0AC41C6E6AEB00361D17 /* IFCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */; };
 		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
 		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
 		C7DD0ACD1C71A9C500361D17 /* IFCQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0ACC1C71A9C500361D17 /* IFCQueryManager.m */; };
@@ -46,7 +45,8 @@
 /* Begin PBXFileReference section */
 		182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCFlashCard.h; sourceTree = "<group>"; };
 		182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCFlashCard.m; sourceTree = "<group>"; };
-		53E19B401DB176050087E231 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5312953D1DCA947F00CD3B07 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		53E19B401DB176050087E231 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewFlashCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6522CCE25720C87DD13ADEA6 /* Pods-InterviewFlashCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards/Pods-InterviewFlashCards.debug.xcconfig"; sourceTree = "<group>"; };
 		6CB1DBA2345BC7C0809629A8 /* Pods-InterviewFlashCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards/Pods-InterviewFlashCards.release.xcconfig"; sourceTree = "<group>"; };
@@ -54,8 +54,6 @@
 		C7DD0A841C6CDF5400361D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7DD0A861C6CDF5400361D17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7DD0A871C6CDF5400361D17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C7DD0A891C6CDF5400361D17 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C7DD0A8A1C6CDF5400361D17 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C7DD0A8D1C6CDF5400361D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7DD0A901C6CDF5400361D17 /* InterviewFlashCards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InterviewFlashCards.xcdatamodel; sourceTree = "<group>"; };
 		C7DD0A921C6CDF5500361D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,8 +67,6 @@
 		C7DD0AAD1C6CDF5700361D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCAnswerViewController.h; sourceTree = "<group>"; };
 		C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCAnswerViewController.m; sourceTree = "<group>"; };
-		C7DD0AC21C6E6AEB00361D17 /* IFCMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCMenuViewController.h; sourceTree = "<group>"; };
-		C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCMenuViewController.m; sourceTree = "<group>"; };
 		C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+AsyncFetch.h"; path = "../UIImage+AsyncFetch.h"; sourceTree = "<group>"; };
 		C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AsyncFetch.m"; path = "../UIImage+AsyncFetch.m"; sourceTree = "<group>"; };
 		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
@@ -119,11 +115,8 @@
 		18D4D6AD1C7B88A4004E8555 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C7DD0A891C6CDF5400361D17 /* ViewController.h */,
-				C7DD0A8A1C6CDF5400361D17 /* ViewController.m */,
-				53E19B401DB176050087E231 /* ViewController.swift */,
-				C7DD0AC21C6E6AEB00361D17 /* IFCMenuViewController.h */,
-				C7DD0AC31C6E6AEB00361D17 /* IFCMenuViewController.m */,
+				5312953D1DCA947F00CD3B07 /* MenuViewController.swift */,
+				53E19B401DB176050087E231 /* QuestionsViewController.swift */,
 				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
 				C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */,
 			);
@@ -297,6 +290,7 @@
 		C7DD0A781C6CDF5200361D17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Varindra Hart";
@@ -419,11 +413,10 @@
 				C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */,
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
 				C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */,
-				53E19B411DB176050087E231 /* ViewController.swift in Sources */,
-				C7DD0AC41C6E6AEB00361D17 /* IFCMenuViewController.m in Sources */,
+				53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */,
 				C7DD0ACD1C71A9C500361D17 /* IFCQueryManager.m in Sources */,
+				5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */,
 				C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */,
-				C7DD0A8B1C6CDF5400361D17 /* ViewController.m in Sources */,
 				C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */,
 				C7DD0A851C6CDF5400361D17 /* main.m in Sources */,
 			);

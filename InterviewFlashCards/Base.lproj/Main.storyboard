@@ -9,7 +9,7 @@
         <!--Menu View Controller-->
         <scene sceneID="8dc-Xm-qjE">
             <objects>
-                <viewController id="ww0-J5-cxg" customClass="IFCMenuViewController" sceneMemberID="viewController">
+                <viewController id="ww0-J5-cxg" customClass="MenuViewController" customModule="InterviewFlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w16-Ye-REw"/>
                         <viewControllerLayoutGuide type="bottom" id="LeJ-pU-LNZ"/>
@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="386" y="292"/>
         </scene>
-        <!--View Controller-->
+        <!--Questions View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="QuestionsViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionsViewController" id="BYZ-38-t0r" customClass="QuestionsViewController" customModule="InterviewFlashCards" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

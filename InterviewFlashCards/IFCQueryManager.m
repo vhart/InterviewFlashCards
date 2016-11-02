@@ -28,32 +28,6 @@ NSString *BASE_URL = @"https://fiery-torch-4131.firebaseio.com/";
         }
     }];
 
-//    __block NSInteger childrenCount;
-//
-//    dispatch_queue_t serial = dispatch_queue_create("fetching", DISPATCH_QUEUE_SERIAL);
-//
-//    dispatch_async(serial, ^{
-//        [self childrenCountForSection:type withCompletion:^(NSInteger count) {
-//
-//            childrenCount = count;
-//
-//            Firebase *ref = [[Firebase alloc]initWithUrl:[self firebaseRequestStringForType:type]];
-//
-//            dispatch_async(serial, ^{
-//                [[ref queryOrderedByKey] observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-//
-//                    [fireBaseDataArray addObject:(NSDictionary *)[snapshot valueInExportFormat]];
-//
-//                    if (fireBaseDataArray.count == childrenCount) {
-//                        completion(fireBaseDataArray);
-//                    }
-//                }];
-//            });
-//
-//        }];
-//    });
-
-
 }
 
 - (void)childrenCountForSection:(Request)type withCompletion:(void(^)(NSInteger count))completion{
