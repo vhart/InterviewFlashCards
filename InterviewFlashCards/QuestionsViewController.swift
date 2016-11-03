@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import Firebase
 
-enum SectionQuestionType: String {
+enum SectionQuestionType: Int {
     case iOSTechnical
     case DataStructures
     case Algorithms
@@ -18,17 +17,21 @@ enum SectionQuestionType: String {
 
 class QuestionsViewController: UIViewController {
     
+    // MARK: IBOutlets
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerButton: UIButton!
     
-    let queryManager = QueryManager()
-    var flashCards = [IFCFlashCard]()
+    // MARK: Private Properties
+    private let queryManager = QueryManager()
+    private var flashCards = [IFCFlashCard]()
+    private var currentIndex = 0
+    private var section: SectionQuestionType = .DataStructures
+    
+    // MARK: Public Properties
     var sectionName = ""
-    var currentIndex = 0
-    var section: SectionQuestionType = .iOSTechnical
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
@@ -38,7 +41,7 @@ class QuestionsViewController: UIViewController {
     }
     
     // MARK: Actions
-    func fetchData() {
+    private func fetchData() {
         let type = requestType
         queryManager.getData(for: type()) { [weak self] json in
             self?.flashCards = IFCFlashCard.flashCardsFromDictionaries(json)
@@ -51,18 +54,18 @@ class QuestionsViewController: UIViewController {
         navigationItem.title = sectionName
     }
     
-    func requestType() -> RequestType {
+    private func requestType() -> RequestType {
         switch (section) {
         case .iOSTechnical:
-            return .RequestTypeiOS
+            return .iOS
         case .DataStructures:
-            return .RequestTypeDataStructures
+            return .DataStructures
         case .Algorithms:
-            return .RequestTypeAlgorithms
+            return .Algorithms
         }
     }
     
-    func prepareFlashCard(index: Int) {
+    private func prepareFlashCard(index: Int) {
         if let next = nextButton, answer = answerButton {
             next.hidden = true
             answer.hidden = true
@@ -73,7 +76,7 @@ class QuestionsViewController: UIViewController {
         })
     }
     
-    func prepareUIwithCard(flashCard: IFCFlashCard) {
+    private func prepareUIwithCard(flashCard: IFCFlashCard) {
         if let question = flashCard.question {
             questionLabel.text = question
         }
@@ -86,12 +89,12 @@ class QuestionsViewController: UIViewController {
         answerButton.hidden = false
     }
     
-    @IBAction func prevButtonTapped(sender: UIButton) {
+    @IBAction private func prevButtonTapped(sender: UIButton) {
         currentIndex = currentIndex - 1 < 0 ? (currentIndex - 1 + flashCards.count) : 0
         prepareFlashCard(currentIndex)
     }
     
-    @IBAction func nextButtonTapped(sender: UIButton) {
+    @IBAction private func nextButtonTapped(sender: UIButton) {
         currentIndex = (currentIndex + 1) % (flashCards.count)
         prepareFlashCard(currentIndex)
     }
@@ -104,8 +107,9 @@ class QuestionsViewController: UIViewController {
     }
     
     func setSectionTypeForViewController(vc: QuestionsViewController, withValue value: Int) {
-        guard let value = SectionQuestionType(rawValue: "\(value)") else { fatalError() }
-        vc.section = value
+        if let sectionValue = SectionQuestionType(rawValue: value) {
+            vc.section = sectionValue
+        }
     }
     
     func dismiss() {

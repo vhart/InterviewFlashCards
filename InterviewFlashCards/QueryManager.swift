@@ -10,15 +10,17 @@ import Foundation
 import Firebase
 
 enum RequestType: Int {
-    case RequestTypeiOS = 1
-    case RequestTypeDataStructures
-    case RequestTypeAlgorithms
+    case iOS
+    case DataStructures
+    case Algorithms
 }
 
 class QueryManager: NSObject {
     
+    // MARK: Private Properties
     private let baseURL = "https://fiery-torch-4131.firebaseio.com/"
     
+    // MARK: Actions
     func getData(for requestType: RequestType, completion: ([[NSObject: AnyObject]]) -> Void) {
         let reference = Firebase(url: baseURL)
         let keyForSection = destinationPathForSection(requestType)
@@ -30,7 +32,7 @@ class QueryManager: NSObject {
         })
     }
 
-    func childrenCountForSection(type: RequestType, withCompletion completion: (count: Int) -> Void) {
+    private func childrenCountForSection(type: RequestType, withCompletion completion: (count: Int) -> Void) {
         let ref = Firebase(url: baseURL)
         ref.queryOrderedByChild(destinationPathForSection(type))
             .queryLimitedToFirst(1)
@@ -40,22 +42,22 @@ class QueryManager: NSObject {
         })
     }
     
-    func firebaseRequestStringForType(type: RequestType) -> String {
+    private func firebaseRequestStringForType(type: RequestType) -> String {
         return baseURL.stringByAppendingString(destinationPathForSection(type))
     }
     
-    func destinationPathForSection(type: RequestType) -> String {
+    private func destinationPathForSection(type: RequestType) -> String {
         switch type {
-        case .RequestTypeiOS:
+        case .iOS:
             return "iOS technical questions"
-        case .RequestTypeDataStructures:
+        case .DataStructures:
             return "data structure questions"
-        case .RequestTypeAlgorithms:
+        case .Algorithms:
             return "algorithm questions"
         }
     }
     
-    func populateArrayWithSnapshot(snapshot: FDataSnapshot) -> [[NSObject: AnyObject]] {
+    private func populateArrayWithSnapshot(snapshot: FDataSnapshot) -> [[NSObject: AnyObject]] {
         var firebaseArray = [[NSObject: AnyObject]]()
         for dict in snapshot.valueInExportFormat().allValues {
             firebaseArray.append(dict as! [NSObject : AnyObject])
