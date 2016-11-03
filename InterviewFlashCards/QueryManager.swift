@@ -9,10 +9,10 @@
 import Foundation
 import Firebase
 
-enum RequestType {
-    case iOS
-    case DataStructures
-    case Algorithms
+enum RequestType: Int {
+    case RequestTypeiOS = 1
+    case RequestTypeDataStructures
+    case RequestTypeAlgorithms
     case Error
 }
 
@@ -22,7 +22,9 @@ class QueryManager: NSObject {
     
     func getDataForRequest(type: RequestType, completion: ([[NSObject: AnyObject]]) -> Void) {
         let ref = Firebase(url: BASE_URL)
+        
         let keyForSection = self.destinationPathForSection(type)
+        print(keyForSection)
         
         ref.queryOrderedByKey().observeEventType(FEventType.ChildAdded, withBlock: { snapshot in
             if (snapshot.key == keyForSection) {
@@ -47,11 +49,11 @@ class QueryManager: NSObject {
     
     func destinationPathForSection(type: RequestType) -> String {
         switch type {
-        case .iOS:
+        case .RequestTypeiOS:
             return "iOS technical questions"
-        case .DataStructures:
+        case .RequestTypeDataStructures:
             return "data structure questions"
-        case .Algorithms:
+        case .RequestTypeAlgorithms:
             return "algorithm questions"
         case .Error:
             return "Error"

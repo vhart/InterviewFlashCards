@@ -52,14 +52,14 @@ class QuestionsViewController: UIViewController {
     }
     
     func requestType() -> RequestType {
-        guard let value = SectionQuestionType(rawValue: 0) else { return .Error }
-        switch value {
+        guard let _ = SectionQuestionType(rawValue: 0) else { return .Error }
+        switch (self.section) {
         case .iOSTechnical:
-            return .iOS
+            return .RequestTypeiOS
         case .DataStructures:
-            return .DataStructures
+            return .RequestTypeDataStructures
         case .Algorithms:
-            return .Algorithms
+            return .RequestTypeAlgorithms
         }
     }
     
