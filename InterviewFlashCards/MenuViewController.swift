@@ -10,11 +10,13 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Interview Flash Cards"
     }
     
+    // MARK: Actions
     @IBAction func sectionButtonTapped(sender: UIButton) {
         let questionVC = storyboard?.instantiateViewControllerWithIdentifier("QuestionsViewController") as! QuestionsViewController
         questionVC.sectionName = (sender.titleLabel?.text)!

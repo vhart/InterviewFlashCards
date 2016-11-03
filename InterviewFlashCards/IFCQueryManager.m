@@ -40,8 +40,8 @@ NSString *BASE_URL = @"https://fiery-torch-4131.firebaseio.com/";
         NSInteger children = snapshot.childrenCount ;
         completion(children);
     }];
-
 }
+
 - (NSString *)firebaseRequestStringForType:(Request)type {
 
     return [BASE_URL stringByAppendingString:[self destinationPathForSection:type]];
@@ -63,7 +63,6 @@ NSString *BASE_URL = @"https://fiery-torch-4131.firebaseio.com/";
             return @"";
             break;
     }
-
 }
 
 - (NSMutableArray <NSDictionary *> *)populateArrayWithSnapshot:(FDataSnapshot *)snapshot{
