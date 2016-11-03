@@ -9,10 +9,11 @@
 import UIKit
 import Firebase
 
-enum SectionQuestionType: Int {
-    case iOSTechnical = 0
+enum SectionQuestionType: String {
+    case iOSTechnical
     case DataStructures
     case Algorithms
+    
 }
 
 class QuestionsViewController: UIViewController {
@@ -39,21 +40,19 @@ class QuestionsViewController: UIViewController {
     // MARK: Actions
     func fetchData() {
         let type = requestType
-        weak var weakSelf = self
-        queryManager.getDataForRequest(type()) { (json) in
-            weakSelf?.flashCards = IFCFlashCard.flashCardsFromDictionaries(json)
-            weakSelf?.prepareFlashCard(0)
+        queryManager.getData(for: type()) { [weak self] json in
+            self?.flashCards = IFCFlashCard.flashCardsFromDictionaries(json)
+            self?.prepareFlashCard(0)
         }
     }
     
-    func setupNavBar() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .Plain, target: self, action: #selector(QuestionsViewController.dismiss))
+    private func setupNavBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .Plain, target: self, action: #selector(QuestionsViewController.dismiss))
         navigationItem.title = sectionName
     }
     
     func requestType() -> RequestType {
-        guard let _ = SectionQuestionType(rawValue: 0) else { return .Error }
-        switch (self.section) {
+        switch (section) {
         case .iOSTechnical:
             return .RequestTypeiOS
         case .DataStructures:
@@ -68,11 +67,9 @@ class QuestionsViewController: UIViewController {
             next.hidden = true
             answer.hidden = true
         }
-        
         let nextCard = flashCards[index]
-        weak var weakSelf = self
-        nextCard.prepareFlashCardWithCompletion({() -> Void in
-            weakSelf!.prepareUIwithCard(nextCard)
+        nextCard.prepareFlashCardWithCompletion({ [weak self] Void in
+            self?.prepareUIwithCard(nextCard)
         })
     }
     
@@ -80,34 +77,38 @@ class QuestionsViewController: UIViewController {
         if let question = flashCard.question {
             questionLabel.text = question
         }
-        self.questionImageView.image = nil
-        
+        questionImageView.image = nil
         if flashCard.questionImages != nil && flashCard.questionImages.count > 0 {
             let questionImage = (flashCard.questionImages[0] as! UIImage)
-            self.questionImageView.image! = questionImage
+            questionImageView.image! = questionImage
         }
-        self.nextButton.hidden = false
-        self.answerButton.hidden = false
+        nextButton.hidden = false
+        answerButton.hidden = false
     }
     
     @IBAction func prevButtonTapped(sender: UIButton) {
-        self.currentIndex = self.currentIndex - 1 < 0 ? (self.currentIndex - 1 + self.flashCards.count) : 0
-        self.prepareFlashCard(self.currentIndex)
+        currentIndex = currentIndex - 1 < 0 ? (currentIndex - 1 + flashCards.count) : 0
+        prepareFlashCard(currentIndex)
     }
     
     @IBAction func nextButtonTapped(sender: UIButton) {
-        self.currentIndex = (self.currentIndex + 1) % (self.flashCards.count)
-        self.prepareFlashCard(self.currentIndex)
+        currentIndex = (currentIndex + 1) % (flashCards.count)
+        prepareFlashCard(currentIndex)
     }
     
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.destinationViewController is IFCAnswerViewController) {
-            (segue.destinationViewController as! IFCAnswerViewController).flashCard = self.flashCards[self.currentIndex]
+            (segue.destinationViewController as! IFCAnswerViewController).flashCard = flashCards[currentIndex]
         }
     }
     
+    func setSectionTypeForViewController(vc: QuestionsViewController, withValue value: Int) {
+        guard let value = SectionQuestionType(rawValue: "\(value)") else { fatalError() }
+        vc.section = value
+    }
+    
     func dismiss() {
-        self.navigationController?.popViewControllerAnimated(true)!
+        navigationController?.popViewControllerAnimated(true)!
     }
 }
