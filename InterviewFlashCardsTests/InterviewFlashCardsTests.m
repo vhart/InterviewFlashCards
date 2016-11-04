@@ -1,19 +1,10 @@
-//
-//  InterviewFlashCardsTests.m
-//  InterviewFlashCardsTests
-//
-//  Created by Varindra Hart on 2/11/16.
-//  Copyright © 2016 Varindra Hart. All rights reserved.
-//
 
 #import <XCTest/XCTest.h>
 #import <Foundation/Foundation.h>
-#import "IFCQueryManager.h"
 #import "IFCFlashCard.h"
 
 @interface InterviewFlashCardsTests : XCTestCase
 
-@property (nonatomic) IFCQueryManager *qman;
 @property (nonatomic) IFCFlashCard *flashCard;
 
 @end
@@ -22,7 +13,6 @@
 
 - (void)setUp {
     [super setUp];
-    self.qman = [IFCQueryManager new];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
