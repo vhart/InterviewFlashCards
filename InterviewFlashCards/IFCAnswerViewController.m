@@ -1,10 +1,3 @@
-//
-//  IFCAnswerViewController.m
-//  InterviewFlashCards
-//
-//  Created by Varindra Hart on 2/12/16.
-//  Copyright © 2016 Varindra Hart. All rights reserved.
-//
 
 #import "IFCAnswerViewController.h"
 #import "UIImage+AsyncFetch.h"

@@ -1,10 +1,3 @@
-//
-//  InterviewFlashCardsUITests.m
-//  InterviewFlashCardsUITests
-//
-//  Created by Varindra Hart on 2/11/16.
-//  Copyright © 2016 Varindra Hart. All rights reserved.
-//
 
 #import <XCTest/XCTest.h>
 

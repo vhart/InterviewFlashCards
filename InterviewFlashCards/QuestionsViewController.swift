@@ -1,11 +1,4 @@
 
-//  QuestionsViewController.swift
-//  InterviewFlashCards
-//
-//  Created by Charles Kang on 10/14/16.
-//  Copyright © 2016 Varindra Hart. All rights reserved.
-//
-
 import UIKit
 
 enum SectionQuestionType: Int {
