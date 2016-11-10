@@ -1,10 +1,21 @@
 PODS:
-  - Firebase (2.5.0)
+  - Firebase (2.5.1)
+  - Nimble (4.1.0)
+  - Nocilla (0.11.0)
+  - Quick (0.9.3)
 
 DEPENDENCIES:
-  - Firebase (>= 2.5.0)
+  - Firebase (~> 2.5.0)
+  - Nimble (~> 4.1.0)
+  - Nocilla
+  - Quick (~> 0.9.3)
 
 SPEC CHECKSUMS:
-  Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
+  Nocilla: 7af7a386071150cc8aa5da4da97d060f049dd61c
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 636c598016e68ba6b0fab515aa660b945ede3f17
+
+COCOAPODS: 1.1.1

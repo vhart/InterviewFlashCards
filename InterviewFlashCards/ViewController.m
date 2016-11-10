@@ -25,6 +25,8 @@
 
 @end
 
+
+//TODO: Swift Conversion
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -49,7 +51,7 @@
     
 }
 
-- (void)fetchData{
+- (void)fetchData {
     Request type = [self requestType];
     
     __weak typeof(self) weakSelf = self;
@@ -76,8 +78,6 @@
         default:
             break;
     }
-    
-    
 }
 
 - (void)prepareFlashCard:(NSInteger)index {
