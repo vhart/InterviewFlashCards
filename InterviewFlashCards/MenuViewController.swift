@@ -18,7 +18,7 @@ class MenuViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func sectionButtonTapped(sender: UIButton) {
-        let questionVC = storyboard?.instantiateViewControllerWithIdentifier("QuestionsViewController") as! QuestionsViewController
+        let questionVC = storyboard?.instantiateViewControllerWithIdentifier("questionsVC") as! QuestionsViewController
         questionVC.sectionName = sender.titleLabel?.text ?? ""
         questionVC.setSectionTypeForViewController(questionVC, withValue: sender.tag)
         navigationController?.pushViewController(questionVC, animated: true)

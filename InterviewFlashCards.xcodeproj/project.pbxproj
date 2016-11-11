@@ -190,17 +190,11 @@
 		C7DD0A821C6CDF5400361D17 /* InterviewFlashCards */ = {
 			isa = PBXGroup;
 			children = (
-				18D4D6AC1C7B8896004E8555 /* Categories */,
-				C7DD0A861C6CDF5400361D17 /* AppDelegate.h */,
-				C7DD0A871C6CDF5400361D17 /* AppDelegate.m */,
+				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
 				18D4D6AD1C7B88A4004E8555 /* ViewControllers */,
 				18D4D6AE1C7B88B0004E8555 /* Model */,
 				18D4D6AF1C7B88C2004E8555 /* QueryManager */,
-				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
-				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
-				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
-				C7DD0A971C6CDF5500361D17 /* Info.plist */,
-				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
+				18D4D6AC1C7B8896004E8555 /* Categories */,
 				C7DD0A831C6CDF5400361D17 /* Supporting Files */,
 			);
 			path = InterviewFlashCards;
@@ -209,6 +203,12 @@
 		C7DD0A831C6CDF5400361D17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
+				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
+				C7DD0A971C6CDF5500361D17 /* Info.plist */,
+				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
+				C7DD0A861C6CDF5400361D17 /* AppDelegate.h */,
+				C7DD0A871C6CDF5400361D17 /* AppDelegate.m */,
 				C7DD0A841C6CDF5400361D17 /* main.m */,
 			);
 			name = "Supporting Files";
