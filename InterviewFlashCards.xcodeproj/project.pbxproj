@@ -12,6 +12,7 @@
 		5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312953D1DCA947F00CD3B07 /* MenuViewController.swift */; };
 		531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531295451DCAB58A00CD3B07 /* QueryManager.swift */; };
 		53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E19B401DB176050087E231 /* QuestionsViewController.swift */; };
+		53EAF97C1DD5354000037783 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53EAF97B1DD5354000037783 /* Roboto-Regular.ttf */; };
 		91BCE02989F38290F9F1D4A4 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791AE182F0C1E594509FB900 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework */; };
 		C7DD0A851C6CDF5400361D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A841C6CDF5400361D17 /* main.m */; };
 		C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A871C6CDF5400361D17 /* AppDelegate.m */; };
@@ -50,6 +51,7 @@
 		531295451DCAB58A00CD3B07 /* QueryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManager.swift; sourceTree = "<group>"; };
 		531295471DCAC04300CD3B07 /* InterviewFlashCards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCards-Bridging-Header.h"; sourceTree = "<group>"; };
 		53E19B401DB176050087E231 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		53EAF97B1DD5354000037783 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewFlashCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6522CCE25720C87DD13ADEA6 /* Pods-InterviewFlashCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards/Pods-InterviewFlashCards.debug.xcconfig"; sourceTree = "<group>"; };
 		6CB1DBA2345BC7C0809629A8 /* Pods-InterviewFlashCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards/Pods-InterviewFlashCards.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,17 +192,13 @@
 		C7DD0A821C6CDF5400361D17 /* InterviewFlashCards */ = {
 			isa = PBXGroup;
 			children = (
-				18D4D6AC1C7B8896004E8555 /* Categories */,
+				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
 				C7DD0A861C6CDF5400361D17 /* AppDelegate.h */,
 				C7DD0A871C6CDF5400361D17 /* AppDelegate.m */,
 				18D4D6AD1C7B88A4004E8555 /* ViewControllers */,
 				18D4D6AE1C7B88B0004E8555 /* Model */,
 				18D4D6AF1C7B88C2004E8555 /* QueryManager */,
-				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
-				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
-				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
-				C7DD0A971C6CDF5500361D17 /* Info.plist */,
-				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
+				18D4D6AC1C7B8896004E8555 /* Categories */,
 				C7DD0A831C6CDF5400361D17 /* Supporting Files */,
 			);
 			path = InterviewFlashCards;
@@ -209,6 +207,11 @@
 		C7DD0A831C6CDF5400361D17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				53EAF97B1DD5354000037783 /* Roboto-Regular.ttf */,
+				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
+				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
+				C7DD0A971C6CDF5500361D17 /* Info.plist */,
+				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
 				C7DD0A841C6CDF5400361D17 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -347,6 +350,7 @@
 			files = (
 				C7DD0A961C6CDF5500361D17 /* LaunchScreen.storyboard in Resources */,
 				C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */,
+				53EAF97C1DD5354000037783 /* Roboto-Regular.ttf in Resources */,
 				C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
