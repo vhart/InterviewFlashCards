@@ -82,7 +82,6 @@ class QuestionsViewController: UIViewController {
     private func prepareUIwithCard(flashCard: IFCFlashCard) {
         if let question = flashCard.question {
             questionLabel.text = question
-            print(questionLabel.text)
         }
         questionImageView.image = nil
         if flashCard.questionImages != nil && flashCard.questionImages.count > 0 {
