@@ -38,6 +38,17 @@ class QuestionsViewController: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         fetchData()
+        setButtonAttributes()
+    }
+    
+    func setButtonAttributes() {
+        prevButton.layer.borderWidth = 1
+        prevButton.layer.borderColor = UIColor.lightGrayColor().CGColor
+        nextButton.layer.borderWidth = 1
+        nextButton.layer.borderColor = UIColor.lightGrayColor().CGColor
+        
+        nextButton.transform = CGAffineTransformMakeScale(-1.0, 1.0);
+        nextButton.titleLabel?.transform = CGAffineTransformMakeScale(-1.0, 1.0);
     }
     
     // MARK: Actions
@@ -83,7 +94,7 @@ class QuestionsViewController: UIViewController {
         questionImageView.image = nil
         if flashCard.questionImages != nil && flashCard.questionImages.count > 0 {
             let questionImage = (flashCard.questionImages[0] as! UIImage)
-            questionImageView.image! = questionImage
+            questionImageView.image = questionImage
         }
         nextButton.hidden = false
         answerButton.hidden = false

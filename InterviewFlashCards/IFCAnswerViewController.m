@@ -176,14 +176,14 @@
 
 - (void)displayScoreTrackerAlert {
     
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Score Check Time" message:@"Did you get it?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Score Check" message:@"Did you get the question correct?" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self dismissViewControllerAnimated:NO completion:nil];
 
     }];
     
-    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self dismissViewControllerAnimated:NO completion:nil];
     }];
     
