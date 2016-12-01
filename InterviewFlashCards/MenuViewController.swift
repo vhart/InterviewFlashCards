@@ -1,10 +1,3 @@
-//
-//  MenuViewController.swift
-//  InterviewFlashCards
-//
-//  Created by Charles Kang on 11/2/16.
-//  Copyright © 2016 Varindra Hart. All rights reserved.
-//
 
 import UIKit
 
@@ -18,10 +11,9 @@ class MenuViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func sectionButtonTapped(sender: UIButton) {
-        let questionVC = storyboard?.instantiateViewControllerWithIdentifier("QuestionsViewController") as! QuestionsViewController
+        let questionVC = storyboard?.instantiateViewControllerWithIdentifier("QuestionViewController") as! QuestionViewController
         questionVC.sectionName = sender.titleLabel?.text ?? ""
         questionVC.setSectionTypeForViewController(questionVC, withValue: sender.tag)
         navigationController?.pushViewController(questionVC, animated: true)
-    }
-    
+    }    
 }

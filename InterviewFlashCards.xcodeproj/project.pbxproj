@@ -11,8 +11,9 @@
 		50C514133FEC5C5C99518168 /* Pods_InterviewFlashCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */; };
 		5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312953D1DCA947F00CD3B07 /* MenuViewController.swift */; };
 		531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531295451DCAB58A00CD3B07 /* QueryManager.swift */; };
-		53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E19B401DB176050087E231 /* QuestionsViewController.swift */; };
-		91BCE02989F38290F9F1D4A4 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791AE182F0C1E594509FB900 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework */; };
+		5390626C1DEFFA93007781B3 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5390626B1DEFFA93007781B3 /* QuestionViewController.swift */; };
+		5390626E1DEFFADD007781B3 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5390626D1DEFFADD007781B3 /* AnswerViewController.swift */; };
+		6EF924A2F1C3C4E0B8E3ED8C /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791AE182F0C1E594509FB900 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework */; };
 		C7DD0A851C6CDF5400361D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A841C6CDF5400361D17 /* main.m */; };
 		C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A871C6CDF5400361D17 /* AppDelegate.m */; };
 		C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */; };
@@ -20,7 +21,6 @@
 		C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A921C6CDF5500361D17 /* Assets.xcassets */; };
 		C7DD0A961C6CDF5500361D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */; };
 		C7DD0AAC1C6CDF5700361D17 /* InterviewFlashCardsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */; };
-		C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */; };
 		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
 		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
 /* End PBXBuildFile section */
@@ -49,7 +49,8 @@
 		5312953D1DCA947F00CD3B07 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		531295451DCAB58A00CD3B07 /* QueryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManager.swift; sourceTree = "<group>"; };
 		531295471DCAC04300CD3B07 /* InterviewFlashCards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCards-Bridging-Header.h"; sourceTree = "<group>"; };
-		53E19B401DB176050087E231 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		5390626B1DEFFA93007781B3 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		5390626D1DEFFADD007781B3 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewFlashCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6522CCE25720C87DD13ADEA6 /* Pods-InterviewFlashCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards/Pods-InterviewFlashCards.debug.xcconfig"; sourceTree = "<group>"; };
 		6CB1DBA2345BC7C0809629A8 /* Pods-InterviewFlashCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards/Pods-InterviewFlashCards.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,8 +70,6 @@
 		C7DD0AA71C6CDF5700361D17 /* InterviewFlashCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewFlashCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterviewFlashCardsUITests.m; sourceTree = "<group>"; };
 		C7DD0AAD1C6CDF5700361D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCAnswerViewController.h; sourceTree = "<group>"; };
-		C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCAnswerViewController.m; sourceTree = "<group>"; };
 		C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+AsyncFetch.h"; path = "../UIImage+AsyncFetch.h"; sourceTree = "<group>"; };
 		C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AsyncFetch.m"; path = "../UIImage+AsyncFetch.m"; sourceTree = "<group>"; };
 		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
@@ -91,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91BCE02989F38290F9F1D4A4 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework in Frameworks */,
+				6EF924A2F1C3C4E0B8E3ED8C /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,9 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				5312953D1DCA947F00CD3B07 /* MenuViewController.swift */,
-				53E19B401DB176050087E231 /* QuestionsViewController.swift */,
-				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
-				C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */,
+				5390626D1DEFFADD007781B3 /* AnswerViewController.swift */,
+				5390626B1DEFFA93007781B3 /* QuestionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -380,7 +378,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A644CE8F8838CF41BEF35A06 /* [CP] Copy Pods Resources */ = {
@@ -410,7 +408,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EC55DDBAEFEB5D6F8C917E1F /* [CP] Embed Pods Frameworks */ = {
@@ -466,15 +464,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */,
-				C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */,
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
+				5390626E1DEFFADD007781B3 /* AnswerViewController.swift in Sources */,
 				C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */,
-				53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */,
 				5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */,
 				C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */,
 				C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */,
 				531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */,
 				C7DD0A851C6CDF5400361D17 /* main.m in Sources */,
+				5390626C1DEFFA93007781B3 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

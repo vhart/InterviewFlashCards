@@ -15,8 +15,6 @@
 		<dict>
 			<key>FooterText</key>
 			<string>https://www.firebase.com/terms/terms-of-service.html</string>
-			<key>License</key>
-			<string>Commercial</string>
 			<key>Title</key>
 			<string>Firebase</string>
 			<key>Type</key>
@@ -226,8 +224,6 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 </string>
-			<key>License</key>
-			<string>Apache 2.0</string>
 			<key>Title</key>
 			<string>Nimble</string>
 			<key>Type</key>
@@ -256,8 +252,6 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
-			<key>License</key>
-			<string>MIT</string>
 			<key>Title</key>
 			<string>Nocilla</string>
 			<key>Type</key>
@@ -467,8 +461,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
    See the License for the specific language governing permissions and
    limitations under the License.
 </string>
-			<key>License</key>
-			<string>Apache 2.0</string>
 			<key>Title</key>
 			<string>Quick</string>
 			<key>Type</key>
