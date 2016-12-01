@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="386" y="292"/>
         </scene>
-        <!--Questions View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="QuestionsViewController" id="BYZ-38-t0r" customClass="QuestionsViewController" customModule="InterviewFlashCards" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="BYZ-38-t0r" customClass="QuestionViewController" customModule="InterviewFlashCards" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -106,13 +106,6 @@
                                     <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djt-YW-FhG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-cj-99o">
-                                <rect key="frame" x="275" y="525" width="51" height="30"/>
-                                <state key="normal" title="Answer"/>
-                                <connections>
-                                    <segue destination="Jig-1g-Wod" kind="presentation" modalTransitionStyle="flipHorizontal" id="K11-1W-Osz"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-lM-av9">
                                 <rect key="frame" x="200" y="153" width="200" height="200"/>
                                 <constraints>
@@ -120,6 +113,13 @@
                                     <constraint firstAttribute="height" constant="200" id="vdm-P0-zWH"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-cj-99o">
+                                <rect key="frame" x="275" y="525" width="51" height="30"/>
+                                <state key="normal" title="Answer"/>
+                                <connections>
+                                    <segue destination="Jig-1g-Wod" kind="presentation" id="ReW-zs-e4J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -157,7 +157,7 @@
         <!--Answer View Controller-->
         <scene sceneID="5C5-eJ-9fu">
             <objects>
-                <tableViewController id="Jig-1g-Wod" customClass="IFCAnswerViewController" sceneMemberID="viewController">
+                <tableViewController id="Jig-1g-Wod" customClass="AnswerViewController" customModule="InterviewFlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bMw-aN-gmG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,7 +195,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Back"/>
                                                     <connections>
-                                                        <action selector="backButtonTapped:" destination="Jig-1g-Wod" eventType="touchUpInside" id="irm-UC-4lf"/>
+                                                        <action selector="backButtonTapped:" destination="Jig-1g-Wod" eventType="touchUpInside" id="nzY-TG-LyR"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppr-rN-tcf">
@@ -203,7 +203,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Next"/>
                                                     <connections>
-                                                        <action selector="nextButtonTapped:" destination="Jig-1g-Wod" eventType="touchUpInside" id="BRz-5c-M5g"/>
+                                                        <action selector="nextButtonTapped:" destination="Jig-1g-Wod" eventType="touchUpInside" id="RnK-UF-Kl5"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU0-Id-LSM">
@@ -243,12 +243,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
-                        <outlet property="answer" destination="5T3-Ay-djA" id="hxA-DY-LEh"/>
-                        <outlet property="answerImageView" destination="zaY-EY-uVY" id="HiG-WH-YjF"/>
-                        <outlet property="answerLabel" destination="Tnd-Xe-M7h" id="8lr-fe-b6w"/>
-                        <outlet property="backButton" destination="ZaJ-YQ-Zww" id="LVZ-3I-lag"/>
-                        <outlet property="nextButton" destination="Ppr-rN-tcf" id="Z0M-ea-q8r"/>
-                        <outlet property="paginationLabel" destination="jU0-Id-LSM" id="ggy-mo-bei"/>
+                        <outlet property="answer" destination="5T3-Ay-djA" id="xSA-TB-PxM"/>
+                        <outlet property="answerImageView" destination="zaY-EY-uVY" id="7hi-16-D0D"/>
+                        <outlet property="answerLabel" destination="Tnd-Xe-M7h" id="ViY-dc-eJ3"/>
+                        <outlet property="backButton" destination="ZaJ-YQ-Zww" id="3Vv-cE-GZJ"/>
+                        <outlet property="nextButton" destination="Ppr-rN-tcf" id="Ts2-My-zkh"/>
+                        <outlet property="paginationLabel" destination="jU0-Id-LSM" id="2L0-OI-L1G"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXy-04-f11" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -258,7 +258,7 @@
         <!--Answer View Controller-->
         <scene sceneID="Hm0-re-kAG">
             <objects>
-                <viewController id="Zbm-dh-RUv" customClass="IFCAnswerViewController" sceneMemberID="viewController">
+                <viewController id="Zbm-dh-RUv" customClass="AnswerViewController" customModule="InterviewFlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eeK-VB-TVW"/>
                         <viewControllerLayoutGuide type="bottom" id="5j4-Ka-bSq"/>

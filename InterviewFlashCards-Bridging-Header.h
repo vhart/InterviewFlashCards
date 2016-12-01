@@ -6,4 +6,3 @@
 #endif /* InterviewFlashCards_Bridging_Header_h */
 
 #import "IFCFlashCard.h"
-#import "IFCAnswerViewController.h"

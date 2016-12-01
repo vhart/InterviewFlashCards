@@ -8,7 +8,7 @@ enum SectionQuestionType: Int {
     
 }
 
-class QuestionsViewController: UIViewController {
+class QuestionViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet weak var prevButton: UIButton!
@@ -43,7 +43,7 @@ class QuestionsViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .Plain, target: self, action: #selector(QuestionsViewController.dismiss))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .Plain, target: self, action: #selector(QuestionViewController.dismiss))
         navigationItem.title = sectionName
     }
     
@@ -76,7 +76,7 @@ class QuestionsViewController: UIViewController {
         questionImageView.image = nil
         if flashCard.questionImages != nil && flashCard.questionImages.count > 0 {
             let questionImage = (flashCard.questionImages[0] as! UIImage)
-            questionImageView.image! = questionImage
+            questionImageView.image = questionImage
         }
         nextButton.hidden = false
         answerButton.hidden = false
@@ -94,12 +94,12 @@ class QuestionsViewController: UIViewController {
     
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.destinationViewController is IFCAnswerViewController) {
-            (segue.destinationViewController as! IFCAnswerViewController).flashCard = flashCards[currentIndex]
+        if (segue.destinationViewController is AnswerViewController) {
+            (segue.destinationViewController as! AnswerViewController).flashCard = flashCards[currentIndex]
         }
     }
     
-    func setSectionTypeForViewController(vc: QuestionsViewController, withValue value: Int) {
+    func setSectionTypeForViewController(vc: QuestionViewController, withValue value: Int) {
         if let sectionValue = SectionQuestionType(rawValue: value) {
             vc.section = sectionValue
         }

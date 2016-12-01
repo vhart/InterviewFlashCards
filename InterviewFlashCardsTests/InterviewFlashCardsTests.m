@@ -39,7 +39,7 @@
 
     __block NSArray *testArray;
 
-    [self.qman getDataForRequest:RequestTypeiOS completion:^(NSArray *json) {
+    [qman getDataForRequest:RequestTypeiOS completion:^(NSArray *json) {
         XCTAssert(json.count > 0);
         testArray = [NSArray arrayWithArray: json];
         [expectation fulfill];
@@ -55,20 +55,20 @@
     
     XCTestExpectation *expectation = [self expectationWithDescription:@"Image Fetching"];
     
-    self.flashCard = [[IFCFlashCard alloc] init];
-    self.flashCard.answerImages = [NSMutableArray new];
-    self.flashCard.questionImages = [NSMutableArray new];
+    flashCard = [[IFCFlashCard alloc] init];
+    flashCard.answerImages = [NSMutableArray new];
+    flashCard.questionImages = [NSMutableArray new];
     
-    self.flashCard.answerImageURLs = @[@"https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/changeMaker.png"];
+    flashCard.answerImageURLs = @[@"https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/changeMaker.png"];
     
-    self.flashCard.questionImageURL = @"http://www.cs.wcupa.edu/rkline/assets/img/DS/bst2.png?1264796754";
+    flashCard.questionImageURL = @"http://www.cs.wcupa.edu/rkline/assets/img/DS/bst2.png?1264796754";
     
-    [self.flashCard prepareFlashCardWithCompletion:^{
+    [flashCard prepareFlashCardWithCompletion:^{
         
         
-        XCTAssert(self.flashCard.questionImages != nil);
+        XCTAssert(flashCard.questionImages != nil);
         
-        XCTAssert(self.flashCard.answerImages.count == self.flashCard.answerImageURLs.count && self.flashCard.answerImages != nil);
+        XCTAssert(flashCard.answerImages.count == flashCard.answerImageURLs.count && flashCard.answerImages != nil);
         [expectation fulfill];
     }];
     

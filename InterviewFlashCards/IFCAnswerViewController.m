@@ -165,27 +165,6 @@
     }
 }
 
-#pragma mark - Score Tracker Alert
-
-- (void)displayScoreTrackerAlert {
-    
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Score Check Time" message:@"Did you get it?" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:NO completion:nil];
-
-    }];
-    
-    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:NO completion:nil];
-    }];
-    
-    [controller addAction:yesAction];
-    [controller addAction:noAction];
-    
-    [self presentViewController:controller animated:YES completion:nil];
-}
-
 #pragma mark - Frame Maker
 
 - (CGRect)fullscreenFrame {
