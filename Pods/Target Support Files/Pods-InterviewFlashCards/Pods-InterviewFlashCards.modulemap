@@ -1,6 +1,0 @@
-framework module Pods_InterviewFlashCards {
-  umbrella header "Pods-InterviewFlashCards-umbrella.h"
-
-  export *
-  module * { export * }
-}
