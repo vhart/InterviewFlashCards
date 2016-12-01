@@ -15,6 +15,5 @@ class MenuViewController: UIViewController {
         questionVC.sectionName = sender.titleLabel?.text ?? ""
         questionVC.setSectionTypeForViewController(questionVC, withValue: sender.tag)
         navigationController?.pushViewController(questionVC, animated: true)
-    }
-    
+    }    
 }

@@ -70,7 +70,7 @@
         <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="QuestionViewController" id="BYZ-38-t0r" customClass="QuestionViewController" customModule="InterviewFlashCards" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="BYZ-38-t0r" customClass="QuestionViewController" customModule="InterviewFlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

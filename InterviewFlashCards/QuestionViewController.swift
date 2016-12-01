@@ -66,7 +66,7 @@ class QuestionViewController: UIViewController {
         let nextCard = flashCards[index]
         nextCard.prepareFlashCardWithCompletion({ [weak self] Void in
             self?.prepareUIwithCard(nextCard)
-        })
+            })
     }
     
     private func prepareUIwithCard(flashCard: IFCFlashCard) {
