@@ -9,17 +9,21 @@
 import Foundation
 import Firebase
 
-enum RequestType: Int {
+public protocol Networking {
+    func getData(for requestType: RequestType, completion: ([[NSObject: AnyObject]]) -> Void)
+}
+
+public enum RequestType: Int {
     case iOS
     case DataStructures
     case Algorithms
 }
 
-class QueryManager: NSObject {
-    
+class QueryManager: Networking {
+
     // MARK: Private Properties
     private let baseURL = "https://fiery-torch-4131.firebaseio.com/"
-    
+
     // MARK: Actions
     func getData(for requestType: RequestType, completion: ([[NSObject: AnyObject]]) -> Void) {
         let reference = Firebase(url: baseURL)

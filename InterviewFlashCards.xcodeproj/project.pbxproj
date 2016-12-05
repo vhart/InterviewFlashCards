@@ -23,6 +23,8 @@
 		C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */; };
 		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
 		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
+		D5F2F8651DF0CEF0007C50CB /* QuestionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2F8631DF0CED4007C50CB /* QuestionsViewControllerSpec.swift */; };
+		D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,9 @@
 		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
 		C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sizing.m"; sourceTree = "<group>"; };
 		D5D0360D1DCC7273001D9B2F /* InterviewFlashCardsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5F2F8621DF0CED4007C50CB /* InterviewFlashCardsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5F2F8631DF0CED4007C50CB /* QuestionsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsViewControllerSpec.swift; path = ../InterviewFlashCardsUITests/QuestionsViewControllerSpec.swift; sourceTree = "<group>"; };
+		D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +222,8 @@
 		C7DD0A9F1C6CDF5600361D17 /* InterviewFlashCardsTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5F2F8631DF0CED4007C50CB /* QuestionsViewControllerSpec.swift */,
+				D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */,
 				C7DD0AA21C6CDF5700361D17 /* Info.plist */,
 				D5D0360D1DCC7273001D9B2F /* InterviewFlashCardsTests-Bridging-Header.h */,
 			);
@@ -228,6 +235,7 @@
 			children = (
 				C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */,
 				C7DD0AAD1C6CDF5700361D17 /* Info.plist */,
+				D5F2F8621DF0CED4007C50CB /* InterviewFlashCardsUITests-Bridging-Header.h */,
 			);
 			path = InterviewFlashCardsUITests;
 			sourceTree = "<group>";
@@ -316,6 +324,7 @@
 					};
 					C7DD0AA61C6CDF5700361D17 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = C7DD0A7F1C6CDF5300361D17;
 					};
 				};
@@ -482,6 +491,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F2F8651DF0CEF0007C50CB /* QuestionsViewControllerSpec.swift in Sources */,
+				D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,10 +690,14 @@
 		C7DD0AB71C6CDF5700361D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = InterviewFlashCardsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.vhart.InterviewFlashCardsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InterviewFlashCardsUITests/InterviewFlashCardsUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = InterviewFlashCards;
 				USES_XCTRUNNER = YES;
 			};
@@ -691,10 +706,13 @@
 		C7DD0AB81C6CDF5700361D17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = InterviewFlashCardsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.vhart.InterviewFlashCardsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InterviewFlashCardsUITests/InterviewFlashCardsUITests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = InterviewFlashCards;
 				USES_XCTRUNNER = YES;
 			};
