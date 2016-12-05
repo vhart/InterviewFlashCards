@@ -23,7 +23,7 @@
 		C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */; };
 		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
 		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
-		D5F2F8651DF0CEF0007C50CB /* QuestionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2F8631DF0CED4007C50CB /* QuestionsViewControllerSpec.swift */; };
+		D50241661DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */; };
 		D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,9 +77,9 @@
 		C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AsyncFetch.m"; path = "../UIImage+AsyncFetch.m"; sourceTree = "<group>"; };
 		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
 		C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sizing.m"; sourceTree = "<group>"; };
+		D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewControllerSpec.swift; sourceTree = "<group>"; };
 		D5D0360D1DCC7273001D9B2F /* InterviewFlashCardsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5F2F8621DF0CED4007C50CB /* InterviewFlashCardsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
-		D5F2F8631DF0CED4007C50CB /* QuestionsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsViewControllerSpec.swift; path = ../InterviewFlashCardsUITests/QuestionsViewControllerSpec.swift; sourceTree = "<group>"; };
 		D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,7 +222,7 @@
 		C7DD0A9F1C6CDF5600361D17 /* InterviewFlashCardsTests */ = {
 			isa = PBXGroup;
 			children = (
-				D5F2F8631DF0CED4007C50CB /* QuestionsViewControllerSpec.swift */,
+				D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */,
 				D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */,
 				C7DD0AA21C6CDF5700361D17 /* Info.plist */,
 				D5D0360D1DCC7273001D9B2F /* InterviewFlashCardsTests-Bridging-Header.h */,
@@ -491,7 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5F2F8651DF0CEF0007C50CB /* QuestionsViewControllerSpec.swift in Sources */,
+				D50241661DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift in Sources */,
 				D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
