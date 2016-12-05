@@ -50,7 +50,7 @@ class AnswerViewController: UITableViewController {
         let height: CGFloat = answerImageView.bounds.size.height
         let x: CGFloat = answerImageView.bounds.origin.x
         let y: CGFloat = answerImageView.bounds.origin.y
-        tempAnswerImageView = UIImageView(frame: CGRectMake(x, y, width, height))
+        tempAnswerImageView = UIImageView(frame: CGRect(x: x, y: y, width: width, height: height))
     }
     
     func setupGestures() {
@@ -75,7 +75,7 @@ class AnswerViewController: UITableViewController {
     
     func handleLeftSwipe(gesture: UISwipeGestureRecognizer) {
         if index < flashCard.answerImages.count-1 {
-            index += 1
+            index = index + 1
             showPaginationLabel()
             answerImageView.image = flashCard.answerImages[index] as? UIImage
         }
@@ -83,7 +83,7 @@ class AnswerViewController: UITableViewController {
     
     func handleRightSwipe(gesture: UISwipeGestureRecognizer) {
         if index > 0 {
-            index -= 1
+            index = index + 1
             showPaginationLabel()
             answerImageView.image = flashCard.answerImages[index] as? UIImage
         }
