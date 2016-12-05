@@ -86,9 +86,13 @@
     } else {
         self.answerImagesLoaded = YES;
         if (self.questionImagesLoaded) {
-            dispatch_async(dispatch_get_main_queue(), ^{
+            if (NSThread.isMainThread) {
                 completion();
-            });
+            } else {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion();
+                });
+            }
         }
     }
 }
