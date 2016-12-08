@@ -75,7 +75,7 @@ class AnswerViewController: UITableViewController {
     
     func handleLeftSwipe(gesture: UISwipeGestureRecognizer) {
         if index < flashCard.answerImages.count-1 {
-            index = index + 1
+            index+=1
             showPaginationLabel()
             answerImageView.image = flashCard.answerImages[index] as? UIImage
         }
@@ -83,7 +83,7 @@ class AnswerViewController: UITableViewController {
     
     func handleRightSwipe(gesture: UISwipeGestureRecognizer) {
         if index > 0 {
-            index = index + 1
+            index+=1
             showPaginationLabel()
             answerImageView.image = flashCard.answerImages[index] as? UIImage
         }
