@@ -1,0 +1,50 @@
+{
+    "answer_urls" =     {
+        0 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/recursivePrints.png";
+    };
+    question = "Implement an algorithm without for or while loops that prints 1 to 100 and then back to 1.";
+}
+{
+    "answer_urls" =     {
+        0 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/rotateMatrix.png";
+    };
+    question = "Suppose you have an n x n array of integers. Write an algorithm that turns it ninety degrees clockwise.";
+}
+{
+    "answer_urls" =     {
+        0 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/removeRepeatedWords.png";
+    };
+    question = "Given an array of words (Strings), return an array of those words in the order they appeared but without repetitions. Have O(n) time complexity!";
+}
+{
+    "answer_urls" =     {
+        0 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/iterativeFib.png";
+    };
+    question = "Implement a Fibonacci function that has run time O(n).";
+}
+{
+    "answer_urls" =     {
+        0 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/changeMaker.png";
+    };
+    question = "Given an amount of money, find the optimal arrangement of change (assume US currency) for that value. The arrangement is optimal is it contains the fewest number of coins. This function should return an array of the values.";
+}
+{
+    "answer_urls" =     {
+        0 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/tictactoeP1.png";
+        1 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/tictactoeP2.png";
+    };
+    question = "Given a full 3 x 3 tic tac toe board, determine if there is a winner. (In your algorithm consider giving the x's and o's values)";
+}
+{
+    "answer_urls" =     {
+        0 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/QuickSort.png";
+        1 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/QuickSortPt2.png";
+    };
+    question = "Implement quicksort";
+}
+{
+    "answer_urls" =     {
+        0 = "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/integerPalindrome.png";
+    };
+    question = "Write an algorithm that determines if an integer is a palindrome without casting the integer to string.";
+}
