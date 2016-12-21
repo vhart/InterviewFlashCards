@@ -10,7 +10,8 @@ import Foundation
 import Firebase
 
 public protocol Networking {
-    func getData(for requestType: RequestType, completion: ([[NSObject: AnyObject]]) -> Void)
+    func getData(for requestType: RequestType,
+                     completion: ([[NSObject: AnyObject]]) -> Void)
 }
 
 public enum RequestType: Int {

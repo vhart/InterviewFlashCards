@@ -1,0 +1,102 @@
+{
+  {
+    "answer": "When an event happens in a view, for example a touch event, the view will fire the event to a chain of UIResponder objects associated with the UIView. The first UIResponder is the UIView itself, if it does not handle the event then it continues up the chain to until UIResponder handles the event. \n\nThe chain will include UIViewControllers, parent UIViews and their associated UIViewControllers, if none of those handle the event then the UIWindow is asked if it can handle it and finally if that doesn't handle the event then the UIApplicationDelegate is asked."
+    "question": "What is the responder chain?"
+  }
+  {
+    "answer": "MVC stands for model-view-controller. It is a design pattern that focuses on a separation of concerns. The model is the logical unit for the controller, and the controller handles events occurring on the view. The model and the view never have to interact directly. This makes your code cleaner and decouples the view from the logical component."
+    "question": "What is MVC?"
+  }
+  {
+    "answer": "The reuseIdentifier is used to indicate that a cell can be re-used in a UITableView. For example when the cell looks the same, but has different content. The UITableView will maintain an internal cache of UITableViewCell\U2019s with the reuseIdentifier and allow them to be re-used when dequeueReusableCellWithIdentifier: is called. By re-using table cell\U2019s the scroll performance of the tableview is better because new views do not need to be created."
+    "question": "What is a reuse identifier used for?"
+  }
+  {
+    "answer": "No, that array is not thread safe. Two threads may try to write to the array at the same time, causing a collision. Using a dispatch barrier on the concurrency queue used to access the singleton can make it thread safe."
+    "question": "Assume a singleton has an NSMutableArray property. Is this array thread safe? What could be done to make it thread safe if it is not?"
+  }
+  {
+    "answer": "Storyboards simplify the prototyping and mocking up of user interfaces and flow. Storyboards are best used with multiple interconnected view controllers, as their major simplification is in transitioning between view controllers. You shouldn't use storyboards if the view has a complicated or dynamic layout, best implemented with code. With NIBs, any arbitrary view can be designed, which the developer can then attach to a view controller as-needed.NIBs share the merge conflict problems we saw with Storyboards, but to a lesser extent, as NIB files operate at a smaller scale. You should avoid using NIBs for views with dynamic content, where the layout changes significantly depending on content or view controllers with complicated transitions that could be simplified with storyboarding. It\U2019s often a good call to use use custom code for iOS user interface design when you have dynamic layouts, views with effects, such as rounded corners, shadows, etc. and any case in which using NIBs and Storyboards is complicated or infeasible. Although NIBs and Storyboards bring some advantages to the table, there\U2019s no reasonable downside to code usage."
+    "question": "What are the pros and cons of storyboard vs xibs vs programmatic layout?"
+  }
+  {
+    "answer": "Atomic and non-atomic refers to whether the setters/getters for a property will atomically read and write values to the property. When the atomic keyword is used on a property, any access to it will be \U201csynchronized\U201d. Therefore a call to the getter will be guaranteed to return a valid value, however this does come with a small performance penalty. Hence in some situations nonatomic is used to provide faster access to a property, but there is a chance of a race condition causing the property to be nil under rare circumstances (when a value is being set from another thread and the old value was released from memory but the new value hasn\U2019t yet been fully assigned to the location in memory for the property)."
+    "question": "What is the difference between atomic and nonatomic synthesized properties?"
+  }
+  {
+    "answer": "Delegation is a communication pattern in iOS. A delegate is an object that acts on behalf of another. This is done by implementing a protocol specific to the calling class. A protocol itself is a list of optional and required method declarations that are implemented by the delegate"
+    "question": "What is delegation and how is it implemented?"
+  }
+  {
+    "answer": "Structs are pass by value and class objects are pass by reference. Pass by value creates a copy of the original, whereas pass by reference passes a pointer to the actual object."
+    "question": "What is the difference between a struct and a class?"
+  }
+  {
+    "answer": "You would declare the variable as _block 'type' 'name'"
+    "question": "Blocks have read access to variables outside of its implementation, but what if you wanted to write to a variable outside of the block. How would you declare that variable and why?"
+  }
+  {
+    "answer": "Method swizzling allows the implementation of an existing selector to be switched at runtime for a different implementation in a classes dispatch table. Swizzling allows you to write code that can be executed before and/or after the original method. For example perhaps to track the time method execution took, or to insert log statements"
+    "question": "What is method swizzling?"
+  }
+  {
+    "answer": "Optionals are variables in swift that have the option of being nil. An optional is actually built on an enum which simply tells if the variable contains a value or does not. The two enum cases are .some and .none."
+    "question": "What are optionals and how do they function below the surface?"
+  }
+  {
+    "answer": "Delegation is a one to one communication pattern whereas notification allow multiple objects to respond to the same event. Additionally notifications have the ability of reaching objects further down the navigation stack. Delegation can only occur between two consecutive levels."
+    "question": "What is the difference between delegation and notifications (NSNotification)?"
+  }
+  {
+    "answer": "If you need to add a method to an existing class, perhaps to add functionality to make it easier to do something in your own application, the easiest way is to use a category./nA category can be declared for any class, even if you don\U2019t have the original implementation source code (such as for standard Cocoa or Cocoa Touch classes). Any methods that you declare in a category will be available to all instances of the original class, as well as any subclasses of the original class. At runtime, there\U2019s no difference between a method added by a category and one that is implemented by the original class."
+    "question": "What is a category and when is it used?"
+  }
+  {
+    "answer": "ARC or Automatic Reference Counting tracks and manages your apps memory usage. ARC tracks how many properties, constants, and variables are currently referring to each class instance. ARC will not deallocate an instance as long as at least one active reference to that instance still exists."
+    "question": "What is ARC? How does it work?"
+  }
+  {
+    "answer": "viewDidLoad is called when the view is loaded, whether from a Xib file, storyboard or programmatically created in loadView. viewDidAppear is called every time the view is presented on the device. Which to use depends on the use case for your data. If the data is fairly static and not likely to change then it can be loaded in viewDidLoad and cached. However if the data changes regularly then using viewDidAppear to load it is better."
+    "question": "What is the difference between viewDidLoad and viewDidAppear? Which should you use to load data from a remote server to display in the view?"
+  }
+  {
+    "answer": "Protocol oriented programming tends to favor structs over classes. These objects are implemented by adhering to protocols rather than by using inheritance. Object oriented program tends to use classes that are the result of subclassing."
+    "question": "What is the difference between Swift's protocol oriented programming and object oriented programming?"
+  }
+  {
+    "answer": "KVC stands for Key-Value Coding. It's a mechanism by which an object's properties can be accessed using string's at runtime rather than having to statically know the property names at development time. KVO stands for Key-Value Observing and allows a controller or class to observe changes to a property value."
+    "question": "What is KVC and KVO?"
+  }
+  {
+    "answer": "This is a very common task in iOS and a good answer here can cover a whole host of topics. The important piece of information in the question is that the images are hosted remotely and they may take time to download, therefore when it asks for \U201cconsiderations\U201d, you should be talking about: \n\nOnly download the image when the cell is scrolled into view, i.e. when cellForRowAtIndexPath is called. \n\nDownloading the image asynchronously on a background thread so as not to block the UI so the user can keep scrolling. \n\nWhen the image has downloaded for a cell we need to check if that cell is still in the view or whether it has been re-used by another piece of data. If it\U2019s been re-used then we should discard the image, otherwise we need to switch back to the main thread to change the image on the cell. \n\nOther good answers will go on to talk about offline caching of the images, using placeholder images while the images are being downloaded."
+    "question": "What considerations do you need when writing a UITableViewController which shows images downloaded from a remote server?"
+  }
+  {
+    "answer": "A strong reference (which you will use in most cases) means that you want to \"own\" the object you are referencing with this property/variable. The compiler will take care that any object that you assign to this property will not be destroyed as long as you (or any other object) points to it with a strong reference. Only once you set the property to nil will the object get destroyed (unless one or more other objects also hold a strong reference to it).  In contrast, with a weak reference you signify that you don't want to have control over the object's lifetime. The object you are referencing weakly only lives on because at least one other object holds a strong reference to it. Once that is no longer the case, the object gets destroyed and your weak property will automatically get set to nil."
+    "question": "What is the difference between a strong and weak reference? Assign?"
+  }
+  {
+    "answer": "Dispatch barrier async/sync is a GCD method that takes in a concurrency queue as parameter and waits for all tasks in that queue to be executed before it makes its own call. The dispatch barrier essentially causes the concurrency queue to temporarily act like a serial queue, thus preventing simultaneous block calls. This can be useful when an update to a mutable object is needed, but the object may be referenced elsewhere."
+    "question": "What is dispatch barrier?"
+  }
+  {
+    "answer": "GCD is a concurrency library that utilizes FIFO queues. The primary mechanism of using GCD is by submitting blocks to queues or responding to events that pop out of queues. \nGCD can be used to make asynchronous and synchronous requests. For example you can use GCD to make an asynchronous request fetching image data from a URL. You can then convert that data to a UIImage and update your UI. However, you must be sure that the UI is updated on the MAIN thread."
+    "question": "Explain what GCD is and how it can be used?"
+  }
+  {
+    "answer": "Never. UI should always be updated on the main thread. UI updates from the background thread may have unexpected results."
+    "question": "When should you adjust UI on a background thread?"
+  }
+  {
+    "answer": "Blocks are a language level feature that  allow you to create distinct segments of code that can be passed around to methods or functions as if they were values. Blocks are Objective-C objects. \nAdditionally blocks are an encapsulation of scope where they are defined. This allows a block to have read access to variables defined outside of itself within the same class. \nYou could use a block to escape an async call on a background thread."
+    "question": "What are blocks and how are they used?"
+  }
+  {
+    "answer": "Singletons themselves, without regards to their properties, are thread safe assuming they utilize dispatch once. \ndispatch_once() executes a block once and only once in a thread safe manner. Different threads that try to access the critical section \U2014 the code passed to dispatch_once \U2014 while a thread is already in this section are blocked until the critical section completes. \nIt should be noted that this only makes accessing the shared instance thread safe."
+    "question": "Are singletons thread safe? What causes them to be instantiated only once?"
+  }
+  {
+    "answer": "The bounds of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0). \n\nThe frame of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within."
+    "question": "What is the difference between a view's frame and its bounds?"
+  }
+}

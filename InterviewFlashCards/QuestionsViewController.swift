@@ -31,7 +31,7 @@ class QuestionsViewController: UIViewController {
 
     // MARK: Public Properties
     var sectionName = ""
-    var dataGenerator: Networking?
+    var dataGenerator: Networking? = QueryManager()
 
     // MARK: Actions
 
