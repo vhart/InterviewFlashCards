@@ -1,21 +1,52 @@
 PODS:
-  - Firebase (2.5.1)
-  - Nimble (4.1.0)
+  - Firebase/Core (3.10.0):
+    - FirebaseAnalytics (= 3.6.0)
+    - FirebaseCore (= 3.4.5)
+  - Firebase/Database (3.10.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 3.1.1)
+  - FirebaseAnalytics (3.6.0):
+    - FirebaseCore (~> 3.4)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.4.5):
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (3.1.1):
+    - FirebaseAnalytics (~> 3.5)
+  - FirebaseInstanceID (1.0.8)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleToolboxForMac/Defines (2.1.0)
+  - GoogleToolboxForMac/NSData+zlib (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+  - Nimble (5.1.1)
   - Nocilla (0.11.0)
-  - Quick (0.9.3)
+  - Quick (1.0.0)
 
 DEPENDENCIES:
-  - Firebase (~> 2.5.0)
-  - Nimble (~> 4.1.0)
+  - Firebase/Core
+  - Firebase/Database
+  - Nimble
   - Nocilla
-  - Quick (~> 0.9.3)
+  - Quick
 
 SPEC CHECKSUMS:
-  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
-  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
+  Firebase: 387f37c7dca894a02708da9ff35ba147040eae9e
+  FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
+  FirebaseCore: 1e383fdfe37b6b5d6ff88e84204bdee30276af0f
+  FirebaseDatabase: 6de92187481ff0e8e124064f21742e95ee883b02
+  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nocilla: 7af7a386071150cc8aa5da4da97d060f049dd61c
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
 
-PODFILE CHECKSUM: 636c598016e68ba6b0fab515aa660b945ede3f17
+PODFILE CHECKSUM: 017ab0140ad306c6905a2ca9f4e0a18856be9829
 
 COCOAPODS: 1.1.1
