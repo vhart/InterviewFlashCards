@@ -4,12 +4,12 @@ import UIKit
 @testable import InterviewFlashCards
 
 struct DataGeneratorMock: Networking {
-    let dataMock: [[NSObject: AnyObject]]
+    let dataMock: JSON
         = [["question": "How many potatoes fit in your shoe", "answer": "Five potaTOES, lol"],
            ["question": "Pizza or Salad", "answer": "Pizza"],
            ["question": "Monster Trucks", "answer": "That's not a question"]]
 
-    func getData(for requestType: RequestType, completion: ([[NSObject : AnyObject]]) -> Void) {
+    func getData(for requestType: RequestType, completion: @escaping (JSON) -> Void) {
         completion(dataMock)
     }
 }
@@ -20,7 +20,7 @@ class QuestionsViewControllerSpec: QuickSpec {
             var questionVC: QuestionsViewController?
             beforeEach {
                 questionVC = nil
-                questionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("QuestionsViewController") as? QuestionsViewController
+                questionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionsViewController") as? QuestionsViewController
                 questionVC!.set(sectionType: .iOSTechnical)
                 questionVC!.dataGenerator = DataGeneratorMock()
             }
@@ -42,7 +42,7 @@ class QuestionsViewControllerSpec: QuickSpec {
                         let _ = questionVC!.view
                         expect(questionVC!.questionLabel.text) == "How many potatoes fit in your shoe"
 
-                        questionVC!.nextButton.sendActionsForControlEvents(.TouchUpInside)
+                        questionVC!.nextButton.sendActions(for: .touchUpInside)
                         expect(questionVC!.questionLabel.text) == "Pizza or Salad"
                     }
                 }
@@ -54,12 +54,12 @@ class QuestionsViewControllerSpec: QuickSpec {
                         expect(questionVC!.questionLabel.text) == "How many potatoes fit in your shoe"
 
                         for _ in 0 ..< tapsToReturn - 1 {
-                            questionVC!.nextButton.sendActionsForControlEvents(.TouchUpInside)
+                            questionVC!.nextButton.sendActions(for: .touchUpInside)
                         }
 
                         expect(questionVC!.questionLabel.text) == "Monster Trucks"
 
-                        questionVC!.nextButton.sendActionsForControlEvents(.TouchUpInside)
+                        questionVC!.nextButton.sendActions(for: .touchUpInside)
 
                         expect(questionVC!.questionLabel.text) == "How many potatoes fit in your shoe"
                     }
@@ -72,10 +72,10 @@ class QuestionsViewControllerSpec: QuickSpec {
                         let _ = questionVC!.view
                         expect(questionVC!.questionLabel.text) == "How many potatoes fit in your shoe"
 
-                        questionVC!.nextButton.sendActionsForControlEvents(.TouchUpInside)
+                        questionVC!.nextButton.sendActions(for: .touchUpInside)
                         expect(questionVC!.questionLabel.text) == "Pizza or Salad"
 
-                        questionVC!.prevButton.sendActionsForControlEvents(.TouchUpInside)
+                        questionVC!.prevButton.sendActions(for: .touchUpInside)
                         expect(questionVC!.questionLabel.text) == "How many potatoes fit in your shoe"
                     }
                 }
@@ -85,7 +85,7 @@ class QuestionsViewControllerSpec: QuickSpec {
                         let _ = questionVC!.view
                         expect(questionVC!.questionLabel.text) == "How many potatoes fit in your shoe"
 
-                        questionVC!.prevButton.sendActionsForControlEvents(.TouchUpInside)
+                        questionVC!.prevButton.sendActions(for: .touchUpInside)
 
                         expect(questionVC!.questionLabel.text) == "Monster Trucks"
                     }
