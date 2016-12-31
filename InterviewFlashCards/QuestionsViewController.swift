@@ -10,8 +10,8 @@ import UIKit
 
 enum SectionQuestionType {
     case iOSTechnical
-    case DataStructures
-    case Algorithms
+    case dataStructures
+    case algorithms
 
 }
 
@@ -25,9 +25,9 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var answerButton: UIButton!
 
     // MARK: Private Properties
-    private(set) var flashCards = [IFCFlashCard]()
-    private var currentIndex = 0
-    private var section: SectionQuestionType = .DataStructures
+    fileprivate(set) var flashCards = [IFCFlashCard]()
+    fileprivate var currentIndex = 0
+    fileprivate var section: SectionQuestionType = .dataStructures
 
     // MARK: Public Properties
     var sectionName = ""
@@ -35,12 +35,12 @@ class QuestionsViewController: UIViewController {
 
     // MARK: Actions
 
-    @IBAction private func prevButtonTapped(sender: UIButton) {
+    @IBAction fileprivate func prevButtonTapped(_ sender: UIButton) {
         currentIndex = currentIndex - 1 < 0 ? (currentIndex - 1 + flashCards.count) : 0
         prepareFlashCard(currentIndex)
     }
 
-    @IBAction private func nextButtonTapped(sender: UIButton) {
+    @IBAction fileprivate func nextButtonTapped(_ sender: UIButton) {
         currentIndex = (currentIndex + 1) % (flashCards.count)
         prepareFlashCard(currentIndex)
     }
@@ -53,9 +53,9 @@ class QuestionsViewController: UIViewController {
         fetchData()
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.destinationViewController is IFCAnswerViewController) {
-            (segue.destinationViewController as! IFCAnswerViewController).flashCard = flashCards[currentIndex]
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.destination is IFCAnswerViewController) {
+            (segue.destination as! IFCAnswerViewController).flashCard = flashCards[currentIndex]
         }
     }
 
@@ -65,21 +65,24 @@ class QuestionsViewController: UIViewController {
             section = value
     }
 
-    func dismiss() {
-        navigationController?.popViewControllerAnimated(true)!
+    func dismissController() {
+       _ = navigationController?.popViewController(animated: true)
     }
 
     //MARK: Private functions
 
     private func fetchData() {
         dataGenerator?.getData(for: requestType()) { [weak self] json in
-            self?.flashCards = IFCFlashCard.flashCardsFromDictionaries(json)
+            self?.flashCards = IFCFlashCard.flashCards(fromDictionaries: json)
             self?.prepareFlashCard(0)
         }
     }
 
     private func setupNavBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .Plain, target: self, action: #selector(QuestionsViewController.dismiss))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(QuestionsViewController.dismissController))
         navigationItem.title = sectionName
     }
 
@@ -87,38 +90,38 @@ class QuestionsViewController: UIViewController {
         switch (section) {
         case .iOSTechnical:
             return .iOS
-        case .DataStructures:
-            return .DataStructures
-        case .Algorithms:
-            return .Algorithms
+        case .dataStructures:
+            return .dataStructures
+        case .algorithms:
+            return .algorithms
         }
     }
 
-    private func prepareFlashCard(index: Int) {
-        if let next = nextButton, answer = answerButton {
-            next.hidden = true
-            answer.hidden = true
+    fileprivate func prepareFlashCard(_ index: Int) {
+        if let next = nextButton, let answer = answerButton {
+            next.isHidden = true
+            answer.isHidden = true
         }
         let nextCard = flashCards[index]
-        nextCard.prepareFlashCardWithCompletion() { [weak self] in
+        nextCard.prepare() { [weak self] in
             self?.prepareUIwithCard(nextCard)
         }
     }
 
-    private func prepareUIwithCard(flashCard: IFCFlashCard) {
+    fileprivate func prepareUIwithCard(_ flashCard: IFCFlashCard) {
         if let question = flashCard.question {
             questionLabel.text = question
         }
         questionImageView.image = nil
         if flashCard.questionImages != nil && flashCard.questionImages.count > 0 {
             let questionImage = (flashCard.questionImages[0] as! UIImage)
-            questionImageView.image! = questionImage
+            questionImageView.image = questionImage
         }
-        nextButton.hidden = false
-        answerButton.hidden = false
+        nextButton.isHidden = false
+        answerButton.isHidden = false
     }
 
-    private func setAccessibilityLabels() {
+    fileprivate func setAccessibilityLabels() {
         answerButton.accessibilityLabel = "answer button"
         nextButton.accessibilityLabel = "next button"
         prevButton.accessibilityLabel = "previous button"

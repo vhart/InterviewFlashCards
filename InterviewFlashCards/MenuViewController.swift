@@ -23,11 +23,11 @@ class MenuViewController: UIViewController {
     }
 
     // MARK: Actions
-    @IBAction func sectionButtonTapped(sender: UIButton) {
+    @IBAction func sectionButtonTapped(_ sender: UIButton) {
         guard let section = Section(rawValue: sender.tag),
             let storyboard = storyboard,
             let questionVC = storyboard
-                .instantiateViewControllerWithIdentifier("QuestionsViewController")
+                .instantiateViewController(withIdentifier: "QuestionsViewController")
                 as? QuestionsViewController
             else {
                 fatalError("Invalid Section")
@@ -38,9 +38,9 @@ class MenuViewController: UIViewController {
         case .ios:
             questionVC.set(sectionType: .iOSTechnical)
         case .dataStructures:
-            questionVC.set(sectionType: .DataStructures)
+            questionVC.set(sectionType: .dataStructures)
         case .algorithms:
-            questionVC.set(sectionType: .Algorithms)
+            questionVC.set(sectionType: .algorithms)
         }
         navigationController?.pushViewController(questionVC, animated: true)
     }

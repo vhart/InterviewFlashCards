@@ -13,8 +13,6 @@
 		531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531295451DCAB58A00CD3B07 /* QueryManager.swift */; };
 		53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E19B401DB176050087E231 /* QuestionsViewController.swift */; };
 		91BCE02989F38290F9F1D4A4 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791AE182F0C1E594509FB900 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework */; };
-		C7DD0A851C6CDF5400361D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A841C6CDF5400361D17 /* main.m */; };
-		C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A871C6CDF5400361D17 /* AppDelegate.m */; };
 		C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */; };
 		C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */; };
 		C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A921C6CDF5500361D17 /* Assets.xcassets */; };
@@ -27,6 +25,8 @@
 		D544AC7A1DFFBB9000FE5721 /* algorithm questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D544AC771DFFBB9000FE5721 /* algorithm questions.txt */; };
 		D544AC7B1DFFBB9000FE5721 /* data structure questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D544AC781DFFBB9000FE5721 /* data structure questions.txt */; };
 		D544AC7C1DFFBB9000FE5721 /* iOS technical questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D544AC791DFFBB9000FE5721 /* iOS technical questions.txt */; };
+		D5A918D51E107BF9007C4967 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */; };
+		D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A918D61E107CDE007C4967 /* AppDelegate.swift */; };
 		D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,9 +61,6 @@
 		707A09BFDE8FF8D42F00084C /* Pods-InterviewFlashCards-InterviewFlashCardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards-InterviewFlashCardsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards-InterviewFlashCardsTests/Pods-InterviewFlashCards-InterviewFlashCardsTests.release.xcconfig"; sourceTree = "<group>"; };
 		791AE182F0C1E594509FB900 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewFlashCards_InterviewFlashCardsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0A801C6CDF5400361D17 /* InterviewFlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewFlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7DD0A841C6CDF5400361D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C7DD0A861C6CDF5400361D17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C7DD0A871C6CDF5400361D17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C7DD0A8D1C6CDF5400361D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7DD0A901C6CDF5400361D17 /* InterviewFlashCards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InterviewFlashCards.xcdatamodel; sourceTree = "<group>"; };
 		C7DD0A921C6CDF5500361D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +81,8 @@
 		D544AC771DFFBB9000FE5721 /* algorithm questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "algorithm questions.txt"; sourceTree = "<group>"; };
 		D544AC781DFFBB9000FE5721 /* data structure questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "data structure questions.txt"; sourceTree = "<group>"; };
 		D544AC791DFFBB9000FE5721 /* iOS technical questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS technical questions.txt"; sourceTree = "<group>"; };
+		D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5A918D61E107CDE007C4967 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D0360D1DCC7273001D9B2F /* InterviewFlashCardsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5F2F8621DF0CED4007C50CB /* InterviewFlashCardsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaConfiguration.swift; sourceTree = "<group>"; };
@@ -130,6 +129,7 @@
 		18D4D6AD1C7B88A4004E8555 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D5A918D61E107CDE007C4967 /* AppDelegate.swift */,
 				5312953D1DCA947F00CD3B07 /* MenuViewController.swift */,
 				53E19B401DB176050087E231 /* QuestionsViewController.swift */,
 				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
@@ -203,8 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				18D4D6AC1C7B8896004E8555 /* Categories */,
-				C7DD0A861C6CDF5400361D17 /* AppDelegate.h */,
-				C7DD0A871C6CDF5400361D17 /* AppDelegate.m */,
 				18D4D6AD1C7B88A4004E8555 /* ViewControllers */,
 				18D4D6AE1C7B88B0004E8555 /* Model */,
 				18D4D6AF1C7B88C2004E8555 /* QueryManager */,
@@ -212,6 +210,7 @@
 				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
 				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
 				C7DD0A971C6CDF5500361D17 /* Info.plist */,
+				D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */,
 				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
 				C7DD0A831C6CDF5400361D17 /* Supporting Files */,
 			);
@@ -221,7 +220,6 @@
 		C7DD0A831C6CDF5400361D17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C7DD0A841C6CDF5400361D17 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -333,6 +331,7 @@
 					C7DD0A7F1C6CDF5300361D17 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = BULEKXRKSR;
+						LastSwiftMigration = 0820;
 					};
 					C7DD0A9B1C6CDF5600361D17 = {
 						CreatedOnToolsVersion = 7.1;
@@ -377,6 +376,7 @@
 				C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */,
 				C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */,
 				D544AC7A1DFFBB9000FE5721 /* algorithm questions.txt in Resources */,
+				D5A918D51E107BF9007C4967 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */,
 				182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */,
 				C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */,
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
@@ -501,9 +502,7 @@
 				53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */,
 				5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */,
 				C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */,
-				C7DD0A881C6CDF5400361D17 /* AppDelegate.m in Sources */,
 				531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */,
-				C7DD0A851C6CDF5400361D17 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +655,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InterviewFlashCards-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -671,6 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.mesfin.InterviewFlashCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InterviewFlashCards-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -686,7 +687,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InterviewFlashCardsTests/InterviewFlashCardsTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InterviewFlashCards.app/InterviewFlashCards";
 			};
 			name = Debug;
@@ -702,7 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.vhart.InterviewFlashCardsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InterviewFlashCardsTests/InterviewFlashCardsTests-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InterviewFlashCards.app/InterviewFlashCards";
 			};
 			name = Release;

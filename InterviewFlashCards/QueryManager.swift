@@ -8,64 +8,60 @@
 
 import Foundation
 import Firebase
+import FirebaseDatabase
 
+public typealias JSON = [[String: Any]]
 public protocol Networking {
     func getData(for requestType: RequestType,
-                     completion: ([[NSObject: AnyObject]]) -> Void)
+                     completion: @escaping (JSON) -> Void)
 }
 
 public enum RequestType: Int {
     case iOS
-    case DataStructures
-    case Algorithms
+    case dataStructures
+    case algorithms
 }
 
 class QueryManager: Networking {
-
     // MARK: Private Properties
-    private let baseURL = "https://fiery-torch-4131.firebaseio.com/"
+    fileprivate let baseURL = "https://fiery-torch-4131.firebaseio.com/"
 
-    // MARK: Actions
-    func getData(for requestType: RequestType, completion: ([[NSObject: AnyObject]]) -> Void) {
-        let reference = Firebase(url: baseURL)
+    func getData(for requestType: RequestType, completion: @escaping (JSON) -> Void) {
         let keyForSection = destinationPathForSection(requestType)
-        reference.queryOrderedByKey().observeEventType(FEventType.ChildAdded, withBlock: { snapshot in
-            if (snapshot.key == keyForSection) {
-                let fireBaseDataArray = self.populateArrayWithSnapshot(snapshot)
-                completion(fireBaseDataArray)
-            }
+        let reference = FIRDatabase.database().reference(withPath: keyForSection)
+        reference.observe(.value, with: { snapshot in
+            let dataArray = self.populateArray(withSnapshot: snapshot)
+            completion(dataArray)
         })
+//        reference?.queryOrderedByKey().observe(FEventType.childAdded, with: { snapshot in
+//            if let snapshot = snapshot,
+//                snapshot.key == keyForSection {
+//                let fireBaseDataArray = self.populateArrayWithSnapshot(snapshot)
+//                completion(fireBaseDataArray)
+//
+//            }
+//        })
     }
 
-    private func childrenCountForSection(type: RequestType, withCompletion completion: (count: Int) -> Void) {
-        let ref = Firebase(url: baseURL)
-        ref.queryOrderedByChild(destinationPathForSection(type))
-            .queryLimitedToFirst(1)
-            .observeEventType(FEventType.ChildAdded, withBlock: { snapshot -> Void in
-            let children = Int(snapshot.childrenCount)
-            completion(count: children)
-        })
+    fileprivate func firebaseRequestStringForType(_ type: RequestType) -> String {
+        return baseURL + destinationPathForSection(type)
     }
-    
-    private func firebaseRequestStringForType(type: RequestType) -> String {
-        return baseURL.stringByAppendingString(destinationPathForSection(type))
-    }
-    
-    private func destinationPathForSection(type: RequestType) -> String {
+
+    fileprivate func destinationPathForSection(_ type: RequestType) -> String {
         switch type {
         case .iOS:
             return "iOS technical questions"
-        case .DataStructures:
+        case .dataStructures:
             return "data structure questions"
-        case .Algorithms:
+        case .algorithms:
             return "algorithm questions"
         }
     }
-    
-    private func populateArrayWithSnapshot(snapshot: FDataSnapshot) -> [[NSObject: AnyObject]] {
-        var firebaseArray = [[NSObject: AnyObject]]()
-        for dict in snapshot.valueInExportFormat().allValues {
-            firebaseArray.append(dict as! [NSObject : AnyObject])
+
+    fileprivate func populateArray(withSnapshot snapshot: FIRDataSnapshot) -> JSON {
+        var firebaseArray = JSON()
+        for dict in (snapshot.valueInExportFormat() as AnyObject).allValues {
+            firebaseArray.append(dict as! [String: Any])
             }
         return firebaseArray
     }
