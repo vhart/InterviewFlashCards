@@ -54,13 +54,12 @@ class QuestionsViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.destination is IFCAnswerViewController) {
-            (segue.destination as! IFCAnswerViewController).flashCard = flashCards[currentIndex]
+        if (segue.destination is AnswersViewController) {
+            (segue.destination as! AnswersViewController).flashCard = flashCards[currentIndex]
         }
     }
 
-    //MARK: Public functions
-
+    //MARK: Public Functions
     func set(sectionType value: SectionQuestionType) {
             section = value
     }

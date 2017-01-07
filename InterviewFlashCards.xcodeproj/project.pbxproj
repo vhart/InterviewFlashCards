@@ -11,6 +11,9 @@
 		50C514133FEC5C5C99518168 /* Pods_InterviewFlashCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */; };
 		5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312953D1DCA947F00CD3B07 /* MenuViewController.swift */; };
 		531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531295451DCAB58A00CD3B07 /* QueryManager.swift */; };
+		53322A291E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
+		53322A2A1E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
+		53322A2B1E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
 		53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E19B401DB176050087E231 /* QuestionsViewController.swift */; };
 		91BCE02989F38290F9F1D4A4 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791AE182F0C1E594509FB900 /* Pods_InterviewFlashCards_InterviewFlashCardsTests.framework */; };
 		C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */; };
@@ -18,7 +21,6 @@
 		C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A921C6CDF5500361D17 /* Assets.xcassets */; };
 		C7DD0A961C6CDF5500361D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */; };
 		C7DD0AAC1C6CDF5700361D17 /* InterviewFlashCardsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */; };
-		C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */; };
 		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
 		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
 		D50241661DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */; };
@@ -54,6 +56,7 @@
 		5312953D1DCA947F00CD3B07 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		531295451DCAB58A00CD3B07 /* QueryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManager.swift; sourceTree = "<group>"; };
 		531295471DCAC04300CD3B07 /* InterviewFlashCards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCards-Bridging-Header.h"; sourceTree = "<group>"; };
+		53322A281E1F10C5003E1080 /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
 		53E19B401DB176050087E231 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewFlashCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6522CCE25720C87DD13ADEA6 /* Pods-InterviewFlashCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards/Pods-InterviewFlashCards.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,8 +74,6 @@
 		C7DD0AA71C6CDF5700361D17 /* InterviewFlashCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewFlashCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterviewFlashCardsUITests.m; sourceTree = "<group>"; };
 		C7DD0AAD1C6CDF5700361D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCAnswerViewController.h; sourceTree = "<group>"; };
-		C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCAnswerViewController.m; sourceTree = "<group>"; };
 		C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+AsyncFetch.h"; path = "../UIImage+AsyncFetch.h"; sourceTree = "<group>"; };
 		C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AsyncFetch.m"; path = "../UIImage+AsyncFetch.m"; sourceTree = "<group>"; };
 		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
@@ -132,8 +133,7 @@
 				D5A918D61E107CDE007C4967 /* AppDelegate.swift */,
 				5312953D1DCA947F00CD3B07 /* MenuViewController.swift */,
 				53E19B401DB176050087E231 /* QuestionsViewController.swift */,
-				C7DD0ABF1C6E628000361D17 /* IFCAnswerViewController.h */,
-				C7DD0AC01C6E628000361D17 /* IFCAnswerViewController.m */,
+				53322A281E1F10C5003E1080 /* AnswersViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 			attributes = {
 				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Varindra Hart";
 				TargetAttributes = {
 					C7DD0A7F1C6CDF5300361D17 = {
@@ -496,8 +496,8 @@
 			files = (
 				D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */,
 				182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */,
-				C7DD0AC11C6E628000361D17 /* IFCAnswerViewController.m in Sources */,
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
+				53322A291E1F10C5003E1080 /* AnswersViewController.swift in Sources */,
 				C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */,
 				53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */,
 				5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */,
@@ -510,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53322A2A1E1F10C5003E1080 /* AnswersViewController.swift in Sources */,
 				D50241661DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift in Sources */,
 				D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */,
 			);
@@ -519,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53322A2B1E1F10C5003E1080 /* AnswersViewController.swift in Sources */,
 				C7DD0AAC1C6CDF5700361D17 /* InterviewFlashCardsUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,8 +573,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -616,8 +620,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -636,6 +642,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -679,6 +686,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F13FCFFEF8A7059A1F4FCD3 /* Pods-InterviewFlashCards-InterviewFlashCardsTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = InterviewFlashCardsTests/Info.plist;
@@ -696,6 +704,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 707A09BFDE8FF8D42F00084C /* Pods-InterviewFlashCards-InterviewFlashCardsTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = InterviewFlashCardsTests/Info.plist;
