@@ -12,19 +12,22 @@ class AnswersViewController: UITableViewController {
     
     var flashCard = IFCFlashCard()
     
+    //MARK: IBOutlets
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var answerImageView: UIImageView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var answer: UILabel!
     @IBOutlet weak var paginationLabel: UILabel!
-    var tempAnswerImageView: UIImageView!
-    var tempAnswerLabel: UILabel!
+    
+    // MARK: Properties
+    var tempAnswerImageView: UIImageView?
+    var tempAnswerLabel: UILabel?
     var isTapped = false
     var index = 0
-    var leftGesture: UISwipeGestureRecognizer!
-    var rightGesture: UISwipeGestureRecognizer!
-    var tapGesture: UITapGestureRecognizer!
+    var leftGesture: UISwipeGestureRecognizer?
+    var rightGesture: UISwipeGestureRecognizer?
+    var tapGesture: UITapGestureRecognizer?
     
     
     override func viewDidLoad() {
@@ -127,7 +130,7 @@ class AnswersViewController: UITableViewController {
             if !(self.flashCard.answer != nil) {
                 self.answerLabel.isHidden = false
                 self.answer.isHidden = false
-                self.answerImageView.bounds = self.tempAnswerImageView.bounds
+                self.answerImageView.bounds = (self.tempAnswerImageView?.bounds)!
             }
             else if !(self.flashCard.answerImages != nil) {
                 self.answerImageView.isHidden = false
