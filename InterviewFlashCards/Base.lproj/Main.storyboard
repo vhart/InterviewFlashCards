@@ -114,7 +114,7 @@
                                 <rect key="frame" x="275" y="525" width="51" height="30"/>
                                 <state key="normal" title="Answer"/>
                                 <connections>
-                                    <segue destination="Jig-1g-Wod" kind="presentation" modalTransitionStyle="flipHorizontal" id="K11-1W-Osz"/>
+                                    <segue destination="Jig-1g-Wod" kind="presentation" identifier="answerSegueIdentifier" modalTransitionStyle="flipHorizontal" id="K11-1W-Osz"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-lM-av9">
@@ -199,15 +199,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Back"/>
                                                     <connections>
-                                                        <action selector="backButtonTapped:" destination="Jig-1g-Wod" eventType="touchUpInside" id="irm-UC-4lf"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppr-rN-tcf">
-                                                    <rect key="frame" x="543" y="30" width="42" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <state key="normal" title="Next"/>
-                                                    <connections>
-                                                        <action selector="nextButtonTapped:" destination="Jig-1g-Wod" eventType="touchUpInside" id="BRz-5c-M5g"/>
+                                                        <action selector="backButtonTapped:" destination="Jig-1g-Wod" eventType="touchUpInside" id="cbS-KC-bTw"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU0-Id-LSM">
@@ -228,11 +220,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="zaY-EY-uVY" secondAttribute="bottom" constant="10" id="R8e-8l-aJX"/>
                                                 <constraint firstItem="5T3-Ay-djA" firstAttribute="top" secondItem="Es7-Jd-O1X" secondAttribute="topMargin" constant="30" id="avl-2q-mdi"/>
                                                 <constraint firstItem="Tnd-Xe-M7h" firstAttribute="top" secondItem="5T3-Ay-djA" secondAttribute="bottom" constant="50" id="dXi-jw-ZUc"/>
-                                                <constraint firstItem="Ppr-rN-tcf" firstAttribute="top" secondItem="Es7-Jd-O1X" secondAttribute="top" constant="30" id="eRV-Dp-M7M"/>
                                                 <constraint firstAttribute="trailing" secondItem="Tnd-Xe-M7h" secondAttribute="trailing" constant="20" id="ed3-vq-tsW"/>
                                                 <constraint firstItem="zaY-EY-uVY" firstAttribute="leading" secondItem="Es7-Jd-O1X" secondAttribute="leading" constant="20" id="jZh-tp-nxg"/>
                                                 <constraint firstItem="zaY-EY-uVY" firstAttribute="top" secondItem="Tnd-Xe-M7h" secondAttribute="bottom" constant="10" id="nJd-N5-y2Z"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ppr-rN-tcf" secondAttribute="trailing" constant="15" id="qdm-yY-T3U"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -250,8 +240,6 @@
                         <outlet property="answer" destination="5T3-Ay-djA" id="hxA-DY-LEh"/>
                         <outlet property="answerImageView" destination="zaY-EY-uVY" id="HiG-WH-YjF"/>
                         <outlet property="answerLabel" destination="Tnd-Xe-M7h" id="8lr-fe-b6w"/>
-                        <outlet property="backButton" destination="ZaJ-YQ-Zww" id="LVZ-3I-lag"/>
-                        <outlet property="nextButton" destination="Ppr-rN-tcf" id="Z0M-ea-q8r"/>
                         <outlet property="paginationLabel" destination="jU0-Id-LSM" id="ggy-mo-bei"/>
                     </connections>
                 </tableViewController>

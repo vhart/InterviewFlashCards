@@ -179,6 +179,7 @@
 		C7DD0A771C6CDF5200361D17 = {
 			isa = PBXGroup;
 			children = (
+				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
 				D544AC761DFFBAF100FE5721 /* Flashcards Data */,
 				C7DD0A821C6CDF5400361D17 /* InterviewFlashCards */,
 				C7DD0A9F1C6CDF5600361D17 /* InterviewFlashCardsTests */,
@@ -206,12 +207,6 @@
 				18D4D6AD1C7B88A4004E8555 /* ViewControllers */,
 				18D4D6AE1C7B88B0004E8555 /* Model */,
 				18D4D6AF1C7B88C2004E8555 /* QueryManager */,
-				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
-				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
-				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
-				C7DD0A971C6CDF5500361D17 /* Info.plist */,
-				D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */,
-				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
 				C7DD0A831C6CDF5400361D17 /* Supporting Files */,
 			);
 			path = InterviewFlashCards;
@@ -220,6 +215,11 @@
 		C7DD0A831C6CDF5400361D17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
+				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
+				C7DD0A971C6CDF5500361D17 /* Info.plist */,
+				D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */,
+				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -547,6 +547,7 @@
 				C7DD0A8D1C6CDF5400361D17 /* Base */,
 			);
 			name = Main.storyboard;
+			path = InterviewFlashCards;
 			sourceTree = "<group>";
 		};
 		C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */ = {
