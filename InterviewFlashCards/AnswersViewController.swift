@@ -14,7 +14,7 @@ class AnswersViewController: UITableViewController {
     @IBOutlet weak var answer: UILabel!
     @IBOutlet weak var paginationLabel: UILabel!
     
-    // MARK: Properties
+    //MARK: Properties
     var tempAnswerImageView: UIImageView?
     var tempAnswerLabel: UILabel?
     var index = 0
@@ -25,7 +25,7 @@ class AnswersViewController: UITableViewController {
         setupGestures()
     }
     
-    // MARK: Setup
+    //MARK: Setup
     func setupUI() {
         paginationLabel.text = ""
         setupTempImageViewBounds()

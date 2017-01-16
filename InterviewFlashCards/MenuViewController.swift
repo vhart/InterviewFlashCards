@@ -9,13 +9,13 @@ class MenuViewController: UIViewController {
         case algorithms
     }
 
-    // MARK: Lifecycle Methods
+    //MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Interview Flash Cards"
     }
 
-    // MARK: Actions
+    //MARK: Actions
     @IBAction func sectionButtonTapped(_ sender: UIButton) {
         guard let section = Section(rawValue: sender.tag),
             let storyboard = storyboard,

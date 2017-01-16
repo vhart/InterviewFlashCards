@@ -10,24 +10,24 @@ enum SectionQuestionType {
 
 class QuestionsViewController: UIViewController {
     
-    // MARK: IBOutlets
+    //MARK: IBOutlets
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerButton: UIButton!
     
-    // MARK: Private Properties
+    //MARK: Private Properties
     fileprivate(set) var flashCards = [IFCFlashCard]()
     fileprivate var currentIndex = 0
     fileprivate var section: SectionQuestionType = .dataStructures
     let segueIdentifier = "answerSegueIdentifier"
     
-    // MARK: Public Properties
+    //MARK: Public Properties
     var sectionName = ""
     var dataGenerator: Networking? = QueryManager()
     
-    // MARK: Actions
+    //MARK: Actions
     @IBAction fileprivate func prevButtonTapped(_ sender: UIButton) {
         currentIndex = currentIndex - 1 < 0 ? (currentIndex - 1 + flashCards.count) : 0
         prepareFlashCard(currentIndex)
@@ -38,7 +38,7 @@ class QuestionsViewController: UIViewController {
         prepareFlashCard(currentIndex)
     }
     
-    // MARK: Lifecycle Methods
+    //MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setAccessibilityLabels()
@@ -61,8 +61,7 @@ class QuestionsViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    //MARK: Private functions
-    
+    //MARK: Private Functions
     private func fetchData() {
         dataGenerator?.getData(for: requestType()) { [weak self] json in
             self?.flashCards = IFCFlashCard.flashCards(fromDictionaries: json)
