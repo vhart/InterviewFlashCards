@@ -1,10 +1,4 @@
-//
-//  AnswersViewController.swift
-//  InterviewFlashCards
-//
-//  Created by Charles Kang on 1/5/17.
-//  Copyright © 2017 Varindra Hart. All rights reserved.
-//
+
 
 import UIKit
 
@@ -23,12 +17,7 @@ class AnswersViewController: UITableViewController {
     // MARK: Properties
     var tempAnswerImageView: UIImageView?
     var tempAnswerLabel: UILabel?
-    var isTapped = false
     var index = 0
-    var leftGesture: UISwipeGestureRecognizer?
-    var rightGesture: UISwipeGestureRecognizer?
-    var tapGesture: UITapGestureRecognizer?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
