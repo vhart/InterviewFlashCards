@@ -3,7 +3,7 @@ import Nimble
 import UIKit
 @testable import InterviewFlashCards
 
-struct DataGeneratorMock: Networking {
+struct DataGeneratorMock: DataGenerator {
     let dataMock: JSON
         = [["question": "How many potatoes fit in your shoe", "answer": "Five potaTOES, lol"],
            ["question": "Pizza or Salad", "answer": "Pizza"],

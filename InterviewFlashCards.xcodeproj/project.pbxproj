@@ -24,11 +24,12 @@
 		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
 		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
 		D50241661DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */; };
-		D544AC7A1DFFBB9000FE5721 /* algorithm questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D544AC771DFFBB9000FE5721 /* algorithm questions.txt */; };
-		D544AC7B1DFFBB9000FE5721 /* data structure questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D544AC781DFFBB9000FE5721 /* data structure questions.txt */; };
-		D544AC7C1DFFBB9000FE5721 /* iOS technical questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D544AC791DFFBB9000FE5721 /* iOS technical questions.txt */; };
 		D5A918D51E107BF9007C4967 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */; };
 		D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A918D61E107CDE007C4967 /* AppDelegate.swift */; };
+		D5D027F81E33DA2E00571FED /* JsonFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D027F71E33DA2E00571FED /* JsonFileReader.swift */; };
+		D5D027FC1E33EC3100571FED /* iOS-technical-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027F91E33EC3100571FED /* iOS-technical-questions.json */; };
+		D5D027FD1E33EC3100571FED /* data-structure-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027FA1E33EC3100571FED /* data-structure-questions.json */; };
+		D5D027FE1E33EC3100571FED /* algorithm-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027FB1E33EC3100571FED /* algorithm-questions.json */; };
 		D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,11 +80,12 @@
 		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
 		C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sizing.m"; sourceTree = "<group>"; };
 		D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewControllerSpec.swift; sourceTree = "<group>"; };
-		D544AC771DFFBB9000FE5721 /* algorithm questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "algorithm questions.txt"; sourceTree = "<group>"; };
-		D544AC781DFFBB9000FE5721 /* data structure questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "data structure questions.txt"; sourceTree = "<group>"; };
-		D544AC791DFFBB9000FE5721 /* iOS technical questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS technical questions.txt"; sourceTree = "<group>"; };
 		D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5A918D61E107CDE007C4967 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5D027F71E33DA2E00571FED /* JsonFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReader.swift; sourceTree = "<group>"; };
+		D5D027F91E33EC3100571FED /* iOS-technical-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iOS-technical-questions.json"; sourceTree = "<group>"; };
+		D5D027FA1E33EC3100571FED /* data-structure-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-structure-questions.json"; sourceTree = "<group>"; };
+		D5D027FB1E33EC3100571FED /* algorithm-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "algorithm-questions.json"; sourceTree = "<group>"; };
 		D5D0360D1DCC7273001D9B2F /* InterviewFlashCardsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5F2F8621DF0CED4007C50CB /* InterviewFlashCardsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaConfiguration.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				531295451DCAB58A00CD3B07 /* QueryManager.swift */,
+				D5D027F71E33DA2E00571FED /* JsonFileReader.swift */,
 			);
 			name = QueryManager;
 			sourceTree = "<group>";
@@ -248,9 +251,9 @@
 		D544AC761DFFBAF100FE5721 /* Flashcards Data */ = {
 			isa = PBXGroup;
 			children = (
-				D544AC771DFFBB9000FE5721 /* algorithm questions.txt */,
-				D544AC781DFFBB9000FE5721 /* data structure questions.txt */,
-				D544AC791DFFBB9000FE5721 /* iOS technical questions.txt */,
+				D5D027F91E33EC3100571FED /* iOS-technical-questions.json */,
+				D5D027FA1E33EC3100571FED /* data-structure-questions.json */,
+				D5D027FB1E33EC3100571FED /* algorithm-questions.json */,
 			);
 			path = "Flashcards Data";
 			sourceTree = "<group>";
@@ -370,12 +373,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D544AC7B1DFFBB9000FE5721 /* data structure questions.txt in Resources */,
 				C7DD0A961C6CDF5500361D17 /* LaunchScreen.storyboard in Resources */,
-				D544AC7C1DFFBB9000FE5721 /* iOS technical questions.txt in Resources */,
+				D5D027FD1E33EC3100571FED /* data-structure-questions.json in Resources */,
 				C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */,
 				C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */,
-				D544AC7A1DFFBB9000FE5721 /* algorithm questions.txt in Resources */,
+				D5D027FC1E33EC3100571FED /* iOS-technical-questions.json in Resources */,
+				D5D027FE1E33EC3100571FED /* algorithm-questions.json in Resources */,
 				D5A918D51E107BF9007C4967 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D027F81E33DA2E00571FED /* JsonFileReader.swift in Sources */,
 				D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */,
 				182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */,
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
