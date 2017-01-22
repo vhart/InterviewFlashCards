@@ -1,8 +1,7 @@
 # Interview Flash Cards
 An open-source project in the form of iOS technical, data structures, and algorithm questions in flashcard form.
 
-
- ## Pods
+## Pods
  - Firebase(soon to be migrated to a Realm database)
  - Quick
  - Nimble
