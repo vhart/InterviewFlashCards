@@ -14,9 +14,9 @@ class AnswersViewController: UITableViewController {
     @IBOutlet weak var questionNumberLabel: UILabel!
 
     //MARK: Properties
-    var tempAnswerImageView: UIImageView?
-    var tempAnswerLabel: UILabel?
-    var index = 0
+    fileprivate var tempAnswerImageView: UIImageView?
+    fileprivate var tempAnswerLabel: UILabel?
+    fileprivate var index = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +24,10 @@ class AnswersViewController: UITableViewController {
     }
 
     //MARK: Setup
-    func setupUI() {
+    fileprivate func setupUI() {
         questionNumberLabel.text = ""
         setupTempImageViewBounds()
         if (flashCard.answerImages != nil) {
-            index = 0
             answerImageView.isUserInteractionEnabled = true
             answerImageView.image = flashCard.answerImages.first
             answerLabel.text = ""
@@ -37,16 +36,16 @@ class AnswersViewController: UITableViewController {
         }
     }
 
-    func setupTempImageViewBounds() {
+    fileprivate func setupTempImageViewBounds() {
         tempAnswerImageView = UIImageView(frame: answerImageView.frame)
     }
 
-    func updateQuestionNumberLabel() {
+    fileprivate func updateQuestionNumberLabel() {
         questionNumberLabel.text = "\(index + 1)/\(flashCard.answerImages.count)"
     }
 
     //MARK: Frame Maker
-    func fullscreenFrame() -> CGRect {
+    fileprivate func fullscreenFrame() -> CGRect {
         return CGRect(x: CGFloat(view.bounds.origin.x + 10), y: CGFloat(view.bounds.origin.y + 10), width: CGFloat(view.bounds.size.width - 20), height: CGFloat(view.bounds.size.height - 10))
     }
     //MARK: Navigation

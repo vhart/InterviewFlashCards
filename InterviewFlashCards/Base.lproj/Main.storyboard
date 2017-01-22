@@ -240,7 +240,7 @@
                         <outlet property="answer" destination="5T3-Ay-djA" id="hxA-DY-LEh"/>
                         <outlet property="answerImageView" destination="zaY-EY-uVY" id="HiG-WH-YjF"/>
                         <outlet property="answerLabel" destination="Tnd-Xe-M7h" id="8lr-fe-b6w"/>
-                        <outlet property="paginationLabel" destination="jU0-Id-LSM" id="ggy-mo-bei"/>
+                        <outlet property="questionNumberLabel" destination="jU0-Id-LSM" id="hC8-dT-rNA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXy-04-f11" userLabel="First Responder" sceneMemberID="firstResponder"/>

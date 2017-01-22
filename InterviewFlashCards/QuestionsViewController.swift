@@ -46,9 +46,10 @@ class QuestionsViewController: UIViewController {
         fetchData()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         if segue.identifier == segueIdentifier {
-            (segue.destination as! AnswersViewController).flashCard = flashCards[currentIndex]
+            (segue.destination as? AnswersViewController)?.flashCard = flashCards[currentIndex]
         }
     }
 
