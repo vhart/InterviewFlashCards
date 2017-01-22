@@ -11,7 +11,7 @@ class AnswersViewController: UITableViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var answer: UILabel!
-    @IBOutlet weak var paginationLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
 
     //MARK: Properties
     var tempAnswerImageView: UIImageView?
@@ -25,12 +25,12 @@ class AnswersViewController: UITableViewController {
 
     //MARK: Setup
     func setupUI() {
-        paginationLabel.text = ""
+        questionNumberLabel.text = ""
         setupTempImageViewBounds()
         if (flashCard.answerImages != nil) {
             index = 0
             answerImageView.isUserInteractionEnabled = true
-            answerImageView.image = flashCard.answerImages[0]
+            answerImageView.image = flashCard.answerImages.first
             answerLabel.text = ""
         } else {
             answerLabel.text = flashCard.answer
@@ -41,8 +41,8 @@ class AnswersViewController: UITableViewController {
         tempAnswerImageView = UIImageView(frame: answerImageView.frame)
     }
 
-    func showPaginationLabel() {
-        paginationLabel.text = "\(index + 1)/\(flashCard.answerImages.count)"
+    func updateQuestionNumberLabel() {
+        questionNumberLabel.text = "\(index + 1)/\(flashCard.answerImages.count)"
     }
 
     //MARK: Frame Maker
