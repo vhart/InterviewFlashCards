@@ -8,8 +8,8 @@
 @property (nonatomic) NSString *answer;
 @property (nonatomic) NSString *questionImageURL;
 @property (nonatomic) NSArray <NSString *> *answerImageURLs;
-@property (nonatomic) NSMutableArray *questionImages;
-@property (nonatomic) NSMutableArray *answerImages;
+@property (nonatomic) NSArray <UIImage *> *questionImages;
+@property (nonatomic) NSArray <UIImage *> *answerImages;
 @property (nonatomic) BOOL questionImagesLoaded;
 @property (nonatomic) BOOL answerImagesLoaded;
 

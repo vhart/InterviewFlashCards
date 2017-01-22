@@ -47,7 +47,7 @@
 
     if (self.questionImageURL && self.questionImages.count == 0) {
         [UIImage asyncFetchForUrl:self.questionImageURL withCompletion:^(UIImage *img, BOOL success) {
-            [self.questionImages addObject:img];
+            [self.questionImages arrayByAddingObject:img];
             self.questionImagesLoaded = YES;
             if (self.answerImagesLoaded) {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -66,7 +66,7 @@
 
                 NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
                 UIImage *ansImage = [UIImage imageWithData:data];
-                [self.answerImages addObject:ansImage];
+                [self.answerImages arrayByAddingObject:ansImage];
 
                 if (self.answerImages.count == self.answerImageURLs.count) {
                     self.answerImagesLoaded = YES;
