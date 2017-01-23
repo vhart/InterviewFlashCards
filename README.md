@@ -1,5 +1,5 @@
 # Interview Flash Cards
-An open-source project in the form of iOS technical, data structures, and algorithm questions in flashcard form.
+An open-source project designed to be a tool for iOS developers preparing for an interview. The project consists of data structure and algorithm questions, as well as iOS technical questions, all in flashcard form.
 
 ## Pods
 - Firebase(soon to be migrated to a Realm database)
@@ -17,9 +17,7 @@ An open-source project in the form of iOS technical, data structures, and algori
 
 ## Features
 - Choose between 3 different study topics
-- Question tracking to make sure you're understanding the topics and concepts
 - Solutions to questions within the app
-- Swipe through all questions and categories smoothly
 
 ## Future Improvements and Features
 - UI and UX update
