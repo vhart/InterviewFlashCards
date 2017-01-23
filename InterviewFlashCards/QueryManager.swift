@@ -2,10 +2,10 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
-public typealias JSON = [[String: Any]]
+public typealias JSON = [String: Any]
 public protocol DataGenerator {
     func getData(for requestType: RequestType,
-                     completion: @escaping (JSON) -> Void)
+                     completion: @escaping ([JSON]) -> Void)
 }
 
 public enum RequestType: Int {
@@ -18,7 +18,7 @@ class QueryManager: DataGenerator {
     // MARK: Private Properties
     fileprivate let baseURL = "https://fiery-torch-4131.firebaseio.com/"
 
-    func getData(for requestType: RequestType, completion: @escaping (JSON) -> Void) {
+    func getData(for requestType: RequestType, completion: @escaping ([JSON]) -> Void) {
         let keyForSection = destinationPathForSection(requestType)
         let reference = FIRDatabase.database().reference(withPath: keyForSection)
         reference.observe(.value, with: { snapshot in
@@ -42,8 +42,8 @@ class QueryManager: DataGenerator {
         }
     }
 
-    fileprivate func populateArray(withSnapshot snapshot: FIRDataSnapshot) -> JSON {
-        var firebaseArray = JSON()
+    fileprivate func populateArray(withSnapshot snapshot: FIRDataSnapshot) -> [JSON] {
+        var firebaseArray = [JSON]()
         for dict in (snapshot.valueInExportFormat() as AnyObject).allValues {
             firebaseArray.append(dict as! [String: Any])
             }
