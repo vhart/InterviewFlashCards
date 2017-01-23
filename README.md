@@ -1,12 +1,6 @@
 # Interview Flash Cards
 An open-source project designed to be a tool for iOS developers preparing for an interview. The project consists of data structure and algorithm questions, as well as iOS technical questions, all in flashcard form.
 
-## Pods
-- Firebase(soon to be migrated to a Realm database)
-- Quick
-- Nimble
-- Nocilla
-
 ## Minimum Requirements
 - Xcode 8
 - iOS 10.0
