@@ -1,12 +1,11 @@
-
 import Foundation
 import Firebase
 import FirebaseDatabase
 
-public typealias JSON = [[String: Any]]
-public protocol Networking {
+public typealias JSON = [String: Any]
+public protocol DataGenerator {
     func getData(for requestType: RequestType,
-                     completion: @escaping (JSON) -> Void)
+                     completion: @escaping ([JSON]) -> Void)
 }
 
 public enum RequestType: Int {
@@ -15,25 +14,17 @@ public enum RequestType: Int {
     case algorithms
 }
 
-class QueryManager: Networking {
+class QueryManager: DataGenerator {
     // MARK: Private Properties
     fileprivate let baseURL = "https://fiery-torch-4131.firebaseio.com/"
 
-    func getData(for requestType: RequestType, completion: @escaping (JSON) -> Void) {
+    func getData(for requestType: RequestType, completion: @escaping ([JSON]) -> Void) {
         let keyForSection = destinationPathForSection(requestType)
         let reference = FIRDatabase.database().reference(withPath: keyForSection)
         reference.observe(.value, with: { snapshot in
             let dataArray = self.populateArray(withSnapshot: snapshot)
             completion(dataArray)
         })
-//        reference?.queryOrderedByKey().observe(FEventType.childAdded, with: { snapshot in
-//            if let snapshot = snapshot,
-//                snapshot.key == keyForSection {
-//                let fireBaseDataArray = self.populateArrayWithSnapshot(snapshot)
-//                completion(fireBaseDataArray)
-//
-//            }
-//        })
     }
 
     fileprivate func firebaseRequestStringForType(_ type: RequestType) -> String {
@@ -51,8 +42,8 @@ class QueryManager: Networking {
         }
     }
 
-    fileprivate func populateArray(withSnapshot snapshot: FIRDataSnapshot) -> JSON {
-        var firebaseArray = JSON()
+    fileprivate func populateArray(withSnapshot snapshot: FIRDataSnapshot) -> [JSON] {
+        var firebaseArray = [JSON]()
         for dict in (snapshot.valueInExportFormat() as AnyObject).allValues {
             firebaseArray.append(dict as! [String: Any])
             }

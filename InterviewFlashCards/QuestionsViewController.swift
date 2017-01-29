@@ -1,4 +1,3 @@
-
 import UIKit
 
 enum SectionQuestionType {
@@ -10,26 +9,27 @@ enum SectionQuestionType {
 
 class QuestionsViewController: UIViewController {
 
-    //MARK: IBOutlets
+    // MARK: IBOutlets
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerButton: UIButton!
 
-    //MARK: Private Properties
+    // MARK: Private Properties
     fileprivate(set) var flashCards = [IFCFlashCard]()
     fileprivate var currentIndex = 0
     fileprivate var section: SectionQuestionType = .dataStructures
     let segueIdentifier = "answerSegueIdentifier"
 
-    //MARK: Public Properties
+    // MARK: Public Properties
     var sectionName = ""
-    var dataGenerator: Networking? = QueryManager()
+    var dataGenerator: DataGenerator? = JsonFileReader()
 
-    //MARK: Actions
+    // MARK: Actions
+
     @IBAction fileprivate func prevButtonTapped(_ sender: UIButton) {
-        currentIndex = currentIndex - 1 < 0 ? (currentIndex - 1 + flashCards.count) : 0
+        currentIndex = currentIndex - 1 < 0 ? (currentIndex - 1 + flashCards.count) : currentIndex - 1
         prepareFlashCard(currentIndex)
     }
 
@@ -38,7 +38,7 @@ class QuestionsViewController: UIViewController {
         prepareFlashCard(currentIndex)
     }
 
-    //MARK: Lifecycle Methods
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setAccessibilityLabels()
@@ -90,23 +90,20 @@ class QuestionsViewController: UIViewController {
     }
 
     fileprivate func prepareFlashCard(_ index: Int) {
+        guard flashCards.count > index else { return }
         if let next = nextButton, let answer = answerButton {
             next.isHidden = true
             answer.isHidden = true
         }
         let nextCard = flashCards[index]
         nextCard.prepare() { [weak self] in
-            self?.prepareUIwithCard(nextCard)
+            self?.prepareView(with: nextCard)
         }
     }
 
-    fileprivate func prepareUIwithCard(_ flashCard: IFCFlashCard) {
+    fileprivate func prepareView(with flashCard: IFCFlashCard) {
         questionLabel.text = flashCard.question
-        questionImageView.image = nil
-        if flashCard.questionImages != nil && flashCard.questionImages.count > 0 {
-            let questionImage = flashCard.questionImages[0]
-            questionImageView.image = questionImage
-        }
+        questionImageView.image = flashCard.questionImages.first
         nextButton.isHidden = false
         answerButton.isHidden = false
     }

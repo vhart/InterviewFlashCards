@@ -1,4 +1,3 @@
-
 #import "IFCFlashCard.h"
 #import "NSMutableArray+Sizing.h"
 #import "UIImage+AsyncFetch.h"
@@ -13,18 +12,16 @@
         self.answer           = dict[@"answer"];
         self.questionImageURL = dict[@"question_url"];
 
-        NSDictionary *urls    = dict[@"answer_urls"];
-        self.answerImageURLs = [self arrayOfUrlsFromDictionary:urls];
-
-        if (self.questionImageURL) {
-            self.questionImages = [NSMutableArray new];
+        id urls    = dict[@"answer_urls"];
+        if ([urls isKindOfClass:[NSArray class]]) {
+            self.answerImageURLs = urls;
+        } else if ([urls isKindOfClass:[NSDictionary class]]) {
+            self.answerImageURLs = [self arrayOfUrlsFromDictionary:urls];
         }
-        if (self.answerImageURLs) {
-            self.answerImages = [NSMutableArray new];
-        }
+        self.questionImages = [NSArray new];
 
+        self.answerImages = [NSArray new];
     }
-
     return self;
 }
 
@@ -47,7 +44,7 @@
 
     if (self.questionImageURL && self.questionImages.count == 0) {
         [UIImage asyncFetchForUrl:self.questionImageURL withCompletion:^(UIImage *img, BOOL success) {
-            [self.questionImages arrayByAddingObject:img];
+            self.questionImages = [self.questionImages arrayByAddingObject:img];
             self.questionImagesLoaded = YES;
             if (self.answerImagesLoaded) {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -66,7 +63,7 @@
 
                 NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
                 UIImage *ansImage = [UIImage imageWithData:data];
-                [self.answerImages arrayByAddingObject:ansImage];
+                self.answerImages = [self.answerImages arrayByAddingObject:ansImage];
 
                 if (self.answerImages.count == self.answerImageURLs.count) {
                     self.answerImagesLoaded = YES;
@@ -98,7 +95,7 @@
         [flashCards addObject:next];
     }
 
-    return flashCards;
+    return flashCards.copy;
 }
 
 @end

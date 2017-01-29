@@ -1,4 +1,3 @@
-
 import UIKit
 
 class AnswersViewController: UITableViewController {
@@ -27,7 +26,7 @@ class AnswersViewController: UITableViewController {
     fileprivate func setupUI() {
         questionNumberLabel.text = ""
         setupTempImageViewBounds()
-        if (flashCard.answerImages != nil) {
+        if (!flashCard.answerImages.isEmpty) {
             answerImageView.isUserInteractionEnabled = true
             answerImageView.image = flashCard.answerImages.first
             answerLabel.text = ""
