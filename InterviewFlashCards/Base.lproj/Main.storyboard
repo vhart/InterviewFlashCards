@@ -13,7 +13,7 @@
         <!--Menu View Controller-->
         <scene sceneID="8dc-Xm-qjE">
             <objects>
-                <viewController id="ww0-J5-cxg" customClass="MenuViewController" customModule="InterviewFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="ww0-J5-cxg" customClass="MenuViewController" customModule="InterviewFlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w16-Ye-REw"/>
                         <viewControllerLayoutGuide type="bottom" id="LeJ-pU-LNZ"/>
@@ -250,7 +250,7 @@
         <!--Answer View Controller-->
         <scene sceneID="Hm0-re-kAG">
             <objects>
-                <viewController id="Zbm-dh-RUv" customClass="IFCAnswerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnswerViewController" id="Zbm-dh-RUv" customClass="IFCAnswerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eeK-VB-TVW"/>
                         <viewControllerLayoutGuide type="bottom" id="5j4-Ka-bSq"/>
@@ -308,7 +308,7 @@
         <!--Navigation Controller-->
         <scene sceneID="8kJ-Ee-p6q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LLU-Yb-Yjf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navController" automaticallyAdjustsScrollViewInsets="NO" id="LLU-Yb-Yjf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OyK-QD-xpl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
