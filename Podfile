@@ -7,6 +7,8 @@ target ‘InterviewFlashCards’ do
   use_frameworks!
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'BrightFutures'
+    pod 'SwiftyJSON'
 
   # Pods for InterviewFlashCards
   target 'InterviewFlashCardsTests' do
