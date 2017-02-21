@@ -31,6 +31,7 @@
 		D5D027FC1E33EC3100571FED /* iOS-technical-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027F91E33EC3100571FED /* iOS-technical-questions.json */; };
 		D5D027FD1E33EC3100571FED /* data-structure-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027FA1E33EC3100571FED /* data-structure-questions.json */; };
 		D5D027FE1E33EC3100571FED /* algorithm-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027FB1E33EC3100571FED /* algorithm-questions.json */; };
+		D5E7EE5F1E56AA1E0041ECE3 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E7EE5E1E56AA1E0041ECE3 /* Flashcard.swift */; };
 		D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,11 +85,13 @@
 		D50723E31E35A9DE00EFE055 /* JsonFileReaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReaderSpec.swift; sourceTree = "<group>"; };
 		D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5A918D61E107CDE007C4967 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5B1EBB61E5A10FD006556D1 /* AlgorithmTesting.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AlgorithmTesting.playground; sourceTree = "<group>"; };
 		D5D027F71E33DA2E00571FED /* JsonFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReader.swift; sourceTree = "<group>"; };
 		D5D027F91E33EC3100571FED /* iOS-technical-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iOS-technical-questions.json"; sourceTree = "<group>"; };
 		D5D027FA1E33EC3100571FED /* data-structure-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-structure-questions.json"; sourceTree = "<group>"; };
 		D5D027FB1E33EC3100571FED /* algorithm-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "algorithm-questions.json"; sourceTree = "<group>"; };
 		D5D0360D1DCC7273001D9B2F /* InterviewFlashCardsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5E7EE5E1E56AA1E0041ECE3 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 		D5F2F8621DF0CED4007C50CB /* InterviewFlashCardsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +150,7 @@
 			children = (
 				182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */,
 				182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */,
+				D5E7EE5E1E56AA1E0041ECE3 /* Flashcard.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -184,6 +188,7 @@
 		C7DD0A771C6CDF5200361D17 = {
 			isa = PBXGroup;
 			children = (
+				D5B1EBB51E5A107F006556D1 /* Playgrounds */,
 				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
 				D544AC761DFFBAF100FE5721 /* Flashcards Data */,
 				C7DD0A821C6CDF5400361D17 /* InterviewFlashCards */,
@@ -259,6 +264,14 @@
 				D5D027FB1E33EC3100571FED /* algorithm-questions.json */,
 			);
 			path = "Flashcards Data";
+			sourceTree = "<group>";
+		};
+		D5B1EBB51E5A107F006556D1 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				D5B1EBB61E5A10FD006556D1 /* AlgorithmTesting.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +520,7 @@
 				53322A291E1F10C5003E1080 /* AnswersViewController.swift in Sources */,
 				C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */,
 				53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */,
+				D5E7EE5F1E56AA1E0041ECE3 /* Flashcard.swift in Sources */,
 				5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */,
 				C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */,
 				531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */,

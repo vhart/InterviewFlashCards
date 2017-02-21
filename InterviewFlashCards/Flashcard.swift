@@ -6,31 +6,38 @@ enum FlashcardError: Error {
     case invalidImage
 }
 
-class Flashcard {
+public enum FlashcardType {
+    case iOS
+    case dataStructures
+    case algorithms
+}
+
+public class Flashcard {
+    let type: FlashcardType
     let question: String
-    let answer: String?
+    let answer: String
     let questionImageUrlString: String?
 
     private(set) var questionImage: UIImage? = nil
-    private(set) var hasLoadedQuestionImages: Bool = false
-    private(set) var hasLoadedAnswerImages: Bool = false
 
     private let requestQueue = DispatchQueue(label: "com.interviewflashcards.flashcard")
 
-    public init?(dictionary dict: [String: Any]) {
+    public init?(dictionary dict: [String: Any], type: FlashcardType) {
         let json = SwiftyJSON.JSON(dict)
-        guard let question = json["question"].string
+        guard let question = json["question"].string,
+            let answer = json["answer"].string
             else { return nil }
 
+        self.type = type
         self.question = question
-        self.answer = json["answer"].string
+        self.answer = answer
         self.questionImageUrlString = json["question_url"].string
     }
 
     func prepareQuestionImagesIfNeeded() -> Future<Void, FlashcardError> {
         let promise = Promise<Void, FlashcardError>()
 
-        guard questionImage == nil else {
+        guard questionImageUrlString != nil && questionImage == nil else {
             promise.success()
             return promise.future
         }
@@ -55,8 +62,9 @@ class Flashcard {
         return promise.future
     }
 
-    class func flashcards(fromDictionaries dictionaries: [[String: Any]]) -> [Flashcard] {
-        return dictionaries.flatMap { Flashcard(dictionary: $0) }
+    class func flashcards(ofType type: FlashcardType,
+                          fromDictionaries dictionaries: [[String: Any]]) -> [Flashcard] {
+        return dictionaries.flatMap { Flashcard(dictionary: $0, type: type) }
     }
 
 }
