@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		50C514133FEC5C5C99518168 /* Pods_InterviewFlashCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */; };
 		5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312953D1DCA947F00CD3B07 /* MenuViewController.swift */; };
-		531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531295451DCAB58A00CD3B07 /* QueryManager.swift */; };
 		53322A291E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
 		53322A2A1E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
 		53322A2B1E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
@@ -20,8 +19,6 @@
 		C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A921C6CDF5500361D17 /* Assets.xcassets */; };
 		C7DD0A961C6CDF5500361D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */; };
 		C7DD0AAC1C6CDF5700361D17 /* InterviewFlashCardsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */; };
-		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
-		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
 		D50241661DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */; };
 		D50723E41E35A9DE00EFE055 /* JsonFileReaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50723E31E35A9DE00EFE055 /* JsonFileReaderSpec.swift */; };
 		D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A918D61E107CDE007C4967 /* AppDelegate.swift */; };
@@ -58,7 +55,6 @@
 /* Begin PBXFileReference section */
 		2F13FCFFEF8A7059A1F4FCD3 /* Pods-InterviewFlashCards-InterviewFlashCardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards-InterviewFlashCardsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards-InterviewFlashCardsTests/Pods-InterviewFlashCards-InterviewFlashCardsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5312953D1DCA947F00CD3B07 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		531295451DCAB58A00CD3B07 /* QueryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManager.swift; sourceTree = "<group>"; };
 		531295471DCAC04300CD3B07 /* InterviewFlashCards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCards-Bridging-Header.h"; sourceTree = "<group>"; };
 		53322A281E1F10C5003E1080 /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
 		53E19B401DB176050087E231 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
@@ -78,10 +74,6 @@
 		C7DD0AA71C6CDF5700361D17 /* InterviewFlashCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewFlashCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterviewFlashCardsUITests.m; sourceTree = "<group>"; };
 		C7DD0AAD1C6CDF5700361D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+AsyncFetch.h"; path = "../UIImage+AsyncFetch.h"; sourceTree = "<group>"; };
-		C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AsyncFetch.m"; path = "../UIImage+AsyncFetch.m"; sourceTree = "<group>"; };
-		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
-		C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sizing.m"; sourceTree = "<group>"; };
 		D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewControllerSpec.swift; sourceTree = "<group>"; };
 		D50723E31E35A9DE00EFE055 /* JsonFileReaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReaderSpec.swift; sourceTree = "<group>"; };
 		D5A918D61E107CDE007C4967 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,17 +120,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18D4D6AC1C7B8896004E8555 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */,
-				C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */,
-				C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */,
-				C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 		18D4D6AD1C7B88A4004E8555 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +144,6 @@
 		18D4D6AF1C7B88C2004E8555 /* QueryManager */ = {
 			isa = PBXGroup;
 			children = (
-				531295451DCAB58A00CD3B07 /* QueryManager.swift */,
 				D5D027F71E33DA2E00571FED /* JsonFileReader.swift */,
 			);
 			name = QueryManager;
@@ -218,7 +198,6 @@
 		C7DD0A821C6CDF5400361D17 /* InterviewFlashCards */ = {
 			isa = PBXGroup;
 			children = (
-				18D4D6AC1C7B8896004E8555 /* Categories */,
 				18D4D6AD1C7B88A4004E8555 /* ViewControllers */,
 				18D4D6AE1C7B88B0004E8555 /* Model */,
 				18D4D6AF1C7B88C2004E8555 /* QueryManager */,
@@ -535,13 +514,10 @@
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
 				53322A291E1F10C5003E1080 /* AnswersViewController.swift in Sources */,
 				D5F684131E636DFB00B92542 /* StringLayoutHandler.swift in Sources */,
-				C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */,
 				D5F684141E636DFB00B92542 /* TmTypes.swift in Sources */,
 				53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */,
 				D5E7EE5F1E56AA1E0041ECE3 /* Flashcard.swift in Sources */,
 				5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */,
-				C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */,
-				531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
