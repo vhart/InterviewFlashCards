@@ -1,0 +1,6 @@
+framework module SyntaxKit {
+  umbrella header "SyntaxKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

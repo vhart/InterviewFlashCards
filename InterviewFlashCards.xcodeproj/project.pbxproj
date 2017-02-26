@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */; };
 		50C514133FEC5C5C99518168 /* Pods_InterviewFlashCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE8F0CFE6E55B73AC4C835 /* Pods_InterviewFlashCards.framework */; };
 		5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312953D1DCA947F00CD3B07 /* MenuViewController.swift */; };
-		531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531295451DCAB58A00CD3B07 /* QueryManager.swift */; };
 		53322A291E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
 		53322A2A1E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
 		53322A2B1E1F10C5003E1080 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53322A281E1F10C5003E1080 /* AnswersViewController.swift */; };
@@ -21,17 +19,20 @@
 		C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A921C6CDF5500361D17 /* Assets.xcassets */; };
 		C7DD0A961C6CDF5500361D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */; };
 		C7DD0AAC1C6CDF5700361D17 /* InterviewFlashCardsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */; };
-		C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */; };
-		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
 		D50241661DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */; };
 		D50723E41E35A9DE00EFE055 /* JsonFileReaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50723E31E35A9DE00EFE055 /* JsonFileReaderSpec.swift */; };
-		D5A918D51E107BF9007C4967 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */; };
 		D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A918D61E107CDE007C4967 /* AppDelegate.swift */; };
 		D5D027F81E33DA2E00571FED /* JsonFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D027F71E33DA2E00571FED /* JsonFileReader.swift */; };
 		D5D027FC1E33EC3100571FED /* iOS-technical-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027F91E33EC3100571FED /* iOS-technical-questions.json */; };
 		D5D027FD1E33EC3100571FED /* data-structure-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027FA1E33EC3100571FED /* data-structure-questions.json */; };
 		D5D027FE1E33EC3100571FED /* algorithm-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027FB1E33EC3100571FED /* algorithm-questions.json */; };
+		D5E7EE5F1E56AA1E0041ECE3 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E7EE5E1E56AA1E0041ECE3 /* Flashcard.swift */; };
 		D5F2F8671DF0D41E007C50CB /* NocillaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */; };
+		D5F684131E636DFB00B92542 /* StringLayoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F684111E636DFB00B92542 /* StringLayoutHandler.swift */; };
+		D5F684141E636DFB00B92542 /* TmTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F684121E636DFB00B92542 /* TmTypes.swift */; };
+		D5F684171E636E6300B92542 /* Swift.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = D5F684161E636E6300B92542 /* Swift.tmLanguage */; };
+		D5F684191E636E8000B92542 /* Tomorrow-Night-Bright.tmTheme in Resources */ = {isa = PBXBuildFile; fileRef = D5F684181E636E8000B92542 /* Tomorrow-Night-Bright.tmTheme */; };
+		D5F6841B1E636E8D00B92542 /* Tomorrow.tmTheme in Resources */ = {isa = PBXBuildFile; fileRef = D5F6841A1E636E8D00B92542 /* Tomorrow.tmTheme */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFCFlashCard.h; sourceTree = "<group>"; };
-		182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFCFlashCard.m; sourceTree = "<group>"; };
 		2F13FCFFEF8A7059A1F4FCD3 /* Pods-InterviewFlashCards-InterviewFlashCardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlashCards-InterviewFlashCardsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewFlashCards-InterviewFlashCardsTests/Pods-InterviewFlashCards-InterviewFlashCardsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5312953D1DCA947F00CD3B07 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		531295451DCAB58A00CD3B07 /* QueryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManager.swift; sourceTree = "<group>"; };
 		531295471DCAC04300CD3B07 /* InterviewFlashCards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCards-Bridging-Header.h"; sourceTree = "<group>"; };
 		53322A281E1F10C5003E1080 /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
 		53E19B401DB176050087E231 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
@@ -76,21 +74,23 @@
 		C7DD0AA71C6CDF5700361D17 /* InterviewFlashCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewFlashCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD0AAB1C6CDF5700361D17 /* InterviewFlashCardsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterviewFlashCardsUITests.m; sourceTree = "<group>"; };
 		C7DD0AAD1C6CDF5700361D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+AsyncFetch.h"; path = "../UIImage+AsyncFetch.h"; sourceTree = "<group>"; };
-		C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AsyncFetch.m"; path = "../UIImage+AsyncFetch.m"; sourceTree = "<group>"; };
-		C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sizing.h"; sourceTree = "<group>"; };
-		C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sizing.m"; sourceTree = "<group>"; };
 		D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewControllerSpec.swift; sourceTree = "<group>"; };
 		D50723E31E35A9DE00EFE055 /* JsonFileReaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReaderSpec.swift; sourceTree = "<group>"; };
-		D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5A918D61E107CDE007C4967 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5B1EBB61E5A10FD006556D1 /* AlgorithmTesting.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AlgorithmTesting.playground; sourceTree = "<group>"; };
 		D5D027F71E33DA2E00571FED /* JsonFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReader.swift; sourceTree = "<group>"; };
 		D5D027F91E33EC3100571FED /* iOS-technical-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iOS-technical-questions.json"; sourceTree = "<group>"; };
 		D5D027FA1E33EC3100571FED /* data-structure-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-structure-questions.json"; sourceTree = "<group>"; };
 		D5D027FB1E33EC3100571FED /* algorithm-questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "algorithm-questions.json"; sourceTree = "<group>"; };
 		D5D0360D1DCC7273001D9B2F /* InterviewFlashCardsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5E7EE5E1E56AA1E0041ECE3 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 		D5F2F8621DF0CED4007C50CB /* InterviewFlashCardsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewFlashCardsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5F2F8661DF0D41E007C50CB /* NocillaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaConfiguration.swift; sourceTree = "<group>"; };
+		D5F684111E636DFB00B92542 /* StringLayoutHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringLayoutHandler.swift; sourceTree = "<group>"; };
+		D5F684121E636DFB00B92542 /* TmTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TmTypes.swift; sourceTree = "<group>"; };
+		D5F684161E636E6300B92542 /* Swift.tmLanguage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Swift.tmLanguage; sourceTree = "<group>"; };
+		D5F684181E636E8000B92542 /* Tomorrow-Night-Bright.tmTheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Tomorrow-Night-Bright.tmTheme"; sourceTree = "<group>"; };
+		D5F6841A1E636E8D00B92542 /* Tomorrow.tmTheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tomorrow.tmTheme; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,17 +120,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18D4D6AC1C7B8896004E8555 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				C7DD0AC51C6F203C00361D17 /* UIImage+AsyncFetch.h */,
-				C7DD0AC61C6F203C00361D17 /* UIImage+AsyncFetch.m */,
-				C7DD0AC81C70304200361D17 /* NSMutableArray+Sizing.h */,
-				C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 		18D4D6AD1C7B88A4004E8555 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,8 +134,9 @@
 		18D4D6AE1C7B88B0004E8555 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				182D74DF1C6EAB7500F3E41B /* IFCFlashCard.h */,
-				182D74E01C6EAB7500F3E41B /* IFCFlashCard.m */,
+				D5F684111E636DFB00B92542 /* StringLayoutHandler.swift */,
+				D5F684121E636DFB00B92542 /* TmTypes.swift */,
+				D5E7EE5E1E56AA1E0041ECE3 /* Flashcard.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -154,7 +144,6 @@
 		18D4D6AF1C7B88C2004E8555 /* QueryManager */ = {
 			isa = PBXGroup;
 			children = (
-				531295451DCAB58A00CD3B07 /* QueryManager.swift */,
 				D5D027F71E33DA2E00571FED /* JsonFileReader.swift */,
 			);
 			name = QueryManager;
@@ -184,6 +173,7 @@
 		C7DD0A771C6CDF5200361D17 = {
 			isa = PBXGroup;
 			children = (
+				D5B1EBB51E5A107F006556D1 /* Playgrounds */,
 				C7DD0A8C1C6CDF5400361D17 /* Main.storyboard */,
 				D544AC761DFFBAF100FE5721 /* Flashcards Data */,
 				C7DD0A821C6CDF5400361D17 /* InterviewFlashCards */,
@@ -208,7 +198,6 @@
 		C7DD0A821C6CDF5400361D17 /* InterviewFlashCards */ = {
 			isa = PBXGroup;
 			children = (
-				18D4D6AC1C7B8896004E8555 /* Categories */,
 				18D4D6AD1C7B88A4004E8555 /* ViewControllers */,
 				18D4D6AE1C7B88B0004E8555 /* Model */,
 				18D4D6AF1C7B88C2004E8555 /* QueryManager */,
@@ -220,10 +209,10 @@
 		C7DD0A831C6CDF5400361D17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D5F684151E636E0B00B92542 /* TmSupport */,
 				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
 				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
 				C7DD0A971C6CDF5500361D17 /* Info.plist */,
-				D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */,
 				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
 			);
 			name = "Supporting Files";
@@ -259,6 +248,24 @@
 				D5D027FB1E33EC3100571FED /* algorithm-questions.json */,
 			);
 			path = "Flashcards Data";
+			sourceTree = "<group>";
+		};
+		D5B1EBB51E5A107F006556D1 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				D5B1EBB61E5A10FD006556D1 /* AlgorithmTesting.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		D5F684151E636E0B00B92542 /* TmSupport */ = {
+			isa = PBXGroup;
+			children = (
+				D5F684161E636E6300B92542 /* Swift.tmLanguage */,
+				D5F6841A1E636E8D00B92542 /* Tomorrow.tmTheme */,
+				D5F684181E636E8000B92542 /* Tomorrow-Night-Bright.tmTheme */,
+			);
+			path = TmSupport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,13 +383,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F684171E636E6300B92542 /* Swift.tmLanguage in Resources */,
+				D5F6841B1E636E8D00B92542 /* Tomorrow.tmTheme in Resources */,
 				C7DD0A961C6CDF5500361D17 /* LaunchScreen.storyboard in Resources */,
 				D5D027FD1E33EC3100571FED /* data-structure-questions.json in Resources */,
 				C7DD0A931C6CDF5500361D17 /* Assets.xcassets in Resources */,
+				D5F684191E636E8000B92542 /* Tomorrow-Night-Bright.tmTheme in Resources */,
 				C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */,
 				D5D027FC1E33EC3100571FED /* iOS-technical-questions.json in Resources */,
 				D5D027FE1E33EC3100571FED /* algorithm-questions.json in Resources */,
-				D5A918D51E107BF9007C4967 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,14 +511,13 @@
 			files = (
 				D5D027F81E33DA2E00571FED /* JsonFileReader.swift in Sources */,
 				D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */,
-				182D74E11C6EAB7500F3E41B /* IFCFlashCard.m in Sources */,
 				C7DD0A911C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld in Sources */,
 				53322A291E1F10C5003E1080 /* AnswersViewController.swift in Sources */,
-				C7DD0AC71C6F203C00361D17 /* UIImage+AsyncFetch.m in Sources */,
+				D5F684131E636DFB00B92542 /* StringLayoutHandler.swift in Sources */,
+				D5F684141E636DFB00B92542 /* TmTypes.swift in Sources */,
 				53E19B411DB176050087E231 /* QuestionsViewController.swift in Sources */,
+				D5E7EE5F1E56AA1E0041ECE3 /* Flashcard.swift in Sources */,
 				5312953E1DCA947F00CD3B07 /* MenuViewController.swift in Sources */,
-				C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */,
-				531295461DCAB58A00CD3B07 /* QueryManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

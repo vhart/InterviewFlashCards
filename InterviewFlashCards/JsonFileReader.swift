@@ -1,3 +1,11 @@
+import SwiftyJSON
+
+public typealias JSON = [String: Any]
+public protocol DataGenerator {
+    func getData(for requestType: FlashcardType,
+                 completion: @escaping ([Flashcard]) -> Void)
+}
+
 struct JsonFileReader: DataGenerator {
     enum FileName: String {
         case algorithm = "algorithm-questions"
@@ -11,7 +19,7 @@ struct JsonFileReader: DataGenerator {
         }
     }
 
-    func getData(for requestType: RequestType, completion: @escaping ([JSON]) -> Void) {
+    func getData(for requestType: FlashcardType, completion: @escaping ([Flashcard]) -> Void) {
         let fileName: FileName
         switch  requestType {
         case .algorithms: fileName = .algorithm
@@ -27,7 +35,8 @@ struct JsonFileReader: DataGenerator {
                 completion([])
                 return
         }
-        completion(data)
+        completion(Flashcard.flashcards(ofType: requestType,
+                                        fromDictionaries: data))
     }
 
     private func json(from data: Data) -> [String: Any]? {

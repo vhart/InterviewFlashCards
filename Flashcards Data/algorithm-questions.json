@@ -3,50 +3,58 @@
     "answer_urls": [
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/recursivePrints.png"
     ],
-    "question": "Implement an algorithm without for or while loops that prints 1 to 100 and then back to 1."
+    "question": "Implement an algorithm without for or while loops that prints 1 to 100 and then back to 1.",
+    "answer": "enum Direction {#N#Ttypealias Generator = (Int) -> Int#N#N#Tcase ascending#N#Tcase descending#N#T#N#Tvar generateNext: Generator {#N#T#Tswitch self {#N#T#Tcase .ascending: return { $0 + 1 }#N#T#Tcase .descending: return { $0 - 1 }#N#T#T}#N#T}#N}#N#Nfunc print(range: ClosedRange<Int>, direction: Direction) {#N#Tfunc printAllBounded(starting  value: Int) {#N#T#Tif range.contains(value) {#N#T#T#Tprint(value)#N#T#T#TprintAllBounded(starting: direction.generateNext(value))#N#T#T}#N#T}#N#T#N#Tlet first: Int#N#Tswitch direction {#N#Tcase .ascending: first = range.lowerBound#N#Tcase .descending: first = range.upperBound#N#T}#N#TprintAllBounded(starting: first)#N}#N#Nfunc printForwardsAndBackwards(range: ClosedRange<Int>) {#N#Tprint(range: range, direction: .ascending)#N#T#N#Tif range.count > 1 {#N#T#Tlet lower = range.lowerBound#N#T#Tlet upper = range.upperBound - 1#N#T#Tlet descendingRange = ClosedRange<Int>(lower...upper)#N#T#Tprint(range: descendingRange, direction: .descending)#N#T}#N}#N"
   },
   {
     "answer_urls": [
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/rotateMatrix.png"
     ],
-    "question": "Suppose you have an n x n array of integers. Write an algorithm that turns it ninety degrees clockwise."
+    "question": "Suppose you have an n x n array of integers. Write an algorithm that turns it ninety degrees clockwise.",
+    "answer": "/*   [[2, 1, 4],     [[2, 5, 6],#N      [5, 9, 0],  ->  [1, 9, 8],#N      [6, 8, 3]]      [4, 0, 3]]   */#N#Nfunc rotate90Degrees(matrix: [[Int]]) -> [[Int]] {#N    var newMatrix = [[Int]]()#N#N    for index in 0..<matrix.count {#N        let column = matrix.map { return $0[index] }#N        newMatrix.append(column)#N    }#N#N    return newMatrix#N}#N"
   },
   {
     "answer_urls": [
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/removeRepeatedWords.png"
     ],
-    "question": "Given an array of words (Strings), return an array of those words in the order they appeared but without repetitions. Have O(n) time complexity!"
+    "question": "Given an array of words (Strings), return an array of those words in the order they appeared but without repetitions. Have O(n) time complexity!",
+    "answer": "func removeDuplicates(from words: [String]) -> [String] {#N#Tvar wordsUsed = Set<String>()#N#Tvar uniqueWords = [String]()#N#Tfor word in words where !wordsUsed.contains(word) {#N#T#TuniqueWords.append(word)#N#T#TwordsUsed.insert(word)#N#T}#N#Treturn uniqueWords#N}#N"
   },
   {
     "answer_urls": [
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/iterativeFib.png"
     ],
-    "question": "Implement a Fibonacci function that has run time O(n)."
+    "question": "Implement a Fibonacci function that has run time O(n).",
+    "answer": "enum FibonacciError: Error {#N#Tcase overflow#N}#N#Nfunc fibonacci(n: UInt) throws -> Int {#N#Tif n == 0 { return 0 }#N#Tif 1...2 ~= n { return 1 }#N#T#N#Tvar secondToLastTerm = 1#N#Tvar firstToLastTerm = 1#N#T#N#T#N#Tfor _ in 3...n {#N#T#Tguard Int.max - firstToLastTerm < secondToLastTerm#N#T#T#Telse { throw FibonacciError.overflow }#N#T#T#N#T#Tlet nextTerm = secondToLastTerm + firstToLastTerm#N#T#TsecondToLastTerm = firstToLastTerm#N#T#TfirstToLastTerm = nextTerm#N#T}#N#T#N#Treturn firstToLastTerm#N}#N"
   },
   {
     "answer_urls": [
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/changeMaker.png"
     ],
-    "question": "Given an amount of money, find the optimal arrangement of change (assume US currency) for that value. The arrangement is optimal is it contains the fewest number of coins. This function should return an array of the values."
+    "question": "Given an amount of money, find the optimal arrangement of change (assume US currency) for that value. The arrangement is optimal if it contains the fewest number of coins. This function should return an array of the values.",
+    "answer": "enum Country {#N#Tcase usa#N#T#N#Tvar coins: [Int] {#N#T#Tswitch self {#N#T#Tcase .usa: return [50, 25, 10, 5, 1]#N#T#T}#N#T}#N}#N#Nstruct ChangeMaker {#N#Ttypealias Coin = Int#N#N#Tlet denominations: [Coin]#N#T#N#Tinit(denominationsOf country: Country) {#N#T#Tdenominations = country.coins#N#T}#N#T#N#Tfunc makeChange(amount: Int) -> [Int] {#N#T#Tguard amount > 0 else { return [] }#N#T#Tvar currentAmount = amount#N#T#Tvar change = [Int]()#N#T#Tfor coin in denominations where currentAmount > 0 {#N#T#T#Tlet count = currentAmount / coin#N#T#T#Tprint(coin, count, currentAmount)#N#T#T#Tlet coinsToAppend = Array<Int>(repeating: coin,#N#T#T#T#T#T#T#T#T#T#T   count: count)#N#T#T#Tchange.append(contentsOf: coinsToAppend)#N#T#T#TcurrentAmount = currentAmount % coin#N#T#T}#N#T#T#N#T#Tguard currentAmount == 0 else {#N#T#T#Treturn []#N#T#T}#N#T#T#N#T#Treturn change#N#T}#N}#N"
   },
   {
     "answer_urls": [
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/tictactoeP1.png",
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/tictactoeP2.png"
     ],
-    "question": "Given a full 3 x 3 tic tac toe board, determine if there is a winner. (In your algorithm consider giving the x's and o's values)"
+    "question": "Given a full 3 x 3 tic tac toe board, determine if there is a winner. (In your algorithm consider giving the x's and o's values)",
+    "answer": "class Board {#N#Tenum Symbol: Int {#N#T#Tcase x = 1#N#T#Tcase o = -1#N#T}#N#N#Tvar board = [[0,0,0],#N#T#T#T#T [0,0,0],#N#T#T#T#T [0,0,0]]#N#T#N#Tfunc place(symbol: Symbol, location: (row: Int, col: Int)) {#N#T#Tguard 0..<3 ~= location.row#N#T#T#T&& 0..<3 ~= location.col#N#T#T#Telse { return }#N#T#T#N#T#Tboard[location.row][location.col] = symbol.rawValue#N#T}#N#T#N#Tfunc containsWinner() -> Bool {#N#T#Tlet xWin = Symbol.x.rawValue * board.count#N#T#Tlet oWin = Symbol.o.rawValue * board.count#N#T#T#N#T#Tlet pathSums = rowValues() +#N#T#T#TcolumnValues() +#N#T#T#TdiagonalValue()#N#T#T#N#T#Treturn pathSums.contains(xWin) || pathSums.contains(oWin)#N#T}#N#T#N#Tfileprivate func rowValues() -> [Int] {#N#T#Treturn board.map { $0.reduce(0, +) }#N#T}#N#T#N#Tfileprivate func columnValues() -> [Int] {#N#T#Tvar colValues = [Int]()#N#T#Tfor i in 0..<board.count {#N#T#T#Tlet value = board.map { $0[i] }.reduce(0, +)#N#T#T#TcolValues.append(value)#N#T#T}#N#T#Treturn colValues#N#T}#N#T#N#Tfileprivate func diagonalValue() -> [Int] {#N#T#Tvar leftDiag = 0#N#T#Tvar rightDiag = 0#N#T#Tfor (index, row) in board.enumerated() {#N#T#T#TleftDiag += row[index]#N#T#T#TrightDiag += row[board.count - index - 1]#N#T#T}#N#T#Treturn [leftDiag, rightDiag]#N#T}#N}#N"
   },
   {
     "answer_urls": [
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/QuickSort.png",
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/QuickSortPt2.png"
     ],
-    "question": "Implement quicksort"
+    "question": "Implement quicksort",
+    "answer": "func quicksort<T: Comparable>(array: inout [T]) {#N#Tquicksort(array: &array,#N#T#T#T#T#T leftMarker: 0,#N#T#T#T#T#T rightMarker: array.count - 1)#N}#N#Nprivate func quicksort<T: Comparable>(array: inout [T],#N#T#T#T#T#T#T#TleftMarker: Int,#N#T#T#T#T#T#T#TrightMarker: Int) {#N#T#N#Tguard leftMarker < rightMarker else { return }#N#T#N#Tlet partitionIndex = partitionMarker(array: &array,#N#T#T#T#T#T#T#T#T#T#T  leftMarker: leftMarker,#N#T#T#T#T#T#T#T#T#T#T  rightMarker: rightMarker)#N#T#N#Tquicksort(array: &array,#N#T#T#T  leftMarker: leftMarker,#N#T#T#T  rightMarker: partitionIndex - 1)#N#T#N#Tquicksort(array: &array,#N#T#T#T  leftMarker: partitionIndex + 1,#N#T#T#T  rightMarker: rightMarker)#N}#N#Nprivate enum PivotPosition {#N#Tcase left#N#Tcase right#N}#N#Nprivate func partitionMarker<T: Comparable>(array: inout [T],#N#T#T#T#T#T   leftMarker: Int,#N#T#T#T#T#T   rightMarker: Int) -> Int {#N#N#Tvar leftMarker = leftMarker#N#Tvar rightMarker = rightMarker#N#Tvar pivotValue = array[leftMarker]#N#Tvar pivotPosition: PivotPosition = .left#N#T#N#Twhile leftMarker != rightMarker {#N#T#Tlet rightMarkerValueIsLessThanPivot =#N#T#T#Tarray[rightMarker] < pivotValue#N#T#T#N#T#Tlet leftMarkerValueIsGreaterThanPivot =#N#T#T#Tarray[leftMarker] > pivotValue#N#T#T#N#T#Tswitch pivotPosition {#N#T#Tcase .left:#N#T#T#Tif rightMarkerValueIsLessThanPivot {#N#T#T#T#Tswap(&array[leftMarker], &array[rightMarker])#N#T#T#T#TpivotValue = array[rightMarker]#N#T#T#T#TpivotPosition = .right#N#T#T#T#TleftMarker += 1#N#T#T#T} else {#N#T#T#T#TrightMarker -= 1#N#T#T#T}#N#T#N#T#Tcase .right:#N#T#T#Tif leftMarkerValueIsGreaterThanPivot {#N#T#T#T#Tswap(&array[leftMarker], &array[rightMarker])#N#T#T#T#TpivotValue = array[leftMarker]#N#T#T#T#TpivotPosition = .left#N#T#T#T#TrightMarker -= 1#N#T#T#T} else {#N#T#T#T#TleftMarker += 1#N#T#T#T}#N#T#T}#N#T}#N#N#Treturn leftMarker#N}#N"
   },
   {
     "answer_urls": [
        "https://s3-us-west-2.amazonaws.com/interviewflashcardsbucket/integerPalindrome.png"
     ],
-    "question": "Write an algorithm that determines if an integer is a palindrome without casting the integer to string."
+    "question": "Write an algorithm that determines if an integer is a palindrome without casting the integer to string.",
+    "answer": "func isPalindrome(input: Int) -> Bool {#N#Tlet original = abs(input)#N#Tvar toBeReversed = original#N#Tvar reversed = 0#N#N#Twhile toBeReversed > 0 {#N#T#Tlet lastDigit = toBeReversed % 10#N#T#Treversed *= 10#N#T#Treversed += lastDigit#N#T#TtoBeReversed /= 10#N#T}#N#T#N#Treturn original == reversed#N}#N"
   }]
 }

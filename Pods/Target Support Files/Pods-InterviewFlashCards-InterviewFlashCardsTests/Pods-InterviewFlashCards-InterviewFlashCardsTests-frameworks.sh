@@ -84,13 +84,19 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/BrightFutures/BrightFutures.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Result/Result.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SyntaxKit/SyntaxKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Nimble/Nimble.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Nocilla/Nocilla.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Quick/Quick.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/BrightFutures/BrightFutures.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Result/Result.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SyntaxKit/SyntaxKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Nimble/Nimble.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Nocilla/Nocilla.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Quick/Quick.framework"
