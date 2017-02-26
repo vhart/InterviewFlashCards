@@ -9,8 +9,8 @@ struct DataGeneratorMock: DataGenerator {
            ["question": "Pizza or Salad", "answer": "Pizza"],
            ["question": "Monster Trucks", "answer": "That's not a question"]]
 
-    func getData(for requestType: RequestType, completion: @escaping ([JSON]) -> Void) {
-        completion(dataMock)
+    func getData(for requestType: FlashcardType, completion: @escaping ([Flashcard]) -> Void) {
+        completion(Flashcard.flashcards(ofType: .iOS, fromDictionaries: dataMock))
     }
 }
 
@@ -28,7 +28,7 @@ class QuestionsViewControllerSpec: QuickSpec {
             context("viewDidLoad:") {
                 it("has three flashcards") {
                     let _ = questionVC!.view
-                    expect(questionVC!.flashCards.count) == 3
+                    expect(questionVC!.flashcards.count) == 3
                 }
                 it("loads the first question") {
                     let _ = questionVC!.view
@@ -50,7 +50,7 @@ class QuestionsViewControllerSpec: QuickSpec {
                 context("tapped as many times as there are questions") {
                     it("returns to the first question") {
                         let _ = questionVC!.view
-                        let tapsToReturn = questionVC!.flashCards.count
+                        let tapsToReturn = questionVC!.flashcards.count
                         expect(questionVC!.questionLabel.text) == "How many potatoes fit in your shoe"
 
                         for _ in 0 ..< tapsToReturn - 1 {

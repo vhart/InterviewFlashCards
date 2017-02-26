@@ -65,7 +65,7 @@ class AnswersViewController: UIViewController {
             break
         case .iOS, .dataStructures:
             scrollView?.addSubview(answerLabel!)
-            answerLabel?.font = UIFont.systemFont(ofSize: 14.0)
+            answerLabel?.font = UIFont.systemFont(ofSize: 16.0)
             answerLabel?.numberOfLines = 0
             answerLabel?.text = viewModel.answerText
             var constraints = [NSLayoutConstraint(item: answerLabel!,
@@ -73,8 +73,8 @@ class AnswersViewController: UIViewController {
                                relatedBy: .equal,
                                toItem: scrollView!,
                                attribute: .width,
-                               multiplier: 1.0,
-                               constant: -8),
+                               multiplier: 0.9,
+                               constant: 0),
                                NSLayoutConstraint(item: answerLabel!,
                                                   attribute: .centerX,
                                                   relatedBy: .equal,

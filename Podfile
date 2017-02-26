@@ -9,6 +9,7 @@ target ‘InterviewFlashCards’ do
     pod 'Firebase/Database'
     pod 'BrightFutures'
     pod 'SwiftyJSON'
+    pod 'SyntaxKit', git: 'git@github.com:vhart/SyntaxKit', branch: 'master'
 
   # Pods for InterviewFlashCards
   target 'InterviewFlashCardsTests' do
