@@ -24,7 +24,6 @@
 		C7DD0ACA1C70304200361D17 /* NSMutableArray+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */; };
 		D50241661DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */; };
 		D50723E41E35A9DE00EFE055 /* JsonFileReaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50723E31E35A9DE00EFE055 /* JsonFileReaderSpec.swift */; };
-		D5A918D51E107BF9007C4967 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */; };
 		D5A918D71E107CDE007C4967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A918D61E107CDE007C4967 /* AppDelegate.swift */; };
 		D5D027F81E33DA2E00571FED /* JsonFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D027F71E33DA2E00571FED /* JsonFileReader.swift */; };
 		D5D027FC1E33EC3100571FED /* iOS-technical-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D027F91E33EC3100571FED /* iOS-technical-questions.json */; };
@@ -85,7 +84,6 @@
 		C7DD0AC91C70304200361D17 /* NSMutableArray+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sizing.m"; sourceTree = "<group>"; };
 		D50241651DF4FE8D003E20C2 /* QuestionsViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewControllerSpec.swift; sourceTree = "<group>"; };
 		D50723E31E35A9DE00EFE055 /* JsonFileReaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReaderSpec.swift; sourceTree = "<group>"; };
-		D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5A918D61E107CDE007C4967 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B1EBB61E5A10FD006556D1 /* AlgorithmTesting.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AlgorithmTesting.playground; sourceTree = "<group>"; };
 		D5D027F71E33DA2E00571FED /* JsonFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReader.swift; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				C7DD0A921C6CDF5500361D17 /* Assets.xcassets */,
 				C7DD0A941C6CDF5500361D17 /* LaunchScreen.storyboard */,
 				C7DD0A971C6CDF5500361D17 /* Info.plist */,
-				D5A918D41E107BF9007C4967 /* GoogleService-Info.plist */,
 				C7DD0A8F1C6CDF5400361D17 /* InterviewFlashCards.xcdatamodeld */,
 			);
 			name = "Supporting Files";
@@ -416,7 +413,6 @@
 				C7DD0A8E1C6CDF5400361D17 /* Main.storyboard in Resources */,
 				D5D027FC1E33EC3100571FED /* iOS-technical-questions.json in Resources */,
 				D5D027FE1E33EC3100571FED /* algorithm-questions.json in Resources */,
-				D5A918D51E107BF9007C4967 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
