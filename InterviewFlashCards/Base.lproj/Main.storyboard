@@ -86,56 +86,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmj-YQ-QJu">
-                                <rect key="frame" x="20" y="100" width="335" height="23"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmj-YQ-QJu">
+                                <rect key="frame" x="20" y="100" width="335" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlu-Me-e58">
-                                <rect key="frame" x="20" y="40" width="60" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="1o6-yf-m97"/>
-                                    <constraint firstAttribute="width" constant="60" id="AgB-wH-1jg"/>
-                                </constraints>
-                                <state key="normal" title="&lt;&lt; Prev"/>
-                                <connections>
-                                    <action selector="prevButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OlU-XZ-oYu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-ft-aJP">
                                 <rect key="frame" x="295" y="40" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Vhz-H9-kr7"/>
                                     <constraint firstAttribute="width" constant="60" id="uEM-YE-3Ih"/>
                                 </constraints>
-                                <state key="normal" title="Next &gt;&gt;"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Next &gt;"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djt-YW-FhG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-cj-99o">
-                                <rect key="frame" x="162" y="592" width="51" height="30"/>
+                                <rect key="frame" x="157.5" y="586" width="60" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Answer"/>
                                 <connections>
                                     <segue destination="vbS-XK-iOe" kind="presentation" identifier="answerSegueIdentifier" modalTransitionStyle="flipHorizontal" id="LUA-p3-Tah"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-lM-av9">
-                                <rect key="frame" x="87.5" y="153" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="153.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="PoA-Yp-Q5b"/>
                                     <constraint firstAttribute="height" constant="200" id="vdm-P0-zWH"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlu-Me-e58">
+                                <rect key="frame" x="11" y="37" width="72" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1o6-yf-m97"/>
+                                    <constraint firstAttribute="width" constant="72" id="AgB-wH-1jg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="&lt; Prev"/>
+                                <connections>
+                                    <action selector="prevButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OlU-XZ-oYu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qlu-Me-e58" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0gA-Aj-lR1"/>
+                            <constraint firstItem="Qlu-Me-e58" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="11" id="0gA-Aj-lR1"/>
                             <constraint firstItem="Zbq-ft-aJP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="5j7-OQ-QxL"/>
                             <constraint firstItem="tmj-YQ-QJu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="8DM-k4-Dkt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LVA-cj-99o" secondAttribute="bottom" constant="45" id="CmV-Fj-sm0"/>
                             <constraint firstAttribute="trailing" secondItem="tmj-YQ-QJu" secondAttribute="trailing" constant="20" id="KWh-av-OoB"/>
-                            <constraint firstItem="Qlu-Me-e58" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Lad-XI-v8p"/>
+                            <constraint firstItem="Qlu-Me-e58" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="Lad-XI-v8p"/>
                             <constraint firstItem="Sie-lM-av9" firstAttribute="top" secondItem="tmj-YQ-QJu" secondAttribute="bottom" constant="30" id="PGQ-Ez-VfF"/>
                             <constraint firstItem="Sie-lM-av9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qy8-Is-5Uv"/>
                             <constraint firstItem="tmj-YQ-QJu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d75-Or-ZeK"/>
@@ -159,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="292"/>
+            <point key="canvasLocation" x="1202.4000000000001" y="291.90404797601201"/>
         </scene>
         <!--Answers View Controller-->
         <scene sceneID="Fvf-Au-3YZ">
