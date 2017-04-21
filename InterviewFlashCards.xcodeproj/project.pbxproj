@@ -343,7 +343,7 @@
 				TargetAttributes = {
 					C7DD0A7F1C6CDF5300361D17 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = BULEKXRKSR;
+						DevelopmentTeam = 6QXD8H5YSP;
 						LastSwiftMigration = 0820;
 					};
 					C7DD0A9B1C6CDF5600361D17 = {
@@ -673,9 +673,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6QXD8H5YSP;
 				INFOPLIST_FILE = InterviewFlashCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.mesfin.InterviewFlashCards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InterviewFlashCards-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -690,9 +691,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6QXD8H5YSP;
 				INFOPLIST_FILE = InterviewFlashCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.mesfin.InterviewFlashCards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InterviewFlashCards-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
