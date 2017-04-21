@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmj-YQ-QJu">
-                                <rect key="frame" x="20" y="100" width="335" height="23.5"/>
+                                <rect key="frame" x="20" y="160" width="335" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -104,20 +104,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-cj-99o">
-                                <rect key="frame" x="157.5" y="586" width="60" height="36"/>
+                                <rect key="frame" x="158" y="586" width="60" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Answer"/>
                                 <connections>
                                     <segue destination="vbS-XK-iOe" kind="presentation" identifier="answerSegueIdentifier" modalTransitionStyle="flipHorizontal" id="LUA-p3-Tah"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-lM-av9">
-                                <rect key="frame" x="87.5" y="153.5" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="PoA-Yp-Q5b"/>
-                                    <constraint firstAttribute="height" constant="200" id="vdm-P0-zWH"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlu-Me-e58">
                                 <rect key="frame" x="11" y="37" width="72" height="36"/>
                                 <constraints>
@@ -130,6 +123,13 @@
                                     <action selector="prevButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OlU-XZ-oYu"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-lM-av9">
+                                <rect key="frame" x="62" y="199" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="PoA-Yp-Q5b"/>
+                                    <constraint firstAttribute="height" constant="250" id="vdm-P0-zWH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -139,12 +139,12 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LVA-cj-99o" secondAttribute="bottom" constant="45" id="CmV-Fj-sm0"/>
                             <constraint firstAttribute="trailing" secondItem="tmj-YQ-QJu" secondAttribute="trailing" constant="20" id="KWh-av-OoB"/>
                             <constraint firstItem="Qlu-Me-e58" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="Lad-XI-v8p"/>
-                            <constraint firstItem="Sie-lM-av9" firstAttribute="top" secondItem="tmj-YQ-QJu" secondAttribute="bottom" constant="30" id="PGQ-Ez-VfF"/>
+                            <constraint firstItem="Sie-lM-av9" firstAttribute="top" secondItem="tmj-YQ-QJu" secondAttribute="bottom" constant="15" id="PGQ-Ez-VfF"/>
                             <constraint firstItem="Sie-lM-av9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qy8-Is-5Uv"/>
                             <constraint firstItem="tmj-YQ-QJu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d75-Or-ZeK"/>
                             <constraint firstItem="LVA-cj-99o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g3K-aY-yof"/>
                             <constraint firstAttribute="trailing" secondItem="Zbq-ft-aJP" secondAttribute="trailing" constant="20" id="ic8-lP-JQi"/>
-                            <constraint firstItem="tmj-YQ-QJu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="rcH-BZ-dfk"/>
+                            <constraint firstItem="tmj-YQ-QJu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="rcH-BZ-dfk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
