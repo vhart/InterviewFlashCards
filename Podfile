@@ -14,5 +14,6 @@ target ‘InterviewFlashCards’ do
     pod 'Quick'
     pod 'Nimble'
     pod 'Nocilla'
+    pod 'SyntaxKit'
   end
 end

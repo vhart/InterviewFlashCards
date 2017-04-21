@@ -1,6 +1,5 @@
 import UIKit
 import SyntaxKit
-import BrightFutures
 
 class AnswersViewController: UIViewController {
 
