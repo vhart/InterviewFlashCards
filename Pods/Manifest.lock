@@ -1,40 +1,46 @@
 PODS:
-  - BrightFutures (5.1.0):
+  - BrightFutures (5.0.0):
     - Result (~> 3.0)
   - Nimble (5.1.1)
   - Nocilla (0.11.0)
   - Quick (1.0.0)
-  - Result (3.0.0)
-  - SwiftyJSON (3.1.3)
+  - Result (3.2.1)
+  - SwiftyJSON (3.0.0)
   - SyntaxKit (1.0)
 
 DEPENDENCIES:
-  - BrightFutures
+  - BrightFutures (from `https://github.com/Thomvis/BrightFutures`, branch `swift3.0`)
   - Nimble
   - Nocilla
   - Quick
-  - SwiftyJSON
+  - SwiftyJSON (= 3.0.0)
   - SyntaxKit (from `git@github.com:vhart/SyntaxKit`, branch `master`)
 
 EXTERNAL SOURCES:
+  BrightFutures:
+    :branch: swift3.0
+    :git: https://github.com/Thomvis/BrightFutures
   SyntaxKit:
     :branch: master
     :git: git@github.com:vhart/SyntaxKit
 
 CHECKOUT OPTIONS:
+  BrightFutures:
+    :commit: e39ef2049881c28a70417e69b275b9af7640bc9c
+    :git: https://github.com/Thomvis/BrightFutures
   SyntaxKit:
     :commit: 54bf2a238431349b7009603c365b7d4d07dd1620
     :git: git@github.com:vhart/SyntaxKit
 
 SPEC CHECKSUMS:
-  BrightFutures: 62aafb1a63520eda91c9286bf4be33e58e043938
+  BrightFutures: 931ec2cfe4a3686c15eb381b6e80233c40c3880d
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nocilla: 7af7a386071150cc8aa5da4da97d060f049dd61c
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
-  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
   SyntaxKit: 23cc40d740c1996f085a0280c94499249b1b5494
 
-PODFILE CHECKSUM: 3d31553ad0cd07183416d6afd9c2aa03fe1767a1
+PODFILE CHECKSUM: f95034e86bb5f8107fcac6ba3386ea5c471f2de9
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

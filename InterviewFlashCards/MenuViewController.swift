@@ -11,7 +11,7 @@ class MenuViewController: UIViewController {
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Interview Flash Cards"
+        navigationItem.title = "Choose a Section"
     }
 
     // MARK: Actions
